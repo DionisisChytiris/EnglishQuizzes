@@ -1,0 +1,109 @@
+.prep_containers {
+  margin: auto;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+.prepositions_container {
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: -100px; */
+}
+
+.prepositions_homePage1 {
+  width: 600px;
+  height: 800px;
+  background: white;
+  padding: 20px;
+}
+.prepositions_homePage2 {
+  width: 600px;
+  height: 980px;
+  background: rgb(202, 201, 201);
+  padding: 20px;
+  margin-top: -100px;
+}
+
+.prepositions_At_container_inner {
+  width: 500px;
+  height: 200px;
+  background-color: aliceblue;
+  margin-top: 40px;
+  border: 0.1rem solid rgb(122, 122, 122);
+  font-size: 18px;
+  position: relative;
+  /* width: 100%;
+  height: 100%; */
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.prepositions_At_container_inner:hover {
+  transform: rotateX(180deg);
+  cursor: pointer;
+}
+
+.prepositions_At_front,
+.prepositions_At_back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.prepositions_At_back {
+  padding: 20px;
+  transform: rotateX(180deg);
+}
+
+.prepositions_At_back ul {
+  padding: 20px;
+  padding-left: 70px;
+}
+.prepositions_At_back li {
+  list-style: disc;
+}
+
+.prepositions_At_A {
+  border-bottom: 0.1rem solid grey;
+  padding: 15px;
+  letter-spacing: 1px;
+}
+.prepositions_In_A {
+  border-bottom: 0.1rem solid grey;
+  padding: 15px;
+  /* letter-spacing: 1px; */
+  font-size: 16px;
+}
+
+/* .prepositions_At_A span,
+.prepositions_In_A span {
+  font-weight: 800;
+} */
+
+span {
+  font-weight: 800;
+}
+
+.prepositions_At_B {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.prepositions-hand1 {
+  text-align: right;
+  font-size: 20px;
+  margin-top: -30px;
+  margin-right: 20px;
+}
+
+.prepositions-note {
+  margin: 20px;
+}
+
+.prepositions-note ul li {
+  padding-left: 50px;
+}

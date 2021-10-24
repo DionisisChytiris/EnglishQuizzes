@@ -1,0 +1,268 @@
+.irregularVerbs {
+  width: 1000px;
+  height: 100vh;
+  height: 100%;
+  margin: auto;
+  padding: 50px;
+  background: #ffc107;
+}
+
+.irregularVerbs p {
+  color: #26a69a;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px;
+  font-size: 26px;
+}
+
+.irregularVerbs-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+  font-size: 22px;
+  color: white;
+  text-transform: capitalize;
+  border-bottom: 0.1rem solid black;
+}
+
+.irregularVerbs-container {
+  width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background: rgb(140, 151, 155);
+  border: 0.1rem solid black;
+  font-size: 25px;
+}
+
+.container-verbs {
+  border: 0.01rem solid rgb(83, 81, 81);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.irregularInfinitive {
+  color: rgb(236, 230, 230);
+}
+
+.irregularPastParticiple {
+  color: rgb(37, 37, 110);
+}
+
+/*/////////*/
+.stativeVerbs {
+  width: 1000px;
+  height: 100vh;
+  height: 100%;
+  margin: auto;
+  padding: 50px;
+  background: #4480f1;
+  color: white;
+}
+
+.stativeVerbs_container {
+  margin: auto;
+  width: 700px;
+  height: 500px;
+  background: white;
+}
+
+.stativeVerbs_title {
+  color: black;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 20px;
+}
+
+.stativeVerbs_container_verbs {
+  margin: 40px;
+  margin-left: 100px;
+  width: 700px;
+  height: 500px;
+  background: white;
+  display: flex;
+}
+
+.stativeVerbs_1 {
+  width: 235px;
+  height: 100%;
+  background-color: #26a69a;
+  color: white;
+  padding: 40px;
+}
+
+.stativeVerbs_2 {
+  width: 235px;
+  height: 100%;
+  background-color: #2633a6;
+  color: white;
+  padding: 40px;
+}
+
+.stativeVerbs_3 {
+  padding: 40px;
+  color: black;
+}
+
+/* Progress Bar */
+.progressBar_step {
+  margin-top: -70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progressBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35vh;
+}
+
+.circle {
+  width: 29px;
+  height: 29px;
+  line-height: 25px;
+  background-color: green;
+  color: white;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.stepWrapper {
+  display: flex;
+  text-align: center;
+}
+
+.stepBlock .circleWrapper {
+  padding: 0px 20px;
+  position: relative;
+}
+
+.selected .circle {
+  color: black;
+  background-color: white;
+  border-color: green;
+}
+
+.stepBlock:not(:last-child) > .circleWrapper::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  background-color: green;
+  margin: auto;
+  /* z-index: -1; */
+}
+
+.stepBlock:not(:last-child) > .circleWrapper::after {
+  height: 3px;
+  opacity: 1;
+}
+
+.stepBlock:not(:last-child).selected > .circleWrapper::after,
+.stepBlock:not(:last-child).selected
+  ~ .stepBlock:not(:last-child)
+  > .circleWrapper::after {
+  height: 2px;
+  opacity: 0.6;
+}
+
+.progressBar_button {
+  /* padding: 10px 25px; */
+  width: 140px;
+  background-color: green;
+  color: #fff;
+  border: none;
+  margin: 10px;
+  margin-left: 200px;
+  cursor: pointer;
+}
+
+/* Button / Modal  */
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -240px;
+  margin-left: 520px;
+  /* position: fixed; */
+  /* top: 50%;
+  left: 50%; */
+}
+
+.button1 {
+  min-width: 50%;
+  background-color: white;
+}
+
+.button1:hover {
+  background-color: aqua;
+}
+
+.background {
+  margin: auto;
+  width: 70%;
+  height: 80%;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container-test {
+  width: 650px;
+  height: 480px;
+  background-color: rgb(187, 180, 180);
+  margin: 20px;
+  display: flex;
+  padding-top: 15px;
+  flex-direction: column;
+}
+
+.container-test-title {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  /* border-bottom: 0.1rem solid black; */
+  text-transform: capitalize;
+}
+
+.container-title-box {
+  background: green;
+  margin-top: -15px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container-test-title .line {
+  border-bottom: 0.1rem solid black;
+}
+
+.container-columns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hey {
+  margin-bottom: 520px;
+  /* margin-left: 50px; */
+  color: white;
+  font-size: 24px;
+}
+
+.hey:hover {
+  color: red;
+}

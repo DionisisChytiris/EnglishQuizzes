@@ -1,0 +1,87 @@
+:root {
+  --cl-primary-blue: #1fc0fa;
+}
+
+.tenses_page {
+  height: 100%;
+  background: #fff;
+}
+
+.tenses_title {
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cl-primary-blue);
+  font-size: 70px;
+  font-weight: 600;
+}
+
+.tenses_boxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: var(--cl-primary-blue);
+  font-size: 70px;
+  font-weight: 600;
+  padding-bottom: 80px;
+}
+
+.tense_box {
+  width: 500px;
+  height: 300px;
+  background-color: var(--cl-primary-blue);
+  margin: 20px;
+  font-size: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.tense_box:hover {
+  background-color: #12a2d6;
+}
+
+/* Grammar Page */
+
+.tenses3_grammar_page {
+  height: 100vh;
+  height: 100%;
+  background-color: #fff;
+}
+
+.tenses3_Link {
+  background-color: var(--cl-primary-blue);
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 6px;
+}
+
+.tenses3_grammar1 {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: var(--cl-primary-blue);
+  font-size: 70px;
+  font-weight: 600;
+}
+.tenses3_grammar2 {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: var(--cl-primary-blue);
+  font-size: 70px;
+  font-weight: 600;
+}
