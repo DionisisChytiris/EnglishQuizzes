@@ -4,7 +4,6 @@ export const PassiveGrammar = styled.div`
     background: white;
     height: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
 `
 
@@ -36,6 +35,10 @@ export const PassiveMain = styled.div`
     .passive-button:hover {
         background: #045370;
     }
+`
+
+export const PassiveSide = styled.div`
+    /* margin-top: -1000px; */
 `
 
 export const PassiveContainer1 = styled.div`
@@ -80,7 +83,7 @@ export const PassiveContainer1 = styled.div`
         margin-top: 60px;
         margin-bottom: 10px;
 
-        @media (max-width: 750px){
+        @media (max-width: 850px){
         flex-direction: column;
         justify-content: space-around;
         margin: 20px;
@@ -92,6 +95,12 @@ export const PassiveContainer1 = styled.div`
         text-align: left;
         padding-left: 10px;
         border-left: 0.3rem solid #1fc0fa;
+
+        @media (max-width: 850px){
+        .example{
+            width: 95%;
+        }
+        }
     }
     .box2 {
         display: flex;
@@ -100,8 +109,12 @@ export const PassiveContainer1 = styled.div`
         padding-left: 10px;
         border-left: 0.3rem solid #1fc0fa;
 
-        @media (max-width: 750px){
+        @media (max-width: 850px){
         margin-top: 20px;
+
+        .example{
+            width: 95%;
+        }
         }
     }
     color {

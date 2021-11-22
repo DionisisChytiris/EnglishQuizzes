@@ -6,11 +6,8 @@ import {
     PronounsGrammar,
     PronounsSide,
     PronounsMain,
-    PronounsBox1,
-    PronounsBox2,
-    PronounsBox3,
-    PronounsContainer,
-} from '../pronouns.styled'
+    Pronouns1
+} from './grammar.styled'
 
 const Pronouns_Grammar = () => {
     return (
@@ -19,21 +16,11 @@ const Pronouns_Grammar = () => {
                 <SidebarGrammar/>
             </PronounsSide>
             <PronounsMain>
-                <PronounsBox1>
-                    <PronounsContainer>
-                        <h1>Pronouns</h1>
-                    </PronounsContainer>
-                </PronounsBox1>
-                <PronounsBox2>
-                    <PronounsContainer>
-                       World
-                    </PronounsContainer>
-                </PronounsBox2>
-                <PronounsBox3>
-                    <PronounsContainer>
-                        !!!
-                    </PronounsContainer>
-                </PronounsBox3>
+                <Pronouns1>
+                <div className='title'>Pronouns</div>
+                    <h1>Zero Conditional</h1>
+                    <h1>First Conditional</h1>
+                </Pronouns1>
             </PronounsMain>
         </PronounsGrammar>
     )

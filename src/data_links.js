@@ -117,7 +117,7 @@ export const quizzes_links = [
   {
     id: 8,
     url: '/verbs_to_ing',
-    text: 'Verbs + to /  + -ing',
+    text: 'Verbs +to / +ing',
     info1: 'Verbs + to + infinitive',
     info2: 'Verbs + -ing',
     info3: <MdInsertEmoticon/>
@@ -127,6 +127,14 @@ export const quizzes_links = [
     url: '/passive',
     text: 'Passive Voice',
     info1: 'Passive voice',
+    info2: '-',
+    info3: <MdInsertEmoticon/>
+  },
+  {
+    id: 10,
+    url: '/conditionals',
+    text: 'Conditionals',
+    info1: 'Conditionals',
     info2: '-',
     info3: <MdInsertEmoticon/>
   },
@@ -444,66 +452,40 @@ export const tenses3_links = [
   },
 ]
 
-export const verbs_to_ing_links = [
-  {
-    id: 1,
-    url: '/verbs_to_ing_1',
-    text: 'Quiz 1'
-  },
-  {
-    id: 2,
-    url: '/verbs_to_ing_2',
-    text: 'Quiz 2'
-  },
-  {
-    id: 3,
-    url: '/verbs_to_ing_3',
-    text: 'Quiz 3'
-  },
-  {
-    id: 4,
-    url: '/verbs_to_ing_4',
-    text: 'Quiz 4'
-  },
-  {
-    id: 5,
-    url: '/verbs_to_ing',
-    text: <BsArrowReturnLeft/>
-  },
-  {
-    id: 6,
-    url: '/quizzes',
-    text: 'Quizzes'
-  },
-]
+// export const verbs_to_ing_links = [
+//   {
+//     id: 1,
+//     url: '/verbs_to_ing_1',
+//     text: 'Quiz 1'
+//   },
+//   {
+//     id: 2,
+//     url: '/verbs_to_ing_2',
+//     text: 'Quiz 2'
+//   },
+//   {
+//     id: 3,
+//     url: '/verbs_to_ing_3',
+//     text: 'Quiz 3'
+//   },
+//   {
+//     id: 4,
+//     url: '/verbs_to_ing_4',
+//     text: 'Quiz 4'
+//   },
+//   {
+//     id: 5,
+//     url: '/verbs_to_ing',
+//     text: <BsArrowReturnLeft/>
+//   },
+//   {
+//     id: 6,
+//     url: '/quizzes',
+//     text: 'Quizzes'
+//   },
+// ]
 
-export const passive_links = [
-  {
-    id: 1,
-    url: '/passive_1',
-    text: 'Quiz 1'
-  },
-  {
-    id: 2,
-    url: '/passive_2',
-    text: 'Quiz 2'
-  },
-  {
-    id: 3,
-    url: '/passive_3',
-    text: 'Quiz 3'
-  },
-  {
-    id: 4,
-    url: '/passive',
-    text: <BsArrowReturnLeft/>
-  },
-  {
-    id: 5,
-    url: '/quizzes',
-    text: 'Quizzes'
-  },
-]
+
 
 /* FCE PRACTICE - SIDEBARs */
 /* Open Close */

@@ -9,7 +9,7 @@ import {
     PrepositionsMain,
     PrepositionsBox1,
     PrepositionContainerNew
-} from '../prepositions.styled'
+} from './grammar.styled'
 
 const Prepositions_Grammar = () => {
     return (

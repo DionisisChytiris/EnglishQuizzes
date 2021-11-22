@@ -6,11 +6,8 @@ import {
     ArticlesGrammar,
     ArticlesSide,
     ArticlesMain,
-    ArticlesBox1,
-    ArticlesBox2,
-    ArticlesBox3,
-    ArticlesContainer,
-} from '../articles.styled'
+    Articles1
+} from './grammar.styled'
 
 const Articles_Grammar = () => {
     return (
@@ -19,21 +16,11 @@ const Articles_Grammar = () => {
                 <SidebarGrammar/>
             </ArticlesSide>
             <ArticlesMain>
-                <ArticlesBox1>
-                    <ArticlesContainer>
-                        <h1>Articles Grammar</h1>
-                    </ArticlesContainer>
-                </ArticlesBox1>
-                <ArticlesBox2>
-                    <ArticlesContainer>
-                       World
-                    </ArticlesContainer>
-                </ArticlesBox2>
-                <ArticlesBox3>
-                    <ArticlesContainer>
-                        !!!
-                    </ArticlesContainer>
-                </ArticlesBox3>
+                <Articles1>
+                <div className='title'>Articles</div>
+                    <h1>Articles One</h1>
+                    <h1>Articles Two</h1>
+                </Articles1>
             </ArticlesMain>
         </ArticlesGrammar>
     )

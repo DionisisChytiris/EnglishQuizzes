@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import '../../modals/style.css'
 
 const InstructionsMain = styled.div`
     height: 75vh;
@@ -18,12 +20,15 @@ const InstructionsMain = styled.div`
     }
 `
 
-const Return = () => {
+const Instructions = () => {
     return (
         <InstructionsMain>
-            Instructions
+            <h1>Instructions</h1>
+            <Link to='/passive_grammar'>
+                <div className="modal_grammar_button">Passive Grammar</div>
+            </Link>
         </InstructionsMain>
     )
 }
 
-export default Return
+export default Instructions

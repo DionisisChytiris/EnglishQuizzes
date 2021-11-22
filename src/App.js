@@ -14,6 +14,7 @@ import Articles from './components/articles/mainPages/Articles_home';
 import Tenses1 from './components/tenses1/mainPages/Tenses_home';
 import Tenses2 from './components/tenses2/mainPages/Tenses_home';
 import Tenses3 from './components/tenses3/mainPages/Tenses_home';
+import Conditionals from './components/conditionals/mainPages/Conditionals_home'
 import MainPage_Tenses3 from './components/tenses3/mainPages/MainPage';
 import Verbs_to_ing from './components/verbs_to_ing/mainPages/Verbs_to_ing_home';
 import OpenClose_home from './FCE Practice/OpenClose/OpenClose_home'
@@ -75,6 +76,10 @@ import Tenses1_Grammar from './components/tenses1/mainPages/Grammar'
 import Pronouns_Grammar from './components/pronouns/mainPages/Grammar'
 import Tenses2_Grammar from './components/tenses2/mainPages/Grammar'
 import Verbs_to_ing_Grammar from './components/verbs_to_ing/mainPages/Grammar'
+import Conditionals_Grammar from './components/conditionals/mainPages/Grammar'
+import Quiz_1Conditionals from './components/conditionals/quizzes_back/quiz_1Conditionals'
+import Quiz_2Conditionals from './components/conditionals/quizzes_back/quiz_2Conditionals'
+import Quiz_3Conditionals from './components/conditionals/quizzes_back/quiz_3Conditionals'
 
 
 
@@ -101,6 +106,7 @@ function App() {
         <Route path='/tenses3_grammar' component={Tenses3Grammar}/>
         <Route path='/verbs_to_ing' component={Verbs_to_ing}/>
         <Route path='/passive' component={Passive}/>
+        <Route path='/conditionals' component={Conditionals}/>
         <Route path='/openClose' component={OpenClose_home}/>
         <Route path='/wordFormation' component={WordFormation_home}/>
         <Route path='/multipleChoice' component={MultipleChoice_home}/>
@@ -151,6 +157,10 @@ function App() {
         <Route path='/passive_1' component={Quiz1Passive} />
         <Route path='/passive_2' component={Quiz2Passive} />
         <Route path='/passive_3' component={Quiz3Passive} />
+        <Route path='/conditionals_grammar' component={Conditionals_Grammar} />
+        <Route path='/conditionals_1' component={Quiz_1Conditionals}/>
+        <Route path='/conditionals_2' component={Quiz_2Conditionals}/>
+        <Route path='/conditionals_3' component={Quiz_3Conditionals}/>
         <Route path='/openClose1' component={OpenClose1} />
         <Route path='/openClose2' component={OpenClose2} />
         <Route path='/openClose3' component={OpenClose3} />

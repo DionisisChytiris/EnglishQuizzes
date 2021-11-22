@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import {IoArrowRedo} from 'react-icons/io5'
 import {
     PassiveGrammar,
+    PassiveSide,
     PassiveMain,
     PassiveContainer1,
     PassiveContainer2,
@@ -11,14 +12,16 @@ import {
     PassiveColumn1,
     PassiveColumn2,
     PassiveColumn3,
-} from '../passive.styled'
+} from './grammar.styled'
 import { grammardata1 } from '../data/grammardata1'
 import SidebarGrammar from '../../../General Pages/SidebarGrammar'
 
 const Passive_Grammar = () => {
     return (
         <PassiveGrammar>
-            <SidebarGrammar/>
+            <PassiveSide>
+                <SidebarGrammar/>
+            </PassiveSide>
             <PassiveMain>
                 <PassiveContainer1>
                     <h1><span>Passive Voice</span></h1>

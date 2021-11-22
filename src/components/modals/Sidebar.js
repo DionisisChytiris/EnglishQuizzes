@@ -25,11 +25,12 @@ const Sidebar = () => {
                     </>
                 )
             })}
-            <NavLink activeClassName='is-active' to='/'>
-                <p><GoHome/></p>
-            </NavLink>
             <NavLink activeClassName='is-active' to='/modal_grammar'>
                 <p className='book'><FaBookReader /></p>
+            </NavLink>
+            <br/>
+            <NavLink activeClassName='is-active' to='/'>
+                <p><GoHome/></p>
             </NavLink>
         </div>
     )

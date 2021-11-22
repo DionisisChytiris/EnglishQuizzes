@@ -1,15 +1,16 @@
 import React from 'react'
-import Return from './Return'
+import Instructions from './Instructions'
 import Sidebar from '../Sidebar'
+import {QuizzesPageMain} from '../../../General Styles/QuizzesPage.styled'
 
 
 const Pronouns = () => {
     return (
         <>
-            <div className="quizzes_page_quizzes">
+            <QuizzesPageMain>
                 <Sidebar/>
-                <Return/>           
-            </div>
+                <Instructions/>           
+            </QuizzesPageMain>
         </>
     )
 }

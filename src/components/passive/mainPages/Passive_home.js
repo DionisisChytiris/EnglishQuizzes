@@ -1,14 +1,15 @@
 import React from 'react'
 import Sidebar from '../Sidebar'
-import Return from './Return'
+import Instructions from './Instructions'
+import {QuizzesPageMain} from '../../../General Styles/QuizzesPage.styled'
 
 const Passive = () => {
     return (
         <>
-            <div className="quizzes_page_quizzes">
+            <QuizzesPageMain>
                 <Sidebar />
-                <Return />
-            </div>
+                <Instructions />
+            </QuizzesPageMain>
         </>
     )
 }

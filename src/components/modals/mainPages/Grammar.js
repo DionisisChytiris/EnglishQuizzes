@@ -15,7 +15,7 @@ import {
     ModalFlex2,
     ModalFlexLineWhite,
     ModalFlexLineBlue
-} from '../modals.styled'
+} from './grammar.styled'
 
 const Modal_Grammar = () => {
     return (

@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const InstructionsMain = styled.div`
-    height: 75vh;
-    /* height: 100%auto; */
+    /* height: 75vh; */
+    height: 100%auto;
     width: 850px;
     margin: 5% auto;
     display: flex;
@@ -18,12 +18,12 @@ const InstructionsMain = styled.div`
     }
 `
 
-const Return = () => {
+const Instructions = () => {
     return (
         <InstructionsMain>
-            Instructions
+            <h1>Instructions</h1>
         </InstructionsMain>
     )
 }
 
-export default Return
+export default Instructions

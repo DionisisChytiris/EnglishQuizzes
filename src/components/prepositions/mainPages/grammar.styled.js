@@ -3,13 +3,14 @@ import styled from 'styled-components'
 export const PrepositionGrammar = styled.div`
     background: white;
     height: 100%;
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
 `
 
 export const PrepositionSide = styled.div`
-    margin-top: -780px;
+    margin-top: -1000px;
 `
 export const PrepositionContainerNew = styled.div`
     margin-top: -80px;
