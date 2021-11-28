@@ -15,10 +15,12 @@ import {
 } from './grammar.styled'
 import { grammardata1 } from '../data/grammardata1'
 import SidebarGrammar from '../../../General Pages/SidebarGrammar'
+import ShowSideBar from '../../../General Pages/ShowSideBar'
 
 const Passive_Grammar = () => {
     return (
         <PassiveGrammar>
+            <ShowSideBar/>
             <PassiveSide>
                 <SidebarGrammar/>
             </PassiveSide>

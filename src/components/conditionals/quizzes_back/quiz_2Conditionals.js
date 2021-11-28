@@ -3,6 +3,7 @@ import quiz2data from '../data/quiz2data'
 import { v4 as uuidv4 } from 'uuid'
 import { AnswerContainer, Explanation, Question, QuestionCounter, QuizzesMain, QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
 import Sidebar from '../Sidebar'
+import ShowSideBar from '../mainPages/ShowSidebarQuiz'
 
 const Quiz_2Conditionals = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -50,6 +51,7 @@ const Quiz_2Conditionals = () => {
                 ) :
                 (
                 <>
+                    <ShowSideBar/>
                     <h1>Conditionals 2</h1>
                     <QuestionCounter>
                         Question {currentQuestion + 1} / {quiz2data.length}

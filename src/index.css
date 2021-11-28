@@ -3,8 +3,10 @@
   --cl-primary-blue: #1fc0fa;
   --cl-primary-darkblue: #045370;
   --cl-primary-lightgrey: #e7e6e6;
-  --cl-primary-red: rgb(250, 76, 111);
-  --cl-primary-green: rgb(126, 255, 126);
+
+  --cl-secondary-lightgrey: #f5f5f5;
+  --answer-red: rgb(250, 76, 111);
+  --answer-green: rgb(126, 255, 126);
   /* font-size */
   --main-title: clamp(2.1rem, 2.5vw, 2.7rem);
   --section-title: clamp(1.5rem, 1.7vw, 1.9rem);

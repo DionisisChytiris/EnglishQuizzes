@@ -1,14 +1,15 @@
 import React from 'react'
 import Return from './Return'
 import Sidebar from '../Sidebar'
+import { QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
 
 const Prepositions = () => {
     return (
         <>
-            <div className="quizzes_page_quizzes">
+            <QuizzesPageMain>
                 <Sidebar />
                 <Return/>
-            </div>
+            </QuizzesPageMain>
         </>
     )
 }

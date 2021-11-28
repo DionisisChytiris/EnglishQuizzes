@@ -3,6 +3,7 @@ import quiz3data from "../data/quiz3data"
 import { v4 as uuidv4 } from 'uuid'
 import { QuizAnswerContainer, AnswerContainer, Question, QuestionCounter, QuizzesMain, QuizzesPageMain, Explanation, ExplanationTitle, ExplanationContent, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizExplanation } from '../../../General Styles/QuizzesPage.styled'
 import Sidebar from '../Sidebar'
+import ShowSideBar from '../mainPages/ShowSidebarQuiz'
 
 const Quiz_3Conditionals = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -40,7 +41,8 @@ const Quiz_3Conditionals = () => {
             <Sidebar/>
             <QuizzesMain>
                 {showScore ? (
-                <div>      
+                <div>
+                    <ShowSideBar/>    
                     <div className="score-section">Your score: {score}/{quiz3data.length}</div>
                     <div className='showscore-btns'>
                         <a href="/quiz1" className='return'>Try Again</a>
@@ -50,6 +52,7 @@ const Quiz_3Conditionals = () => {
                 ) :
                 (
                 <>
+                    <ShowSideBar/>
                     <h2>Conditionals 3</h2>
                     <QuizContainer>            
                         <QuizTitle>
@@ -77,27 +80,6 @@ const Quiz_3Conditionals = () => {
                                 </QuizExplanation>
                             }
                     </QuizContainer>
-                    {/* <QuestionCounter>
-                    Question {currentQuestion + 1} / {quiz3data.length}
-                    </QuestionCounter>        
-                    <Question>
-                        {currentQuestion + 1}. {quiz3data[currentQuestion].question}  
-                    </Question>
-                    <AnswerContainer>
-                        {quiz3data[currentQuestion].answersList.map((a) => (
-                            <div disabled={clicked} className={`answer ${clicked && a.isCorrect ? "correct" : wrongAnswer}`} key={uuidv4()}onClick={()=>handleCorrectAnswer(a.isCorrect)}>{a.answer}</div>
-                        ))}
-                    </AnswerContainer>
-                    {showExplanation &&                       
-                        <Explanation>                           
-                            <>
-                                <ExplanationTitle>Explanation</ExplanationTitle>
-                                <div className="line"></div>    
-                                <ExplanationContent>{quiz3data[currentQuestion].help}</ExplanationContent>
-                                <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button>
-                            </>                       
-                        </Explanation>                
-                    }              */}
                 </>        
                 )           
                 }

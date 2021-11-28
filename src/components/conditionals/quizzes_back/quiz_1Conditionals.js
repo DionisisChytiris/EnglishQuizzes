@@ -3,6 +3,7 @@ import quiz1data from "../data/quiz1data"
 import { v4 as uuidv4 } from 'uuid'
 import { AnswerContainer, Question, QuestionCounter, QuizzesMain, QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
 import Sidebar from '../Sidebar'
+import ShowSideBar from '../mainPages/ShowSidebarQuiz'
 
 const Quiz_1Conditionals = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -40,7 +41,8 @@ const Quiz_1Conditionals = () => {
             <Sidebar/>
             <QuizzesMain>
                 {showScore ? (
-                <div>      
+                <div>
+                    <ShowSideBar/>    
                     <div className="score-section">Your score: {score}/{quiz1data.length}</div>
                     <div className='showscore-btns'>
                         <a href="/quiz1" className='return'>Try Again</a>
@@ -50,6 +52,7 @@ const Quiz_1Conditionals = () => {
                 ) :
                 (
                 <>
+                    <ShowSideBar/>
                     <h1>Conditionals 1</h1>                    
                     <QuestionCounter>
                         Question {currentQuestion + 1} / {quiz1data.length}

@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import quiz4data from "../../tenses1/data/quiz4data"
 import { v4 as uuidv4 } from 'uuid'
+import ShowSideBar from '../mainPages/ShowSideBarQuiz'
 
 const Quiz_4Tenses = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -43,6 +44,7 @@ const Quiz_4Tenses = () => {
         <div className='trivia'>
             {showScore ? (
             <div>
+                <ShowSideBar/>
                 <div className="score-section">Your score: {score}/{quiz4data.length}</div>
                 <div className='showscore-btns'>
                     <a href="/quiz1" className='return'>Try Again</a>
@@ -52,6 +54,7 @@ const Quiz_4Tenses = () => {
             ) :
             (
             <>
+                <ShowSideBar/>
                 <div className="question-quiz1">
                     {quiz4data[currentQuestion].question1}
                     <input className='enter-input' onChange={handleInput} /> 

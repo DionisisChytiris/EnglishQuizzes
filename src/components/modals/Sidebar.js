@@ -1,38 +1,94 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { modals_links } from '../../data_links'
-import {GoHome} from 'react-icons/go'
-import {FcReading} from 'react-icons/fc'
-import {GiRead} from 'react-icons/gi'
+// import { modals_links } from '../../data_links'
+import { GoHome } from 'react-icons/go'
 import { FaBookReader } from 'react-icons/fa'
-import './style.css'
+import { BsArrowReturnLeft } from 'react-icons/bs'
+// import './style.css'
+import { SidebarMain, SidebarContainerFixed } from '../../General Styles/Sidebar.styled'
+
+const modals_links = [
+    {
+        id: 1,
+        url: '/modal1',
+        text: 'Quiz 1',
+        // level: 'Modals 1'
+      },
+      {
+        id: 2,
+        url: '/modal2',
+        text: 'Quiz 2',
+        // level: 'Modals 2'
+      },
+      {
+        id: 2,
+        url: '/modal3',
+        text: 'Quiz 3',
+        // level: 'Modals 3',
+        // hola: '======='
+      },
+    //   {
+    //     id: 3,
+    //     url: '/quiz8',
+    //     text: 'Test',
+    //     // level: 'Test',
+    //     // hola: '__________'
+    //   },
+]
+const sidebar_container = [
+    {
+        id: 1,
+        url: '/modals',
+        text: <BsArrowReturnLeft/>
+    },
+    {
+        id: 2,
+        url: '/quizzes',
+        text: 'Quizzes'
+    },
+    {
+        id: 3,
+        url: '/',
+        text: <GoHome/>
+    },
+    {
+        id: 4,
+        url: '/modals_grammar',
+        text: <FaBookReader />
+    },
+]
 
 const Sidebar = () => {
     return (
-        <div className='quiz_sidebar1'>
-            {/* <h4>Modals <FcReading/></h4> */}
-            {/* <h4>Modals <GiRead/></h4> */}
+        <SidebarMain>
             <h4>Modals</h4>
+            <div className="line1"></div>
             {modals_links.map((a) => {
                 const { id, url, text, level, hola } = a
                 return (
                     <>
                     <h6>{level}</h6>
-                    <NavLink activeClassName='is-active' to={url}>
-                        <p key={id}>{text}</p>
+                    <NavLink activeClassName='is-active' to={url} key={id}>
+                        <p>{text}</p>
                     </NavLink>
                     <h5>{hola}</h5>
                     </>
                 )
             })}
-            <NavLink activeClassName='is-active' to='/modal_grammar'>
-                <p className='book'><FaBookReader /></p>
-            </NavLink>
-            <br/>
-            <NavLink activeClassName='is-active' to='/'>
-                <p><GoHome/></p>
-            </NavLink>
-        </div>
+             <SidebarContainerFixed>
+                <div className="line"></div>
+                {sidebar_container.map((a) => {
+                    const { id, url, text } = a
+                    return (
+                        <>
+                            <NavLink activeClassName='is-active' to={url} key={id}>
+                                <div className='home-buttons'>{text}</div>
+                            </NavLink>
+                        </>
+                    )
+                })}
+            </SidebarContainerFixed>
+        </SidebarMain>
     )
 }
 

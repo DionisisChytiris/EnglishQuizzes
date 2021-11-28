@@ -20,9 +20,12 @@ const Sidebar = styled.div`
         text-decoration: underline;
     }
     .side {
-        margin: 30px 0px;
+        margin: 20px 0px;
         display: flex;
         font-size: 20px;
+        padding-bottom: 20px;
+        border-bottom: 0.05rem solid lightgrey;
+        /* background: lightgrey; */
     }
     p{
         font-size: 16px;

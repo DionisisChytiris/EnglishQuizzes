@@ -24,6 +24,7 @@ export const QuizzesMain = styled.div`
     align-items: center;
     /* justify-content: center; */
     background-color: var(--cl-primary-blue);
+    /* background-color: #f5f5f5; */
 
     h1{
         font-size: clamp(1.8rem, 2vw, 2.2rem);
@@ -104,7 +105,7 @@ export const Explanation = styled.div`
     width: 60%;
     padding: 10px 30px;
     /* border: 2px solid #eae6eb; */
-    background: var(--cl-primary-lightgrey);
+    background: var(--cl-secondary-lightgrey);
     margin-top: 30px;
     margin-bottom: 1rem;
     border-radius: 0.25rem;
@@ -153,52 +154,66 @@ export const QuizContainer = styled.div`
 export const QuizTitle = styled.div`
     width: 100%;
     height: 15vh;
+    /* margin:auto; */
     /* background: yellow; */
     display: flex;
     `
 
 export const QuizCounter = styled.div`
     width: 20%;
-    background: var(--cl-primary-darkblue);
+    background: var(--cl-primary-lightgrey);
     /* background: linear-gradient(rgb(255, 100, 220), rgb(39, 119, 224)); */
-    color: white;
+    color: var(--cl-primary-darkblue);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 60px;
+    font-size: clamp(2.6rem, 4vw, 4.1rem);
     font-weight: 600;
     border-radius: 10px 0px 0px 0px;
-
     small {
-        font-size: 10px;
-        margin-top:35px;
+        /* font-size: 10px; */
+        font-size: clamp(0.7rem, 1vw, 1.2rem);
+        margin-top:32px;
+        @media (max-width: 850px){
+            margin-top: 24px;
+        }
     }
     `
 export const QuizContent = styled.div`
     width: 80%;
-    background: var(--cl-primary-darkblue);
-    color: white;
+    background: var(--cl-primary-lightgrey);
+    color: var(--cl-primary-darkblue);
     display: flex;
     align-items: center;
     /* justify-content: center; */
     font-weight: 600;
     font-size: 20px;
-    padding: 10px;
+    padding: 0px 90px;
     border-radius: 0px 10px 0px 0px;
-`
+    @media (max-width: 850px){
+        padding: 0px 40px 0px 80px;
+    }
+    `
+export const QuizTextCenter = styled.div`
+    width: 100%;
+    text-align: center;
+    /* background: yellow; */
+    margin-left: -19%;
+    `
+
 export const QuizAnswerContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     margin: 10px auto;
 
     .answer{
-        width: 150px;
+        width: 200px;
         padding: 10px;
         margin: 30px;
         text-align: center;
-        background: lightgrey;
+        background: var(--cl-secondary-lightgrey);
         color: black;
         border: none;
         border-radius: 15px;
@@ -208,16 +223,16 @@ export const QuizAnswerContainer = styled.div`
         justify-content: center;
     }
     .answer:hover {
-        background: var(--cl-primary-darkblue);
+        background: var(--cl-primary-lightgrey);
         cursor: pointer;
-        color: white;
-        font-weight: 600;
+        /* color: white; */
+        /* font-weight: 600; */
     }
     .answer.correct {
-        background: rgb(126, 255, 126);
+        background: var(--answer-green);
     }
     .answer.wrong {
-        background: rgb(250, 76, 111);
+        background: var(--answer-red);
     }
     .answer.correct:hover,
     .answer.wrong:hover {
@@ -229,9 +244,9 @@ export const QuizAnswerContainer = styled.div`
 export const QuizExplanation = styled.div`
     width: 100%;
     height: 25vh;
-    padding: 10px 30px;
+    padding: 10px 30px 20px 30px;
     border-radius: 0px 0px 10px  10px;
-    background: var(--cl-primary-lightgrey);
+    background: var(--cl-secondary-lightgrey);
     margin-top: 10px;
     margin-bottom: 1rem;
     .title {
@@ -249,18 +264,22 @@ export const QuizExplanation = styled.div`
         margin: 2px;
     }
     .content{
-        color: rgb(119, 118, 118);
+        /* color: rgb(119, 118, 118); */
+        color: var(--cl-primary-darkblue);
         padding: 10px 20px;
+        text-align: center;
     }
+    /* button{
+        margin: 50px auto;
+    } */
     .next-btn{
+        /* position: absolute; */
         display: flex;
         align-items: center;
         justify-content: center;
         margin: auto;
     }
-    @media (max-width: 750px){
-        .content{
-            height: 40px;
-        }
+    @media (max-width: 620px){
+        height: 28vh;
     }
 `

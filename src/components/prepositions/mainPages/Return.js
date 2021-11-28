@@ -1,9 +1,12 @@
 import React from 'react'
 import '../style.css'
 import { FaHandPointLeft } from 'react-icons/fa'
+import ShowSideBar from '../mainPages/ShowSidebarQuiz'
 
 const Return = () => {
     return (
+        <>
+        <ShowSideBar />
         <div className='prep_containers'>
              {/* Prepositions of Time container */}
             <div className='prepositions_container'>
@@ -233,6 +236,7 @@ const Return = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

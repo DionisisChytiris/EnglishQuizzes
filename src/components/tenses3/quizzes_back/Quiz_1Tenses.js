@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import quiz1data from "../../tenses3/data/quiz1data"
 import Timer from '../../../General Pages/Timer'
 import { v4 as uuidv4 } from 'uuid'
+import ShowSideBar from '../mainPages/ShowSideBarQuiz'
 
 const Quiz_1Tenses = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -40,6 +41,7 @@ const Quiz_1Tenses = () => {
         <div className='trivia'>
             {showScore ? (
             <div>
+                <ShowSideBar/>
                 <div className="score-section">Your score: {score}/{quiz1data.length}</div>
                 <div className='showscore-btns'>
                     <a href="/quiz1" className='return'>Try Again</a>
@@ -49,7 +51,8 @@ const Quiz_1Tenses = () => {
             ) :
             (
             <>
-                <div className='timer'><Timer setShowScore={setShowScore} currentQuestion={currentQuestion}/></div>
+                <ShowSideBar/>
+                <div className='timer'><Timer setShowScore={setShowScore} currentQuestion={currentQuestion} /></div>
                 <div className="quiz4-count">
                     Question {currentQuestion + 1} of {quiz1data.length}
                     <br/>

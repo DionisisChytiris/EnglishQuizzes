@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {IoIosArrowDown} from 'react-icons/io'
 import '../style.css'
+import ShowSidebar from './ShowSidebarQuiz'
 
 const Return = () => {
     const [showExample8, setShowExample8] = useState(false)
@@ -15,6 +16,7 @@ const Return = () => {
     
     return (
         <>
+            <ShowSidebar/>
             <div className='return_page'>
                 <h1>Articles</h1>
                 <div className="return_page_container1">

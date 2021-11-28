@@ -21,20 +21,22 @@ import OpenClose_home from './FCE Practice/OpenClose/OpenClose_home'
 import WordFormation_home from './FCE Practice/WordFormation/WordFormation_home'
 import MultipleChoice_home from './FCE Practice/MultipleChoice/MultipleChoice_home'
 import keyWord_home from './FCE Practice/KeyWordTransformation/KeyWord_home'
-import Quiz1 from './components/prepositions/Quiz1';
-import Quiz2 from './components/prepositions/Quiz2';
-import Quiz3 from './components/prepositions/Quiz3';
-import Quiz4 from './components/prepositions/Quiz4';
-import Test1Prepositions from './components/prepositions/Test1';
-import Quiz1Pronouns from './components/pronouns/quizzes/Quiz1Pronouns';
-import Quiz2Pronouns from './components/pronouns/quizzes/Quiz2Pronouns';
-import Quiz3Pronouns from './components/pronouns/quizzes/Quiz3Pronouns';
-import Quiz4Pronouns from './components/pronouns/quizzes/Quiz4Pronouns';
-import Quiz0Articles from './components/articles/quizzes/Quiz0Articles';
-import Quiz1Articles from './components/articles/quizzes/Quiz1Articles';
-import Quiz2Articles from './components/articles/quizzes/Quiz2Articles';
-import Quiz3Articles from './components/articles/quizzes/Quiz3Articles';
-import Quiz4Articles from './components/articles/quizzes/Quiz4Articles';
+import Quiz1 from './components/prepositions/quizzes_back/Quiz_1';
+import Quiz2 from './components/prepositions/quizzes_back/Quiz_2';
+import Quiz3 from './components/prepositions/quizzes_back/Quiz_3';
+import Quiz4 from './components/prepositions/quizzes_back/Quiz_4';
+import Quiz5 from './components/prepositions/quizzes_back/Quiz_5';
+import Quiz6 from './components/prepositions/quizzes_back/Quiz_6';
+import Test_1Prepositions from './components/prepositions/quizzes_back/Test_1';
+import Quiz1Pronouns from './components/pronouns/quizzes_back/Quiz_1Pronouns';
+import Quiz2Pronouns from './components/pronouns/quizzes_back/Quiz_2Pronouns';
+import Quiz3Pronouns from './components/pronouns/quizzes_back/Quiz_3Pronouns';
+import Quiz4Pronouns from './components/pronouns/quizzes_back/Quiz_4Pronouns';
+import Quiz0Articles from './components/articles/quizzes_back/Quiz_0Articles';
+import Quiz1Articles from './components/articles/quizzes_back/Quiz_1Articles';
+import Quiz2Articles from './components/articles/quizzes_back/Quiz_2Articles';
+import Quiz3Articles from './components/articles/quizzes_back/Quiz_3Articles';
+import Quiz4Articles from './components/articles/quizzes_back/Quiz_4Articles';
 import Quiz1Tenses from './components/tenses1/quizzes/Quiz1Tenses';
 import Quiz2Tenses from './components/tenses1/quizzes/Quiz2Tenses';
 import Quiz3Tenses from './components/tenses1/quizzes/Quiz3Tenses';
@@ -47,10 +49,10 @@ import Quiz1Tenses3 from './components/tenses3/quizzes/Quiz1Tenses';
 import Quiz2Tenses3 from './components/tenses3/quizzes/Quiz2Tenses';
 import Quiz3Tenses3 from './components/tenses3/quizzes/Quiz3Tenses';
 import Quiz4Tenses3 from './components/tenses3/quizzes/Quiz4Tenses';
-import Quiz1Verb_ing from './components/verbs_to_ing/quizzes/Quiz1'
-import Quiz2Verb_ing from './components/verbs_to_ing/quizzes/Quiz2'
-import Quiz3Verb_ing from './components/verbs_to_ing/quizzes/Quiz3'
-import Quiz4Verb_ing from './components/verbs_to_ing/quizzes/Quiz4'
+import Quiz1Verb_ing from './components/verbs_to_ing/quizzes_back/Quiz_1'
+import Quiz2Verb_ing from './components/verbs_to_ing/quizzes_back/Quiz_2'
+import Quiz3Verb_ing from './components/verbs_to_ing/quizzes_back/Quiz_3'
+import Quiz4Verb_ing from './components/verbs_to_ing/quizzes_back/Quiz_4'
 import OpenClose1 from './FCE Practice/OpenClose/OpenClosePractice/openClose1'
 import OpenClose2 from './FCE Practice/OpenClose/OpenClosePractice/openClose2'
 import OpenClose3 from './FCE Practice/OpenClose/OpenClosePractice/openClose3'
@@ -116,7 +118,9 @@ function App() {
         <Route path='/quiz2' component={Quiz2}/>
         <Route path='/quiz3' component={Quiz3}/>
         <Route path='/quiz4' component={Quiz4} />
-        <Route path='/test1prepositions' component={Test1Prepositions} />
+        <Route path='/quiz4_1' component={Quiz5} />
+        <Route path='/quiz4_2' component={Quiz6} />
+        <Route path='/test1prepositions' component={Test_1Prepositions} />
         <Route path='/pronouns_grammar' component={Pronouns_Grammar} />  
         <Route path='/quiz5' component={Quiz1Pronouns} />  
         <Route path='/quiz6' component={Quiz2Pronouns} />  

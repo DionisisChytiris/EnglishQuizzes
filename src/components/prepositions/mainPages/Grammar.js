@@ -10,10 +10,12 @@ import {
     PrepositionsBox1,
     PrepositionContainerNew
 } from './grammar.styled'
+import ShowSideBar from '../../../General Pages/ShowSideBar'
 
 const Prepositions_Grammar = () => {
     return (
         <PrepositionGrammar>
+            <ShowSideBar/>
             <PrepositionSide>
                 <SidebarGrammar/>
             </PrepositionSide>

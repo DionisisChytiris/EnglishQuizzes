@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import ShowSideBar from './ShowSideBarQuiz'
 
 const InstructionsMain = styled.div`
     height: 75vh;
@@ -20,9 +21,12 @@ const InstructionsMain = styled.div`
 
 const Return = () => {
     return (
-        <InstructionsMain>
-            Instructions
-        </InstructionsMain>
+        <>
+            <ShowSideBar/>
+            <InstructionsMain>
+                Instructions
+            </InstructionsMain>
+        </>
     )
 }
 

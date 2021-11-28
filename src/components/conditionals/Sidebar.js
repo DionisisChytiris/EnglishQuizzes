@@ -8,14 +8,17 @@ import { SidebarMain, SidebarContainerFixed } from '../../General Styles/Sidebar
 const conditionals_links = [
     {
         // level: 'hello',
+        id: 1,
         url: '/conditionals_1',
         text: 'Quiz 1'
     },
     {
+        id:2,
         url: '/conditionals_2',
         text: 'Quiz 2'
     },
     {
+        id:3,
         url: '/conditionals_3',
         text: 'Quiz 3'
     }   
@@ -23,18 +26,22 @@ const conditionals_links = [
 
 const sidebar_container = [
     {
+        id: 1,
         url: '/conditionals',
         text: <BsArrowReturnLeft/>
     },
     {
+        id: 2,
         url: '/quizzes',
         text: 'Quizzes'
     },
     {
+        id: 3,
         url: '/',
         text: <GoHome/>
     },
     {
+        id: 4,
         url: '/conditionals_grammar',
         text: <FaBookReader />
     },
@@ -46,25 +53,23 @@ const Sidebar = () => {
             <h4>Conditionals</h4>
             <div className="line1"></div>
             {conditionals_links.map((a) => {
-                const { url, text, level } = a
+                const { id, url, text, level } = a
                 return (
                     <>
                         {/* <h6>{level}</h6> */}
-                        <p >
-                        <NavLink activeClassName='is-active' to={url}>
-                            {text}
+                        <NavLink activeClassName='is-active' to={url} key={id}>
+                            <p>{text}</p>
                         </NavLink>
-                        </p>
                     </>
                 )
             })}
             <SidebarContainerFixed>
                 <div className="line"></div>
                 {sidebar_container.map((a) => {
-                    const { url, text } = a
+                    const { id, url, text } = a
                     return (
                         <>
-                            <NavLink activeClassName='is-active' to={url}>
+                            <NavLink activeClassName='is-active' to={url} key={id}>
                                 <div className='home-buttons'>{text}</div>
                             </NavLink>
                         </>

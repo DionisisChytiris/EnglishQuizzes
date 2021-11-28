@@ -1,6 +1,7 @@
 import React from 'react'
 // import '../style.css'
 import { IoArrowRedo } from 'react-icons/io5'
+import ShowSideBar from '../../../General Pages/ShowSideBar'
 import SidebarGrammar from '../../../General Pages/SidebarGrammar'
 import {
     PronounsGrammar,
@@ -12,6 +13,7 @@ import {
 const Pronouns_Grammar = () => {
     return (
         <PronounsGrammar>
+            <ShowSideBar/>
             <PronounsSide>
                 <SidebarGrammar/>
             </PronounsSide>

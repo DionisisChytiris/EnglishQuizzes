@@ -14,6 +14,7 @@ import {
     ContainerExample,
     ContainerFlex
 } from './grammar.styled'
+import ShowSideBar from '../../../General Pages/ShowSideBar'
 
 // alert functions
 const spelling = () => {
@@ -32,6 +33,7 @@ const verbs_object = () => {
 const Verbs_to_ing_Grammar = () => {
     return (
         <Verbs_to_ingGrammar>
+            <ShowSideBar/>
             {/* Sidebar (left side)*/}
             <Verbs_to_ingSide>
                 <SidebarGrammar/>

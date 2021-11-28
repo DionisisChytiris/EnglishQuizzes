@@ -25,18 +25,22 @@ const passive_links = [
 
 const sidebar_container = [
     {
+        id: 1,
         url: '/passive',
         text: <BsArrowReturnLeft/>
     },
     {
+        id: 2,
         url: '/quizzes',
         text: 'Quizzes'
     },
     {
+        id: 3,
         url: '/',
         text: <GoHome/>
     },
     {
+        id: 4,
         url: '/passive_grammar',
         text: <FaBookReader />
     },
@@ -52,10 +56,9 @@ const Sidebar = () => {
                 return (
                     <>
                     <h6>{level}</h6>
-                    <p key={id}>
-                    <NavLink activeClassName='is-active' to={url}>
-                            {text} </NavLink>
-                    </p>
+                    <NavLink activeClassName='is-active' to={url} key={id}>
+                        <p>{text}</p>
+                    </NavLink>
                     <h5>{hola}</h5>
                     </>
                 )
@@ -63,10 +66,10 @@ const Sidebar = () => {
             <SidebarContainerFixed>
                 <div className="line"></div>
                 {sidebar_container.map((a) => {
-                    const { url, text } = a
+                    const { id, url, text } = a
                     return (
                         <>
-                            <NavLink activeClassName='is-active' to={url}>
+                            <NavLink activeClassName='is-active' to={url} key={id}>
                                 <div className='home-buttons'>{text}</div>
                             </NavLink>
                         </>

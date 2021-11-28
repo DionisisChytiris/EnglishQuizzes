@@ -65,7 +65,7 @@ export const Verbs_to_ing1 = styled.div`
         padding: 20px 0px 20px 150px;
         margin-right: 20px;
         font-size: clamp(1.1rem, 1.3vw, 1.3rem);
-        background-color: #f5f5f5;
+        background-color: var(--cl-secondary-lightgrey);
     }
     li{
         font-weight: 600;
@@ -127,7 +127,7 @@ export const SameMeaning = styled.div`
     margin-right: 20px;
     /* font-size: clamp(1.1rem, 1.3vw, 1.3rem); */
     font-size: var(--section-text);
-    background-color: #f5f5f5;
+    background-color: var(--cl-secondary-lightgrey);
     
     p{
         /* font-size: clamp(1.1rem, 1.3vw, 1.3rem); */
@@ -174,7 +174,7 @@ export const DifferentMeaning = styled.div`
     margin-right: 20px;
     /* font-size: clamp(1.1rem, 1.3vw, 1.3rem); */
     font-size: var(--section-text);
-    background-color: #f5f5f5;
+    background-color: var(--cl-secondary-lightgrey);
     
     p{
         /* font-size: clamp(1.1rem, 1.3vw, 1.3rem); */

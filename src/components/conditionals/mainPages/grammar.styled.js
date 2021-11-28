@@ -24,7 +24,7 @@ export const ConditionalMain = styled.div`
     justify-content: center;
     /* box-shadow: 1px 5px 0px  rgba(0, 0, 0, 0.2); */
 
-    @media (max-width: 700px){
+    @media (max-width: 800px){
         width: 100%;
     }
     `

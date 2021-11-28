@@ -1,14 +1,15 @@
 import React from 'react'
+import { QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
 import Sidebar from '../Sidebar'
 import Return from './Return'
 
 const Tenses3 = () => {
     return (
         <>
-            <div className="quizzes_page_quizzes">
+            <QuizzesPageMain>
                 <Sidebar />
                 <Return />
-            </div>
+            </QuizzesPageMain>
         </>
     )
 }
