@@ -8,7 +8,7 @@ export const SidebarMain = styled.div`
   font-size: 18px;
   margin: 50px 30px 50px 30px;
   border-radius: 5px;
-  border: 0.2rem solid white;
+  border: 0.05rem solid white;
   h4 {
     margin-top: -90px;
     font-size: 20px;
@@ -58,8 +58,26 @@ export const SidebarMain = styled.div`
       justify-content: center;
   }
   @media (max-width: 850px){
-      /* display: none; */
-      margin-left: -160px;
+      margin-left: -190px;
+      background-color: var(--cl-primary-darkblue);
+      h4{
+        color: white;
+      }
+      p{
+        background-color: transparent;
+        font-size: 18px;
+      }
+      p:hover{
+        background-color: var(--cl-primary-lightgrey);
+        color: black;
+      }
+      .is-active p{
+        font-size: 18px;
+        text-decoration: underline;
+      }
+      a{
+        color:  white;
+      }
   }
 `
 export const SidebarContainerFixed = styled.div`

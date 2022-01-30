@@ -1,41 +1,54 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { quizzes_links } from '../data_links'
-// import {IoIosArrowDown} from 'react-icons/io'
+import photo from '../img/quiz.jpg'
+
+const QuizzesImage = styled.div`
+     background-image: url(${photo});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+`
 
 const Quizzes = () => {
     return (
         <>
+            <div className="fatline"></div>
+            {/* <QuizzesImage></QuizzesImage> */}
             <div className="quizzes_page">
                 <h1>Grammar Quizzes</h1>
                 <div className="quizzes_boxes">
                     {quizzes_links.map((a) => {
-                        const { id, url, text, info1, info2, info3} = a
+                        const { id, url, text, info1, info2, info3, info4, info5, info6, info7, info8, info9, } = a
                         return (
                             <>
-                            {/* <Link to={url} className='quizzes_box'>
-                                <div className="grammar-card1">
-                                    <div className="quizzes_box_container">
-                                            <div className="quizzes_box_title" key={id}>{text}</div>
-                                            <div className="quizzes_box_info">
-                                                <div className="quizzes_box_info1">
-                                                    More info
-                                                    <IoIosArrowDown/>
-                                                </div>
-                                            </div>
-                                    </div>
-                                <div className="grammar-content1">
-                                        {info1} <br/> {info2} <br/> {info3}
-                                </div>
-                                </div>
-                            </Link>                                     */}
                             <Link to={url} className='quizzes_box' key={id}>
                                 <div className="quizzes_box_inner">
                                     <div className="quizzes_box_front" key={IDBDatabase}>{text}</div>
                                         <div className="quizzes_box_back">
-                                            <p>{info1}</p>
-                                            <p>{info2}</p>
-                                            <p>{info3}</p>
+                                            <div className="blur">
+                                                <div style={{
+                                                    height: '100px',
+                                                    width: '400px',
+                                                    margin: 'auto', 
+                                                    overflow: 'scroll',
+                                                    overflowX: 'hidden',
+                                                    overflowY: 'scroll'
+                                                }}>
+                                                    <p>{info1}</p>
+                                                    <p>{info2}</p>
+                                                    <p>{info3}</p>
+                                                    <p>{info4}</p>
+                                                    <p>{info5}</p>
+                                                    <p>{info6}</p>
+                                                    <p>{info7}</p>
+                                                    <p>{info8}</p>
+                                                    <p>{info9}</p>
+                                                </div>
+                                            </div>
                                         </div>
                                 </div>
                             </Link>                                    

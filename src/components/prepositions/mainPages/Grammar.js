@@ -1,6 +1,4 @@
 import React from 'react'
-// import '../style.css'
-import { IoArrowRedo } from 'react-icons/io5'
 import { FaHandPointLeft } from 'react-icons/fa'
 import SidebarGrammar from '../../../General Pages/SidebarGrammar'
 import {
@@ -11,6 +9,7 @@ import {
     PrepositionContainerNew
 } from './grammar.styled'
 import ShowSideBar from '../../../General Pages/ShowSideBar'
+import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
 
 const Prepositions_Grammar = () => {
     return (
@@ -128,6 +127,7 @@ const Prepositions_Grammar = () => {
                         <div className='prepositions-hand1'><FaHandPointLeft/></div>
                     </div>              
                         </div>
+                        
                         <div className='prepositions_container'>
                             <div className='prepositions_homePage2'>
                                 <h1>Prepositions of Place - at, in, on</h1>
@@ -259,6 +259,9 @@ const Prepositions_Grammar = () => {
                         !!!
                     </PrepositionsContainer>
                 </PrepositionsBox3> */}
+
+                {/* Quizzes Button */}
+                <QuizzesButtonGrammar page='/prepositions' text='Prepositions Quizzes'/>
             </PrepositionsMain>
         </PrepositionGrammar>
     )

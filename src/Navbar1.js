@@ -8,11 +8,21 @@ import './navbar.css'
 
 const Navbar = () => {
     const [click, setClick] = useState(false)
+    const [navbar, setNavbar] = useState(false)
+
+    const changeBackground = () => {
+        if (window.scrollY >= 40) {
+            setNavbar(true)
+        } else {
+            setNavbar(false)
+        }
+    }
+    window.addEventListener('scroll', changeBackground)
 
     const handleClick = () => setClick(!click)
     const closeMobileMenu = ()=> setClick(false)
     return (
-        <nav>
+        <div className={navbar ? 'nav active' : 'nav '}>
             <div className='navbar'>
                 <div className="nav-container container">
                     <img src={logo} alt="logo"/>
@@ -31,7 +41,7 @@ const Navbar = () => {
                     })}
                 </ul>
             </div>
-        </nav>
+        </div>
     )
 }
 

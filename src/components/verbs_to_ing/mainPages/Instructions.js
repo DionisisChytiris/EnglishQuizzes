@@ -17,17 +17,25 @@ const InstructionsMain = styled.div`
         margin-top: 80px;
         margin-bottom: 80px;
     }
+    img{
+        width: 500px;
+        height: 300px;
+        margin: auto;
+    }
 `
 
-const Return = () => {
+const Instructions = () => {
     return (
         <>
             <ShowSideBar/>
             <InstructionsMain>
                 Instructions
+                <img src={'/images/parliament.jpg'} />
+                <br/>
+                {/* <img src={require('/images/stPaul.jpg')}/> */}
             </InstructionsMain>
         </>
     )
 }
 
-export default Return
+export default Instructions

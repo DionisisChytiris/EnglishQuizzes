@@ -79,8 +79,13 @@ export const quizzes_links = [
     url: '/pronouns',
     text: 'Pronouns',
     info1: 'Personal Pronouns',
-    info2: 'Demonstrative Pronouns',
-    info3: 'Relative Pronouns'
+    info2: 'Possessive Pronouns',
+    info3: 'Reflexive Pronouns',
+    info4: 'Demonstrative Pronouns',
+    info5: 'Relative Pronouns',
+    info6: 'Interrogative Pronouns',
+    info7: 'Indefinite Pronouns',
+    info8: 'Reciprocal Pronouns',
   },
   {
     id: 4,
@@ -94,17 +99,23 @@ export const quizzes_links = [
     id: 5,
     url: '/tenses1',
     text: 'Tenses 1',
-    info1: 'Present Simple / Present Continuous',
-    info2: 'Past Simple / Past Continuous',
-    info3: 'Future Simple / Future Continuous'
+    info1: 'Present Simple',
+    info2: 'Present Continuous',
+    info3: 'Past Simple',
+    info4: 'Past Continuous',
+    info5: 'Future Simple',
+    info6: 'Future Continuous'
   },
   {
     id: 6,
     url: '/tenses2',
     text: 'Tenses 2',
-    info1: 'Present Perfect / Present Perfect Continuous',
-    info2: 'Past Perfect / Past Perfect Continuous',
-    info3: 'Future Perfect / Future Perfect Continuous'
+    info1: 'Present Perfect',
+    info2: 'Present Perfect Continuous',
+    info3: 'Past Perfect',
+    info4: 'Past Perfect Continuous',
+    info5: 'Future Perfect',
+    info6: 'Future Perfect Continuous'
   },
   {
     id: 7,
@@ -118,8 +129,8 @@ export const quizzes_links = [
     id: 8,
     url: '/verbs_to_ing',
     text: 'Verbs +to / +ing',
-    info1: 'Verbs + to + infinitive',
-    info2: 'Verbs + -ing',
+    info1: 'Gerund',
+    info2: 'Infinitive',
     info3: <MdInsertEmoticon/>
   },
   {
@@ -134,9 +145,9 @@ export const quizzes_links = [
     id: 10,
     url: '/conditionals',
     text: 'Conditionals',
-    info1: 'Conditionals',
-    info2: '-',
-    info3: <MdInsertEmoticon/>
+    info1: '-',
+    info2: 'Conditionals',
+    info3: <MdInsertEmoticon />
   },
 ]
 

@@ -52,7 +52,7 @@ const sidebar_container = [
     },
     {
         id: 4,
-        url: '/conditionals_grammar',
+        url: '/generalTensesPage',
         text: <FaBookReader />
     }
 ]

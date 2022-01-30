@@ -5,7 +5,7 @@ import ShowSideBar from './ShowSideBarQuiz'
 const InstructionsMain = styled.div`
     /* height: 75vh; */
     height: 100%auto;
-    width: 850px;
+    width: 75%;
     margin: 5% auto;
     display: flex;
     flex-direction: column;

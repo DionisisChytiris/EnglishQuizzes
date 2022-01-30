@@ -1,20 +1,17 @@
 import React from 'react'
-import {Link } from 'react-router-dom'
-// import '../style.css'
-import { IoArrowRedo } from 'react-icons/io5'
 import SidebarGrammar from '../../../General Pages/SidebarGrammar'
 import {
     Verbs_to_ingGrammar,
     Verbs_to_ingSide,
     Verbs_to_ingMain,
     Verbs_to_ing1,
-    QuizzesButton,
     SameMeaning,
     DifferentMeaning,
     ContainerExample,
     ContainerFlex
 } from './grammar.styled'
 import ShowSideBar from '../../../General Pages/ShowSideBar'
+import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
 
 // alert functions
 const spelling = () => {
@@ -71,9 +68,7 @@ const Verbs_to_ing_Grammar = () => {
                         </ul>
                     </div>
                     {/* Go to Quizzes */}
-                    <QuizzesButton>
-                        <Link className='passive-button' to='/verbs_to_ing'>Verbs -to/-ing Quizzes</Link>
-                    </QuizzesButton>
+                    <QuizzesButtonGrammar page='/verbs_to_ing' text='Verbs -to/-ing Quizzes'/>
                     {/* Infinitives */}
                     <h1>Infinitive</h1>
                     <div className="gerund">
@@ -110,9 +105,7 @@ const Verbs_to_ing_Grammar = () => {
                         </ul>
                     </div>
                     {/* Go to Quizzes */}
-                    <QuizzesButton>
-                        <Link className='passive-button' to='/verbs_to_ing'>Verbs -to/-ing Quizzes</Link>
-                    </QuizzesButton>
+                    <QuizzesButtonGrammar page='/verbs_to_ing' text='Verbs -to/-ing Quizzes'/>
                     {/* different meaning */}
                     <h1>Gerund or Infinitive?</h1>
                     <div className="gerund">

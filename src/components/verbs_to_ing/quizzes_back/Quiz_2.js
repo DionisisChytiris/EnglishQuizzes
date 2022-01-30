@@ -3,7 +3,7 @@ import quiz2data from "../data/quiz2data"
 import { v4 as uuidv4 } from 'uuid'
 import Sidebar from '../Sidebar'
 import ShowSideBar from '../mainPages/ShowSideBarQuiz'
-import { QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizAnswerContainer, QuizExplanation } from '../../../General Styles/QuizzesPage.styled'
+import { QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizAnswerContainer, QuizExplanation, QuizTextCenter } from '../../../General Styles/QuizzesPage.styled'
 
 
 const Quiz2Verb_ing = () => {
@@ -62,7 +62,9 @@ const Quiz2Verb_ing = () => {
                                 <small>/ {quiz2data.length}</small>
                             </QuizCounter>
                             <QuizContent>
+                                <QuizTextCenter>
                                     {quiz2data[currentQuestion].question}       
+                                </QuizTextCenter>       
                             </QuizContent>
                         </QuizTitle>
                         <QuizAnswerContainer>

@@ -1,6 +1,5 @@
 import React from 'react'
-// import '../style.css'
-import {IoArrowRedo} from 'react-icons/io5'
+import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
 import ShowSideBar from '../../../General Pages/ShowSideBar'
 import SidebarGrammar from '../../../General Pages/SidebarGrammar'
 import {
@@ -23,6 +22,8 @@ const Articles_Grammar = () => {
                     <h1>Articles One</h1>
                     <h1>Articles Two</h1>
                 </Articles1>
+            {/* Button */}
+            <QuizzesButtonGrammar page='/articles' text='Articles Quizzes'/>
             </ArticlesMain>
         </ArticlesGrammar>
     )

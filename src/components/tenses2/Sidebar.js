@@ -49,7 +49,7 @@ const sidebar_container = [
     },
     {
         id: 4,
-        url: '/tenses2_grammar',
+        url: '/generalTensesPage',
         text: <FaBookReader />
     },
 ]

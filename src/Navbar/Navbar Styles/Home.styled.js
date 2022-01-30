@@ -1,8 +1,34 @@
 import styled from 'styled-components'
+import photo from '../../img/colors.jpg'
+
+export const HomeImageTest = styled.div`
+    /* padding-top: 0px; */
+    background-image: url(${photo});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+    /* background-color: blue; */
+    /* position: relative; */
+    /* top: 0; */
+    /* left: 0; */
+    /* object-fit: cover; */
+
+/* img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+} */
+`
 
 export const HomeSection = styled.section`
     height: 100%;
     position: relative;
+    /* top: 0; */
     overflow: hidden;
     /* width: 80vw;
     margin: auto; */
@@ -52,7 +78,7 @@ export const Home3 = styled.div`
 export const HomeWrapper = styled.div` 
     width: 55%;
     height: 70%;
-    background: blue;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;

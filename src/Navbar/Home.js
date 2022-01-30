@@ -1,7 +1,10 @@
 import React, {useState, useEffect, useRef} from 'react'
+import LazyLoad from 'react-lazyload'
 import { Link } from 'react-router-dom'
-import {HomeData} from '../Navbar/Navbar Data/HomeData'
+import { HomeData } from '../Navbar/Navbar Data/HomeData'
+import photo1 from '../img/colors.jpg'
 import {
+    HomeImageTest,
     HomeSection,
     Home1,
     Home2,
@@ -13,9 +16,12 @@ import {
     HomeContent
 }
     from './Navbar Styles/Home.styled'
+    
 
 
 const Home = () => {
+    const [name, setName] = useState(null)
+    const [submit, setSubmit] = useState(false)
     const [current, setCurrent] = useState(0)
     const length = HomeData.length
     const timeout = useRef(null)
@@ -45,12 +51,27 @@ const Home = () => {
         return null
     }
 
+    // input 
+    const getName = (val) => {
+        setName(val.target.value)
+        setSubmit(false)
+        console.log(val.target.value)
+    }
+
     return (
         <>
             <HomeSection>
+                <HomeImageTest>
+                    {/* <img src={photo1} alt="this is the photo" /> */}
+                </HomeImageTest>
                 <Home1>
                     <h1 className='fade-in'>Home</h1>
-                    <p>hello</p>
+                    <br/>
+                    {
+                        submit ? <p>Hello {name}</p> : null
+                    }
+                    <input type='text' onChange={getName} placeholder='Enter your name...'/>
+                    <button onClick={()=>setSubmit(true)}>Submit</button>
                 </Home1>
                 <Home2>
                     <HomeWrapper>
@@ -59,6 +80,9 @@ const Home = () => {
                                 <HomeSlide key={index}>
                                     {index === current && (
                                         <HomeSlider>
+                                            {/* <LazyLoad height={20}>
+                                                <HomeImage  src={pic.image} />
+                                            </LazyLoad> */}
                                             <HomeImage  src={pic.image} />
                                             <HomeContent>
                                                 <div>{pic.title}</div>

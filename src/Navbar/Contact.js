@@ -1,5 +1,18 @@
 import React from 'react'
+import styled from 'styled-components'
 import emailjs from 'emailjs-com'
+import photo from '../img/colors.jpg'
+import photo1 from '../img/londoneyetiny.jpg'
+import photo2 from '../img/small.jpg'
+import photo3 from '../img/large.jpg'
+
+const ContactPage = styled.div`
+    background-image: url(${photo3});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+`
 
 const Contact = () => {
     function sendEmail(e) {
@@ -10,7 +23,7 @@ const Contact = () => {
 
     return (
         <>
-            <div className="contact_page">
+            <ContactPage>
                 <div className="contact-box">
                     <h1>Contact Form</h1>
                     <form onSubmit={sendEmail}>
@@ -45,7 +58,7 @@ const Contact = () => {
                         />
                     </form>
                 </div>
-            </div>
+            </ContactPage>
         </>
     )
 }

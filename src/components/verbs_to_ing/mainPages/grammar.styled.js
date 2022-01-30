@@ -102,26 +102,6 @@ export const Verbs_to_ing1 = styled.div`
         }
     }
 `
-
-export const QuizzesButton = styled.div`   
-    .passive-button {
-        width: 250px;
-        height: 80px;
-        background: var(--cl-primary-blue);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 21px;
-        color: white;
-        font-weight: 600;
-        margin: 50px auto 80px auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    .passive-button:hover {
-        background: #045370;
-    }
-`
 export const SameMeaning = styled.div`
     padding: 20px;
     margin-right: 20px;

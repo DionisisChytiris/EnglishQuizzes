@@ -1,6 +1,4 @@
 import React from 'react'
-// import '../style.css'
-import {IoArrowRedo} from 'react-icons/io5'
 import ShowSideBar from '../../../General Pages/ShowSideBar'
 import SidebarGrammar from '../../../General Pages/SidebarGrammar'
 import {
@@ -9,9 +7,12 @@ import {
     Tenses1Main,
     Tenses1Box1
 } from './grammar.styled'
+import {QuizzesButtonGrammar} from '../../../General Pages/QuizzesButton'
 
 const Tenses1_Grammar = () => {
     return (
+        <>
+        <div className="fatline"></div>
         <Tenses1Grammar>
             <ShowSideBar/>
             <Tenses1Side>
@@ -23,8 +24,11 @@ const Tenses1_Grammar = () => {
                     <h1>Zero Conditional</h1>
                     <h1>First Conditional</h1>
                 </Tenses1Box1>
+                {/* Go to Quizzes */}
+                <QuizzesButtonGrammar page='/tenses1' text='Tenses 1 Quizzes'/>
             </Tenses1Main>
-        </Tenses1Grammar>
+            </Tenses1Grammar>
+        </>
     )
 }
 

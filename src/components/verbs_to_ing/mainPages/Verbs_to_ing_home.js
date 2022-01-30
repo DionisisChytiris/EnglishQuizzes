@@ -1,14 +1,14 @@
 import React from 'react'
 import { QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
 import Sidebar from '../Sidebar'
-import Return from './Return'
+import Instructions from './Instructions'
 
 const Verbs_to_ing = () => {
     return (
         <>
             <QuizzesPageMain>
                 <Sidebar />
-                <Return />
+                <Instructions />
             </QuizzesPageMain>
         </>
     )

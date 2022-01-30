@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link } from 'react-router-dom'
+import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
 import ShowSideBar from '../../../General Pages/ShowSideBar'
 import SidebarGrammar from '../../../General Pages/SidebarGrammar'
 import {
@@ -7,7 +7,6 @@ import {
     ConditionalSide,
     ConditionalMain,
     Conditional1,
-    QuizzesButton,
     ConditionalType
 } from './grammar.styled'
 
@@ -24,6 +23,10 @@ const Conditionals_Grammar = () => {
             <ConditionalMain>
                 <Conditional1>
                     <h1>Conditionals</h1>
+                    {/* Introduction */}
+                    <div>
+                    <p>Conditional sentences are statements about known factors or hypothetical situations and their consequences. They are described as 'real' or 'unreal' conditionals.</p>
+                    <p>Complete conditional sentences contain a conditional clause and the consequence (result).</p>
                     <p>The structure of conditionals is simple.</p>
 
                     <div className='structure'>
@@ -49,15 +52,14 @@ const Conditionals_Grammar = () => {
                         </div>
                     </div>
                     <h3>Check below the four main types of conditionals. </h3>
-                    {/* Button */}
-                    <QuizzesButton>
-                        <Link className='passive-button' to='/conditionals'>Conditionals Quizzes</Link>
-                    </QuizzesButton>
+                    </div>
+                    {/* Go to Quizzes */}
+                    <QuizzesButtonGrammar page='/conditionals' text='Conditionals Quizzes'/>
                     {/* Zero Conditional */}
                     <ConditionalType>
                         <h1>Zero Conditional</h1>
                         
-                        <p>We use the <strong>zero conditional</strong> to talk about general truths, or things that are generally true.</p>
+                        <p>We use the <strong>Zero Conditional</strong> to talk about general truths, or things that are always true. It's a 'real' conditional, relating to all times.</p>
 
                         <div className='structure'>
                             <div className='box1'>
@@ -77,7 +79,7 @@ const Conditionals_Grammar = () => {
                             </div>
                         </div>
                         <h3>* The ' if ' can be replaced by 'when' without changing the meaning. </h3>
-                        <p>Also, we can use the <strong>zero conditional</strong> to give instructions, or to tell people what to do. </p>
+                        <p>Also, we can use the <strong>Zero Conditional</strong> to give instructions, or to tell people what to do. </p>
                         <div className="example">
                             <div className="example3"></div>
                             <div>
@@ -88,7 +90,7 @@ const Conditionals_Grammar = () => {
                     {/* First Conditional */}
                     <ConditionalType>
                         <h1>First Conditional </h1>
-                        <p>We use the <strong>first conditional</strong> to talk about a particular situation we believe is real or possible to happen in the <strong>future</strong>.</p>
+                        <p>We use the <strong>First Conditional</strong> to talk about a particular situation we believe is real or possible to happen in the <strong>future</strong>.It is a 'real' conditional, relating to the future.</p>
 
                         <div className='structure'>
                             <div className='box1'>
@@ -111,16 +113,14 @@ const Conditionals_Grammar = () => {
                         <h3>* It is common to use <italic>unless (if not), as long as, as soon as </italic>or <italic>in case</italic> instead of ' if '. </h3>
                         <br/>
                         <p><sub_title>Zero vs First conditional</sub_title></p>
-                        <p>The zero conditional describes something in <strong>general</strong>, whereas the first conditional describes something in <strong>particular</strong>.</p>
+                        <p>The Zero Conditional describes something in <strong>general</strong>, whereas the First Conditional describes something in <strong>particular</strong>.</p>
                     </ConditionalType>
-                    {/* Button */}
-                    <QuizzesButton>
-                        <Link className='passive-button' to='/conditionals'>Conditionals Quizzes</Link>
-                    </QuizzesButton>
+                   {/* Go to Quizzes */}
+                   <QuizzesButtonGrammar page='/conditionals' text='Conditionals Quizzes'/>
                     {/* Second Conditional */}
                     <ConditionalType>
                         <h1>Second Conditional</h1>
-                        <p>We use the <strong>second conditional</strong> to talk about <strong>present</strong> or <strong>future</strong> situations that are imaginary or impossible to happen.</p>
+                        <p>We use the <strong>Second Conditional</strong> to talk about situations that are imaginary or impossible to happen in the <strong>present</strong>. It is an 'unreal' conditional, relating to the present.</p>
 
                         <div className='structure'>
                             <div className='box1'>
@@ -143,7 +143,7 @@ const Conditionals_Grammar = () => {
                         <h3>* Sometimes, we can use <italic>should, could or might</italic> instead of 'would'. </h3>
                         <br/>
                         <br/>
-                        <p>Also, we can use the <strong>second conditional</strong> to give advice, or to talk about hypothetical solutions to problems. </p>
+                        <p>Also, we can use the <strong>Second Conditional</strong> to give advice, or to talk about hypothetical solutions to problems. </p>
                         <div className="example">
                             <div className="example1"></div>
                             <div>
@@ -157,7 +157,7 @@ const Conditionals_Grammar = () => {
                     {/* Third Conditional */}
                     <ConditionalType>
                         <h1>Third Conditional</h1>
-                        <p>We use the <strong>third conditional</strong> to talk about an imagined <strong>past</strong> situation. We imagine a change in this situation and the different result of that change. </p>
+                        <p>We use the <strong>Third Conditional</strong> to talk about hypothetical unreal situations in the <strong>past</strong>. </p>
 
                         <div className='structure'>
                             <div className='box3'>
@@ -177,7 +177,7 @@ const Conditionals_Grammar = () => {
                         </div>
                         <br/>
                         <br/>
-                        <p>Also, we can use the <strong>third conditional</strong> to describe regrets or give blame. </p>
+                        <p>Also, we can use the <strong>Third Conditional</strong> to describe regrets or give blame. </p>
                         <div className="example">
                             <div className="example1"></div>
                             <div>
@@ -187,37 +187,52 @@ const Conditionals_Grammar = () => {
                             </div>
                         </div>
                     </ConditionalType>
-                    {/* Button */}
-                    <QuizzesButton>
-                        <Link className='passive-button' to='/conditionals'>Conditionals Quizzes</Link>
-                    </QuizzesButton>
+                   {/* Go to Quizzes */}
+                   <QuizzesButtonGrammar page='/conditionals' text='Conditionals Quizzes'/>
                     {/* Mixed Conditional */}
                     <ConditionalType>
                         <h1>Mixed Conditionals</h1>
-                        <p>The structure of conditionals is very simple.</p>
+                        <p>The <strong>Mixed Conditional</strong> is a combination between the <strong>Second and Third Conditional</strong>. It is used to express present results of hypothetical or unreal situations in the <strong>past</strong>. It is an 'unreal' conditional, relating to the past, often used to talk about regrets.</p>
 
+                        <h6>First combination:</h6>
                         <div className='structure'>
                             <div className='box3'>
-                                <div>If + past perfect, </div>
+                                <div>If + 3nd Conditional , </div>
                                 <div className='b'> + </div>
-                                <div> would + have +  past participle</div>
+                                <div> 2nd Conditional</div>
                             </div>
                         </div>
-                        <p>If a particular condition is true, then a particular result happens.</p>
+                        <p>This type of <strong>Mixed Conditional</strong> expresses how a change in a past situation would have a different result in the present.</p>
 
                         <div className="example">
-                            <div className="example2"></div>
+                            <div className="example3"></div>
                             <div>
-                                <li>past action   /   present result.</li>
-                                <br/>
-                                <li>present condition / past result</li>
-                                <br/>
-                                <li>future action / past result</li>
+                                <li>If we <italic>had followed</italic> the sign, we <italic>wouldn't be</italic> lost now.</li>
+                                <br />
+                                <h6>(We didn't follow the sign, and now we are lost.)</h6>
                             </div>
                         </div>
-                        <h3>Check below the four main types of conditionals. </h3>
-                    </ConditionalType>
-                   
+                        <h3></h3>
+                        <h6>Second combination:</h6>
+                        <div className='structure'>
+                            <div className='box3'>
+                                <div>If + 2nd Conditional , </div>
+                                <div className='b'> + </div>
+                                <div>3nd Conditional</div>
+                            </div>
+                        </div>
+                        <p>This type of <strong>Mixed Conditional</strong> expresses how a different situation in the present would have a different result in the past.</p>
+
+                        <div className="example">
+                            <div className="example3"></div>
+                            <div>
+                                <li>If I <italic>spoke</italic> better English, I <italic>could have got</italic>  the job.</li>
+                                <br/>
+                                <h6>(I don't speak English well enough, so I didn't get the job.)</h6>
+                            </div>
+                        </div>
+                        <h3></h3>
+                    </ConditionalType>                  
                 </Conditional1>
             </ConditionalMain>
         </ConditionalsGrammar>

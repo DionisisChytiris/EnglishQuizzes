@@ -3,11 +3,9 @@ import styled from 'styled-components'
 export const QuizzesPageMain = styled.div`
     width: 1200px;
     background: rgb(253, 251, 251);
-    /* height: 100vh; */
     height: 100%;
     margin: auto;
     display: flex;
-    /* align-items: center; */
 
     @media (max-width: 1200px){
         width: 100%;
@@ -15,16 +13,14 @@ export const QuizzesPageMain = styled.div`
     `
 
 export const QuizzesMain = styled.div`
-    /* height: 100vh; */
     height: 75vh;
-    width: 850px;
+    width: 70%;
     margin: 5% auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
+    border-radius: 5px;
     background-color: var(--cl-primary-blue);
-    /* background-color: #f5f5f5; */
 
     h1{
         font-size: clamp(1.8rem, 2vw, 2.2rem);
@@ -37,9 +33,7 @@ export const QuizzesMain = styled.div`
         color: white;
     }
     @media (max-width: 850px){
-        height: 100vh;
-        margin: 0px;
-        padding-top: 10%;
+       width: 95%;
     }
 `
 
@@ -144,7 +138,7 @@ export const ExplanationContent = styled.div`
 // Test quiz3
 export const QuizContainer = styled.div`
     width: 90%;
-    height: 60vh;
+    height: 70vh;
     background-color: transparent;
     /* border: 10px solid grey; */
     padding: 0px;
@@ -154,10 +148,8 @@ export const QuizContainer = styled.div`
 export const QuizTitle = styled.div`
     width: 100%;
     height: 15vh;
-    /* margin:auto; */
-    /* background: yellow; */
     display: flex;
-    `
+`
 
 export const QuizCounter = styled.div`
     width: 20%;

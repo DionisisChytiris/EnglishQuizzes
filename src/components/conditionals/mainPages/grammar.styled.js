@@ -45,24 +45,31 @@ export const Conditional1 = styled.div`
         width: 70%;
         font-weight: 600;
         padding: 3% 5% ;
-        font-size: clamp(1.8rem, 2vw, 2.5rem);
+        font-size: clamp(1.6rem, 2vw, 2.5rem);
         text-align: center;
         margin: 10px auto 30px;
-
+        
         @media (max-width: 700px){
-        width: 90%;
-        padding: 10px 0px;
-    }
+            font-size: clamp(1.4rem, 2vw, 2.5rem);
+            padding: 10px 0px;
+        }
     }
     .box1{
-        padding-left: 12%;      
         display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .box2{
         display: flex;
-        font-size: 16px;
-        margin-top: 10px;
-        padding-left: 18%;      
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+        margin-top: 5px;
+        
+        @media (max-width: 700px){
+            font-size: clamp(0.8rem, 2vw, 2.5rem);
+            margin-top: 0px;
+        }    
     }
     .b {
         width: 50px;
@@ -106,7 +113,8 @@ export const Conditional1 = styled.div`
         font-size: clamp(1.1rem, 1.2vw, 1.2rem);
         margin-left: 5%;
         font-weight: 600;
-        width: 700px;
+        /* width: 700px; */
+        width: 100%;
         list-style: none;
         color: var(--cl-primary-darkblue);
     }    
@@ -163,7 +171,13 @@ export const ConditionalType = styled.div`
         color: white;
         width: 80%;
         font-size: clamp(1.4rem, 1.6vw, 1.6rem);
-        margin: 10px auto 30px; 
+        margin: 10px auto 30px;
+
+        @media (max-width: 800px){
+            font-size: clamp(1.2em, 1.2vw, 1.3rem);
+            padding: 10px 0px;
+            width: 90%;
+        }
     }
     .b{
         width: 10%;
@@ -172,13 +186,20 @@ export const ConditionalType = styled.div`
     p,
     h3 {
         margin-left: 20px;
-        padding-right: 20px;
+        padding-right: 40px;
+    }
+    h6{
+        font-size: clamp(1.2em, 1.2vw, 1.3rem);
+        margin-left: 40px;
+        font-weight: 100;
     }
     .example{
         margin-left: 50px;
     }
     .box3 {
         display: flex;
+        align-items: center;
+        justify-content: center;
     }
     sub_title{
         color: var(--cl-primary-darkblue);
