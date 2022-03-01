@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../style.css'
 
-const MainPage_Tenses3 = () => {
+const MainPageTenses3 = () => {
     return (
         <>
             <div className="tenses_page">
@@ -20,4 +20,4 @@ const MainPage_Tenses3 = () => {
     )
 }
 
-export default MainPage_Tenses3
+export default MainPageTenses3

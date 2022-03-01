@@ -5,10 +5,13 @@ import Sidebar from '../Sidebar'
 
 const Conditionals = () => {
     return (
-        <QuizzesPageMain>
-            <Sidebar />
-            <Instructions />
-        </QuizzesPageMain>
+        <>
+            <div className="fatline"></div>
+            <QuizzesPageMain>
+                <Sidebar />
+                <Instructions />
+            </QuizzesPageMain>
+        </>
     )
 }
 

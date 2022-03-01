@@ -94,7 +94,7 @@ const Sidebar = () => {
                     const { id, url, text } = a
                     return (
                         <>
-                            <NavLink activeClassName='is-active' to={url}>
+                            <NavLink activeClassName='is-active' to={url} key={id}>
                                 <div className='home-buttons'>{text}</div>
                             </NavLink>
                         </>

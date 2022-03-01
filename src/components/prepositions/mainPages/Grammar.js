@@ -10,9 +10,12 @@ import {
 } from './grammar.styled'
 import ShowSideBar from '../../../General Pages/ShowSideBar'
 import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
+import '../style.css'
 
-const Prepositions_Grammar = () => {
+const PrepositionsGrammar = () => {
     return (
+        <>
+        <div className="fatline"></div>
         <PrepositionGrammar>
             <ShowSideBar/>
             <PrepositionSide>
@@ -264,7 +267,8 @@ const Prepositions_Grammar = () => {
                 <QuizzesButtonGrammar page='/prepositions' text='Prepositions Quizzes'/>
             </PrepositionsMain>
         </PrepositionGrammar>
+        </>
     )
 }
 
-export default Prepositions_Grammar
+export default PrepositionsGrammar

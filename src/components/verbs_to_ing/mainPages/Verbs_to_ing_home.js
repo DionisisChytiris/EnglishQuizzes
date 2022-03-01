@@ -3,9 +3,10 @@ import { QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
 import Sidebar from '../Sidebar'
 import Instructions from './Instructions'
 
-const Verbs_to_ing = () => {
+const VerbsToIng = () => {
     return (
         <>
+        <div className="fatline"></div>
             <QuizzesPageMain>
                 <Sidebar />
                 <Instructions />
@@ -14,4 +15,4 @@ const Verbs_to_ing = () => {
     )
 }
 
-export default Verbs_to_ing
+export default VerbsToIng

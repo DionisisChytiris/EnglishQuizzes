@@ -1,8 +1,8 @@
 import React from 'react';
 import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { BsArrowReturnLeft } from 'react-icons/bs'
-import { MdFace, MdMotorcycle, MdRowing, MdInsertEmoticon } from 'react-icons/md'
-import { VscEllipsis, VscRemove} from 'react-icons/vsc'
+// import { BsArrowReturnLeft } from 'react-icons/bs'
+import { MdFace, MdRowing, MdInsertEmoticon } from 'react-icons/md'
+import {  VscRemove} from 'react-icons/vsc'
 
 /* NAVBAR */
 export const links = [

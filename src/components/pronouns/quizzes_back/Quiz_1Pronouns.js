@@ -29,7 +29,7 @@ const Quiz1Pronouns = () => {
         setClicked(false)
         setShowExplanation(false)
         setWrongAnswer('')
-        setShowInfo(false)
+        setShowInfo(!showInfo)
         if (currentQuestion < quiz1data.length - 1) {
             setCurrentQuestion(currentQuestion + 1)
         } else {
@@ -44,6 +44,8 @@ const Quiz1Pronouns = () => {
     }
 
     return (
+        <>
+        <div className='navLine'></div>
         <QuizzesPageMain>
             <Sidebar />
             <QuizzesMain>
@@ -95,6 +97,7 @@ const Quiz1Pronouns = () => {
             }
             </QuizzesMain>
         </QuizzesPageMain>
+        </>
     )
 }
 

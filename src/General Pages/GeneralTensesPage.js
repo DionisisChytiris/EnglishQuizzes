@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import LazyLoad from 'react-lazyload';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+// import LazyLoad from 'react-lazyload';
+// import { LazyLoadImage } from 'react-lazy-load-image-component';
 import ShowSideBar from '../General Pages/ShowSideBar'
 import SidebarGrammar from '../General Pages/SidebarGrammar'
 import {Tenses1Grammar,Tenses1Side} from '../components/tenses1/mainPages/grammar.styled'
@@ -103,7 +103,7 @@ const GeneralTensesPage =()=> {
                                     {/* <LazyLoad>
                                         <img src={image}/>
                                     </LazyLoad> */}
-                                <img src={image}/>
+                                <img src={image} alt='card'/>
                                 </div>
                                 <div className='info'>{text}</div>
                             </Link>                   

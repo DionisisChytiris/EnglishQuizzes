@@ -18,10 +18,10 @@ const Sidebar = styled.div`
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     .bar{
         height: 100%;
-        height: 80vh;
+        height: 110vh;
     }
     .active{
-        height: 110vh;
+        height: 140vh;
     }
     h1{
         padding-top: 10px;
@@ -136,11 +136,11 @@ const sidebarGrammarA = [
         url: '/modal_grammar',
         title: 'Modals',
     },
-    {
-        id: 6,
-        url: '/tenses2_grammar',
-        title: 'Tenses 2',
-    },
+    // {
+    //     id: 6,
+    //     url: '/tenses2_grammar',
+    //     title: 'Tenses 2',
+    // },
     {
         id: 7,
         url: '/tenses3_grammar',

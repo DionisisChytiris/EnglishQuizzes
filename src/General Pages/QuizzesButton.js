@@ -1,6 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components';
+import Slide from 'react-reveal/Slide'
+
+const Container = styled.div`
+    width: 300px;
+    overflow: hidden;
+    margin: auto;
+`
 
 const QuizzesButton = styled.div`
     .quiz-button {
@@ -23,8 +30,12 @@ const QuizzesButton = styled.div`
 `
 export const QuizzesButtonGrammar = ({text, page}) => {
     return (
-        <QuizzesButton>
-            <Link className='quiz-button' to={page}> {text}</Link>
-        </QuizzesButton>
+        <Container>
+            <Slide left>
+                <QuizzesButton>
+                    <Link className='quiz-button' to={page}> {text}</Link>
+                </QuizzesButton>
+            </Slide>
+        </Container>
     )
 };

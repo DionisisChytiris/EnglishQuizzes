@@ -29,7 +29,7 @@ const Quiz5 = () => {
         setClicked(false)
         setShowExplanation(false)
         setWrongAnswer('')
-        setShowInfo(false)
+        setShowInfo(!showInfo)
         if (currentQuestion < quiz5data.length - 1) {
             setCurrentQuestion(currentQuestion + 1)
         } else {
@@ -38,6 +38,8 @@ const Quiz5 = () => {
     }
 
     return (
+        <>
+        <div className='fatline'></div>
         <QuizzesPageMain>
             <Sidebar />
             <QuizzesMain>
@@ -88,6 +90,7 @@ const Quiz5 = () => {
                 }
             </QuizzesMain>
         </QuizzesPageMain>
+        </>
     )
 }
 

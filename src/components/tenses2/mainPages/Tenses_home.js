@@ -6,6 +6,7 @@ import Return from './Return'
 const Tenses2 = () => {
     return (
         <>
+            <div className="fatline"></div>
             <QuizzesPageMain>
                 <Sidebar />
                 <Return />

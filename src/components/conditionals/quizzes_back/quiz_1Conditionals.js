@@ -5,7 +5,7 @@ import { AnswerContainer, Question, QuestionCounter, QuizzesMain, QuizzesPageMai
 import Sidebar from '../Sidebar'
 import ShowSideBar from '../mainPages/ShowSidebarQuiz'
 
-const Quiz_1Conditionals = () => {
+const Quiz1Conditionals = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [score, setScore] = useState(0)
     const [clicked, setClicked] = useState(false)
@@ -21,14 +21,14 @@ const Quiz_1Conditionals = () => {
             setWrongAnswer('answer-quiz4 wrong')
         } 
         setClicked(true)
-        setShowExplanation(true)
+        setShowExplanation(!showExplanation)
     }
 
     const handleNextQuestion = () => {
         setClicked(false)
         setShowExplanation(false)
         setWrongAnswer('')
-        setShowInfo(false)
+        setShowInfo(!showInfo)
         if (currentQuestion < quiz1data.length - 1) {
             setCurrentQuestion(currentQuestion + 1)
         } else {
@@ -37,6 +37,8 @@ const Quiz_1Conditionals = () => {
     }
 
     return (
+        <>
+        <div className='navLine'></div>
         <QuizzesPageMain>
             <Sidebar/>
             <QuizzesMain>
@@ -48,6 +50,7 @@ const Quiz_1Conditionals = () => {
                         <a href="/quiz1" className='return'>Try Again</a>
                         <a href="/quiz2" className='return'>Next Quiz</a>
                     </div>
+                    
                 </div>
                 ) :
                 (
@@ -65,27 +68,16 @@ const Quiz_1Conditionals = () => {
                             <div disabled={clicked} className={`answer ${clicked && a.isCorrect ? "correct" : wrongAnswer}`} key={uuidv4()}onClick={()=>handleCorrectAnswer(a.isCorrect)}>{a.answer}</div>
                         ))}
                     </AnswerContainer>
-                    {/* <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button> */}
-                    {/* {
-                        showExplanation ? (
-                            <div className="help-box">
-                            <button className='help' onClick={() => setShowInfo(!showInfo)}> { showInfo ? 'Hide' : 'Show Explanation' }</button>
-                            <div className="help-line"></div>
-                                    {
-                                        showInfo &&
-                                        <p className='help-explanation'>{quiz1data[currentQuestion].help}</p>
-                                    }                         
-                            </div>
-                        ) : ''
-                    }                   */}
+                    <button onClick={handleNextQuestion}>Click me</button>
                 </>        
                 )           
                 }
             </QuizzesMain>
         </QuizzesPageMain>
+        </>
     )
 }
 
-export default Quiz_1Conditionals
+export default Quiz1Conditionals
 
 

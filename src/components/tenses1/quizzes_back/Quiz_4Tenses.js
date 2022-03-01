@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import quiz4data from "../../tenses1/data/quiz4data"
-import { v4 as uuidv4 } from 'uuid'
+// import { v4 as uuidv4 } from 'uuid'
+import Sidebar from '../../tenses1/Sidebar'
 import ShowSideBar from '../mainPages/ShowSideBarQuiz'
+import { QuizzesMain, QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
 
 const Quiz_4Tenses = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -35,13 +37,18 @@ const Quiz_4Tenses = () => {
     const checkAnswer = () => {
         if (name === correct) {
             alert('correct')
+            setScore(score +1)
         } else {
             alert('wrong')
         }
     }
 
     return (
-        <div className='trivia'>
+        <>
+        <div className='fatline'></div>
+        <QuizzesPageMain>
+            <Sidebar />
+            <QuizzesMain>
             {showScore ? (
             <div>
                 <ShowSideBar/>
@@ -65,7 +72,9 @@ const Quiz_4Tenses = () => {
             </>        
             )           
             }
-        </div>
+            </QuizzesMain>
+        </QuizzesPageMain>
+        </>
     )
 }
 

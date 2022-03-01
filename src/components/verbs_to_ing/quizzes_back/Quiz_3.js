@@ -6,7 +6,7 @@ import { QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, Qu
 import ShowSideBar from '../mainPages/ShowSideBarQuiz'
 
 
-const Quiz3Verb_ing = () => {
+const Quiz3VerbIng = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [score, setScore] = useState(0)
     const [clicked, setClicked] = useState(false)
@@ -29,7 +29,7 @@ const Quiz3Verb_ing = () => {
         setClicked(false)
         setShowExplanation(false)
         setWrongAnswer('')
-        setShowInfo(false)
+        setShowInfo(!showInfo)
         if (currentQuestion < quiz3data.length - 1) {
             setCurrentQuestion(currentQuestion + 1)
         } else {
@@ -38,6 +38,8 @@ const Quiz3Verb_ing = () => {
     }
 
     return (
+        <>
+        <div className='navLine'></div>
         <QuizzesPageMain>
             <Sidebar />
             <QuizzesMain>
@@ -88,7 +90,8 @@ const Quiz3Verb_ing = () => {
                 }
             </QuizzesMain>
         </QuizzesPageMain>
+        </>
     )
 }
 
-export default Quiz3Verb_ing
+export default Quiz3VerbIng

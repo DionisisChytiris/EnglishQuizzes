@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidebar from '../../tenses3/Sidebar'
-import Quiz_2Tenses from '../../tenses3/quizzes_back/Quiz_2Tenses'
+import Quiz2Tenses from '../../tenses3/quizzes_back/Quiz_2Tenses'
 // import "../../prepositions/style.css"
 
 const Quiz2Tenses3 = () => {
@@ -9,7 +9,7 @@ const Quiz2Tenses3 = () => {
              <div className="quizzes_page_quizzes">
                 <Sidebar />
                 <div className='quizzes_pre_quiz'>
-                    <Quiz_2Tenses/>
+                    <Quiz2Tenses/>
                 </div>
             </div>
         </>

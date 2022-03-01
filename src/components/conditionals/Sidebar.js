@@ -53,7 +53,7 @@ const Sidebar = () => {
             <h4>Conditionals</h4>
             <div className="line1"></div>
             {conditionals_links.map((a) => {
-                const { id, url, text, level } = a
+                const { id, url, text } = a
                 return (
                     <>
                         {/* <h6>{level}</h6> */}

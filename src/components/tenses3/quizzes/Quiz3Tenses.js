@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidebar from '../../tenses3/Sidebar'
-import Quiz_3Tenses from '../../tenses3/quizzes_back/Quiz_3Tenses'
+import Quiz3Tenses from '../../tenses3/quizzes_back/Quiz_3Tenses'
 
 const Quiz3Tenses3 = () => {
     return (
@@ -8,7 +8,7 @@ const Quiz3Tenses3 = () => {
              <div className="quizzes_page_quizzes">
                 <Sidebar />
                 <div className='quizzes_pre_quiz'>
-                    <Quiz_3Tenses/>
+                    <Quiz3Tenses/>
                 </div>
             </div>
         </>

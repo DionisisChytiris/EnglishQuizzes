@@ -29,7 +29,7 @@ const Quiz6 = () => {
         setClicked(false)
         setShowExplanation(false)
         setWrongAnswer('')
-        setShowInfo(false)
+        setShowInfo(!showInfo)
         if (currentQuestion < quiz6data.length - 1) {
             setCurrentQuestion(currentQuestion + 1)
         } else {
@@ -38,6 +38,8 @@ const Quiz6 = () => {
     }
 
     return (
+        <>
+        <div className='navLine'></div>
         <QuizzesPageMain>
             <Sidebar />
             <QuizzesMain>
@@ -58,7 +60,10 @@ const Quiz6 = () => {
                     <QuizContainer>
                         <QuizTitle>
                             <QuizCounter>
+                                <div>
+
                                 {currentQuestion + 1}
+                                </div>
                                 <small>/ {quiz6data.length}</small>
                             </QuizCounter>
                             <QuizContent>
@@ -88,6 +93,7 @@ const Quiz6 = () => {
                 }
             </QuizzesMain>
         </QuizzesPageMain>
+        </>
     )
 }
 

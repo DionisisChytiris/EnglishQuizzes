@@ -53,7 +53,7 @@ const sidebar_container = [
     },
     {
         id: 4,
-        url: '/modals_grammar',
+        url: '/modal_grammar',
         text: <FaBookReader />
     },
 ]

@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
 import quiz3data from "../data/quiz3data"
 import { v4 as uuidv4 } from 'uuid'
-import { QuizAnswerContainer, AnswerContainer, Question, QuestionCounter, QuizzesMain, QuizzesPageMain, Explanation, ExplanationTitle, ExplanationContent, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizExplanation } from '../../../General Styles/QuizzesPage.styled'
+// import { QuizAnswerContainer, AnswerContainer, Question, QuestionCounter, QuizzesMain, QuizzesPageMain, Explanation, ExplanationTitle, ExplanationContent, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizExplanation } from '../../../General Styles/QuizzesPage.styled'
+import { QuizAnswerContainer, QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizExplanation } from '../../../General Styles/QuizzesPage.styled'
 import Sidebar from '../Sidebar'
 import ShowSideBar from '../mainPages/ShowSidebarQuiz'
 
-const Quiz_3Conditionals = () => {
+const Quiz3Conditionals = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [score, setScore] = useState(0)
     const [clicked, setClicked] = useState(false)
@@ -28,7 +29,7 @@ const Quiz_3Conditionals = () => {
         setClicked(false)
         setShowExplanation(false)
         setWrongAnswer('')
-        setShowInfo(false)
+        setShowInfo(!showInfo)
         if (currentQuestion < quiz3data.length - 1) {
             setCurrentQuestion(currentQuestion + 1)
         } else {
@@ -37,6 +38,8 @@ const Quiz_3Conditionals = () => {
     }
 
     return (
+        <>
+        <div className='navLine'></div>
         <QuizzesPageMain>
             <Sidebar/>
             <QuizzesMain>
@@ -85,9 +88,10 @@ const Quiz_3Conditionals = () => {
                 }
             </QuizzesMain>
         </QuizzesPageMain>
+        </>
     )
 }
 
-export default Quiz_3Conditionals
+export default Quiz3Conditionals
 
 

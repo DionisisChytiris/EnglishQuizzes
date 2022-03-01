@@ -10,7 +10,7 @@ const Quiz3Articles = () => {
     const [score, setScore] = useState(0)
     const [clicked, setClicked] = useState(false)
     const [showScore, setShowScore] = useState(false)
-    const [showInfo, setShowInfo] = useState(false)
+    // const [showInfo, setShowInfo] = useState(false)
     const [showExplanation, setShowExplanation] = useState(false)
     const [wrongAnswer, setWrongAnswer] = useState('')
 
@@ -36,6 +36,8 @@ const Quiz3Articles = () => {
     }
 
     return (
+        <>
+        <div className='navLine'></div>
         <QuizzesPageMain>
             <Sidebar />
             <QuizzesMain>
@@ -87,6 +89,7 @@ const Quiz3Articles = () => {
                 }
             </QuizzesMain>
         </QuizzesPageMain>
+        </>
     )
 }
 

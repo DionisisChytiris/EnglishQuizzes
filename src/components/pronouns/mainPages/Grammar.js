@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import ShowSideBar from '../../../General Pages/ShowSideBar'
 import SidebarGrammar from '../../../General Pages/SidebarGrammar'
 import {
-    PronounsGrammar,
+    PronounsGrammarContainer,
     PronounsSide,
     PronounsMain,
     PronounsContainer1,
@@ -12,10 +12,11 @@ import {
 } from './grammar.styled'
 import {FaCheck, FaTimes} from 'react-icons/fa'
 import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
+import { QuizzesButtonGrammarR } from '../../../General Pages/QuizzesButtonR'
 import { Line } from '../../../General Pages/Special Pages/Line'
 import DelayLine from '../../../General Pages/Special Pages/DelayLine'
 
-const Pronouns_Grammar = () => {
+const PronounsGrammar = () => {
     const [personal, setPersonal] = useState()
     const [possessive, setPossessive] = useState()
     const [reflexive, setReflexive] = useState()
@@ -25,7 +26,9 @@ const Pronouns_Grammar = () => {
     const [indefinite, setIndefinite] = useState()
     const [reciprocal, setReciprocal] = useState()
     return (
-        <PronounsGrammar>
+        <>
+        <div className="fatline"></div>
+        <PronounsGrammarContainer>
             <ShowSideBar/>
             <PronounsSide>
                 <SidebarGrammar/>
@@ -34,7 +37,7 @@ const Pronouns_Grammar = () => {
                 <PronounsContainer1>
                     <h1><span>Pronouns</span></h1>
                     <DelayLine/>
-                    <h3></h3>
+                    {/* <h3>-</h3> */}
                     <div className='voice'>Pronouns are words that take the place of a noun, noun phrase or noun clause. We use them when we already know which nouns are being referring to.  </div>
                     <br />
                     {/* First example */}
@@ -191,7 +194,7 @@ const Pronouns_Grammar = () => {
                             <div className='empty'></div>
                             <h1> Personal Pronouns</h1>
                             <div className='possessive'> Possessive</div>
-                            <h3 className='a'></h3>                           
+                            <h3 className='a' style={{color: '#045370'}}>-</h3>                           
                         </div>
                         <div className='row'>
                             <div className='empty1'></div>
@@ -266,10 +269,10 @@ const Pronouns_Grammar = () => {
                             <h4>themselves</h4>                           
                         </div>
                         <div className='row'>
-                            <div className='empty bottom'></div>
-                            <h1></h1>
+                            <div className='empty bottom' style={{color: 'orange', padding: '20px'}}>-</div>
+                            <h1 style={{color: '#045370'}}>-</h1>
                             <div className='possessive'></div>
-                            <h3 className='b'></h3>                           
+                            <h3 className='b' style={{color: '#045370'}}>-</h3>                           
                         </div>
                         
                     </PronounChart>
@@ -694,14 +697,15 @@ const Pronouns_Grammar = () => {
                         
                     </PronounsRules>
                      {/* QuizButton */}
-                    <QuizzesButtonGrammar page='/pronouns' text='Pronouns Quizzes' />
+                    <QuizzesButtonGrammarR page='/pronouns' text='Pronouns Quizzes' />
                     
                     {/* <h3></h3> */}
                 </PronounsContainer1>
                
             </PronounsMain>          
-        </PronounsGrammar>
+        </PronounsGrammarContainer>
+    </>
     )
 }
 
-export default Pronouns_Grammar
+export default PronounsGrammar

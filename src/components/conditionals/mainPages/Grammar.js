@@ -1,5 +1,6 @@
 import React from 'react'
 import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
+import { QuizzesButtonGrammarR } from '../../../General Pages/QuizzesButtonR'
 import ShowSideBar from '../../../General Pages/ShowSideBar'
 import SidebarGrammar from '../../../General Pages/SidebarGrammar'
 import {
@@ -14,6 +15,8 @@ import {
 
 const Conditionals_Grammar = () => {
     return (
+        <>
+        <div className="fatline"></div>
         <ConditionalsGrammar>
             <ShowSideBar />
             <ConditionalSide>
@@ -116,7 +119,7 @@ const Conditionals_Grammar = () => {
                         <p>The Zero Conditional describes something in <strong>general</strong>, whereas the First Conditional describes something in <strong>particular</strong>.</p>
                     </ConditionalType>
                    {/* Go to Quizzes */}
-                   <QuizzesButtonGrammar page='/conditionals' text='Conditionals Quizzes'/>
+                   <QuizzesButtonGrammarR page='/conditionals' text='Conditionals Quizzes'/>
                     {/* Second Conditional */}
                     <ConditionalType>
                         <h1>Second Conditional</h1>
@@ -212,7 +215,7 @@ const Conditionals_Grammar = () => {
                                 <h6>(We didn't follow the sign, and now we are lost.)</h6>
                             </div>
                         </div>
-                        <h3></h3>
+                        <h3 style={{color: 'white'}}>-</h3>
                         <h6>Second combination:</h6>
                         <div className='structure'>
                             <div className='box3'>
@@ -231,11 +234,13 @@ const Conditionals_Grammar = () => {
                                 <h6>(I don't speak English well enough, so I didn't get the job.)</h6>
                             </div>
                         </div>
-                        <h3></h3>
+                        {/* <br/> */}
+                        <h3 style={{color: 'white'}}>-</h3>
                     </ConditionalType>                  
                 </Conditional1>
             </ConditionalMain>
         </ConditionalsGrammar>
+        </>
     )
 }
 

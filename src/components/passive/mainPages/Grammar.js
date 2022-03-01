@@ -25,6 +25,8 @@ import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
 
 const Passive_Grammar = () => {
     return (
+        <>
+        <div className="fatline"></div>
         <PassiveGrammar>
             <ShowSideBar/>
             <PassiveSide>
@@ -141,6 +143,7 @@ const Passive_Grammar = () => {
                 </PassiveContainer2>
             </PassiveMain>           
         </PassiveGrammar>
+        </>
     )
 }
 

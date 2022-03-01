@@ -1,8 +1,8 @@
 import React, {useState, useEffect, useRef} from 'react'
-import LazyLoad from 'react-lazyload'
+// import LazyLoad from 'react-lazyload'
 import { Link } from 'react-router-dom'
 import { HomeData } from '../Navbar/Navbar Data/HomeData'
-import photo1 from '../img/colors.jpg'
+// import photo1 from '../img/colors.jpg'
 import {
     HomeImageTest,
     HomeSection,
@@ -13,9 +13,14 @@ import {
     HomeWrapper,
     HomeSlide,
     HomeSlider,
-    HomeContent
-}
-    from './Navbar Styles/Home.styled'
+    HomeContent,
+    HomeButtonTitle,
+    HomePart2,
+    // TestContainer
+}from './Navbar Styles/Home.styled'
+import Slide from 'react-reveal/Slide'
+import Flash from 'react-reveal/Flash'
+import ScrollAnimation from 'react-animate-on-scroll'
     
 
 
@@ -39,13 +44,13 @@ const Home = () => {
         }
     }, [current, length])
 
-    const nextSlide = () => {
-        if (timeout.current) {
-            clearTimeout(timeout.current)
-        }
+    // const nextSlide = () => {
+    //     if (timeout.current) {
+    //         clearTimeout(timeout.current)
+    //     }
         
-        setCurrent(current === length - 1 ?  0 : current + 1)
-    }
+    //     setCurrent(current === length - 1 ?  0 : current + 1)
+    // }
 
     if (!Array.isArray(HomeData) || HomeData.length <= 0) {
         return null
@@ -72,6 +77,11 @@ const Home = () => {
                     }
                     <input type='text' onChange={getName} placeholder='Enter your name...'/>
                     <button onClick={()=>setSubmit(true)}>Submit</button>
+                    <ScrollAnimation delay={500}animateIn='fadeIn' animateOut='fadeOut'>
+                        <Link  className="home-box" to='/fce_practice'>                  
+                            <HomeButtonTitle>Practice</HomeButtonTitle>                
+                        </Link>              
+                    </ScrollAnimation> 
                 </Home1>
                 <Home2>
                     <HomeWrapper>
@@ -96,17 +106,34 @@ const Home = () => {
                     </HomeWrapper>
                 </Home2>
                 <Home3>
-                    <div className="home-boxes">
-                        <Link className="home-boxes1" to='/quizzes'>
-                            <div className="home_title"> Grammar Quizzes</div>                    
-                        </Link>       
-                        <Link  className="home-boxes1" to='/grammar'>
-                            <div className="home_title">Grammar</div>                    
-                        </Link>       
-                        <Link  className="home-boxes1" to='/fce_practice'>
-                            <div className="home_title">FCE Practice</div>                    
-                        </Link>       
-                    </div>
+                    <HomePart2>   
+                        <Slide right duration={2000}>
+                            <Link className="home-boxes1" to='/quizzes'>
+                                <HomeButtonTitle> Grammar Quizzes</HomeButtonTitle>                    
+                            </Link>       
+                        </Slide>                    
+                        <Slide right duration={1000}>
+                            <Link className="home-boxes1" to='/grammar'>
+                                <HomeButtonTitle> Grammar</HomeButtonTitle>                    
+                            </Link>       
+                        </Slide>  
+                        <Flash right>
+                            <Link  className="home-boxes1" to='/fce_practice'>                  
+                                <HomeButtonTitle>FCE Practice</HomeButtonTitle>                    
+                            </Link>       
+                        </Flash>  
+                        <ScrollAnimation delay={100}animateIn='fadeIn' animateOut='fadeOut'>
+                            <Link  className="home-box" to='/fce_practice'>                  
+                                <HomeButtonTitle>Practice</HomeButtonTitle>                
+                            </Link>              
+                        </ScrollAnimation> 
+                        <ScrollAnimation delay={200}animateIn='fadeIn' animateOut='fadeOut'>
+                            <Link  className="home-box" to='/fce_practice'>                  
+                                <HomeButtonTitle>Practice</HomeButtonTitle>                
+                            </Link>              
+                        </ScrollAnimation> 
+                    </HomePart2>
+                    
                 </Home3>
             </HomeSection>
         </>

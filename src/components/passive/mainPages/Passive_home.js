@@ -6,6 +6,7 @@ import {QuizzesPageMain} from '../../../General Styles/QuizzesPage.styled'
 const Passive = () => {
     return (
         <>
+        <div className="fatline"></div>
             <QuizzesPageMain>
                 <Sidebar />
                 <Instructions />

@@ -132,3 +132,31 @@ export const HomeImage = styled.img`
         object-fit: cover;
     } 
 `
+export const HomePart2 = styled.div`
+    padding: 60px;
+
+    .home-box{
+        transition: 3s;
+    }
+    .box-container {
+        margin: 200px auto
+    }
+    .box {
+        width: 250px;
+        height: 250px;
+        background: grey;
+        /* margin: 200px auto */
+    }
+    `
+export const HomeButtonTitle = styled.div`
+    margin: 60px;
+    width : 300px;
+    height: 150px;
+    background: green;
+    color: white;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;;
+`

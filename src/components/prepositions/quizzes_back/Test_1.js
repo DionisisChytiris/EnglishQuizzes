@@ -4,9 +4,10 @@ import Timer from '../../../General Pages/Timer'
 import { v4 as uuidv4 } from 'uuid'
 import Sidebar from '../Sidebar'
 import ShowSideBar from '../mainPages/ShowSidebarQuiz'
-import { QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizAnswerContainer, QuizExplanation } from '../../../General Styles/QuizzesPage.styled'
+import { QuizzesMain, QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
+// import { QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizAnswerContainer, QuizExplanation } from '../../../General Styles/QuizzesPage.styled'
 
-const Test_1Prepositions = () => {
+const Test1Prepositions = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [score, setScore] = useState(0)
     const [clicked, setClicked] = useState(false)
@@ -39,6 +40,8 @@ const Test_1Prepositions = () => {
     }
 
     return (
+        <>
+        <div className='navLine'></div>
         <QuizzesPageMain>
             <Sidebar />
             <QuizzesMain>
@@ -74,7 +77,8 @@ const Test_1Prepositions = () => {
                 }
             </QuizzesMain>
         </QuizzesPageMain>
+        </>
     )
 }
 
-export default Test_1Prepositions
+export default Test1Prepositions

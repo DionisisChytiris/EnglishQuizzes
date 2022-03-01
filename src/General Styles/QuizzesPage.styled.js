@@ -256,16 +256,11 @@ export const QuizExplanation = styled.div`
         margin: 2px;
     }
     .content{
-        /* color: rgb(119, 118, 118); */
         color: var(--cl-primary-darkblue);
         padding: 10px 20px;
         text-align: center;
     }
-    /* button{
-        margin: 50px auto;
-    } */
     .next-btn{
-        /* position: absolute; */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -273,5 +268,43 @@ export const QuizExplanation = styled.div`
     }
     @media (max-width: 620px){
         height: 28vh;
+    }
+`
+
+export const QuizResults = styled.div`
+    h1{
+        color: green;
+        text-align: center;
+        margin-top: 80px;
+    }
+    .score-section{
+        padding: 30px;
+        color: yellow;
+    }
+    .buttons-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .button{
+        color: white;
+        background: rgb(136, 159, 189);
+        cursor: pointer;
+        border-radius: 15px;
+        font-size: 20px;
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .button:hover {
+        background-color: var(--cl-primary-darkblue);
+    }
+    .results{
+        padding-top: 40px;
+        text-align: center;
+        color: white
     }
 `

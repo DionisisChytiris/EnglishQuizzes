@@ -1,5 +1,5 @@
 import React from 'react'
-import WordFormation_1 from '../wordFormation_back/wordFormation_1'
+import WordFormation1Test from '../wordFormation_back/wordFormation_1'
 import Sidebar from '../Sidebar'
 
 const WordFormation1 = () => {
@@ -8,7 +8,7 @@ const WordFormation1 = () => {
              <div className="quizzes_page_quizzes1">
                 <Sidebar />
                 <div className='fce_mainPage'>
-                    <WordFormation_1/>
+                    <WordFormation1Test/>
                 </div>
             </div>
         </>

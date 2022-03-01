@@ -30,7 +30,7 @@ const Instructions = () => {
             <ShowSideBar/>
             <InstructionsMain>
                 Instructions
-                <img src={'/images/parliament.jpg'} />
+                <img src={'/images/parliament.jpg'} alt='parliament'/>
                 <br/>
                 {/* <img src={require('/images/stPaul.jpg')}/> */}
             </InstructionsMain>

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import quiz4data from "../../tenses3/data/quiz4data"
+import quiz4data from "../data/quiz4data"
 import { v4 as uuidv4 } from 'uuid'
 import ShowSideBar from '../mainPages/ShowSideBarQuiz'
 

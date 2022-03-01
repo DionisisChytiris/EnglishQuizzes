@@ -6,7 +6,7 @@ import ShowSideBar from '../mainPages/ShowSideBarQuiz'
 import { QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizAnswerContainer, QuizExplanation, QuizTextCenter } from '../../../General Styles/QuizzesPage.styled'
 
 
-const Quiz1Verb_ing = () => {
+const Quiz1VerbIng = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [score, setScore] = useState(0)
     const [clicked, setClicked] = useState(false)
@@ -29,7 +29,7 @@ const Quiz1Verb_ing = () => {
         setClicked(false)
         setShowExplanation(false)
         setWrongAnswer('')
-        setShowInfo(false)
+        setShowInfo(!showInfo)
         if (currentQuestion < quiz1data.length - 1) {
             setCurrentQuestion(currentQuestion + 1)
         } else {
@@ -38,6 +38,8 @@ const Quiz1Verb_ing = () => {
     }
 
     return (
+        <>
+        <div className='navLine'></div>
         <QuizzesPageMain>
             <Sidebar />
             <QuizzesMain>
@@ -88,7 +90,8 @@ const Quiz1Verb_ing = () => {
                 }
             </QuizzesMain>
         </QuizzesPageMain>
+        </>
     )
 }
 
-export default Quiz1Verb_ing
+export default Quiz1VerbIng

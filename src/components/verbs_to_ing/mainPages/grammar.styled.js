@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 
-export const Verbs_to_ingGrammar = styled.div`
+export const VerbsToIngGrammarContainer = styled.div`
     background: white;
     height: 100%;
     display: flex;
     /* align-items: center; */
     justify-content: center;
 `
-export const Verbs_to_ingSide = styled.div`
+export const VerbsToIngSide = styled.div`
     /* margin-top: 200px; */
 `
-export const Verbs_to_ingMain = styled.div`
+export const VerbsToIngMain = styled.div`
     background-color:  white;
     height: 100vh;
     height: 100%;
@@ -22,7 +22,7 @@ export const Verbs_to_ingMain = styled.div`
     align-items: center;
     justify-content: center;
 `
-export const Verbs_to_ing1 = styled.div`
+export const VerbsToIng1 = styled.div`
     height: 100%;
     width: 800px;
 

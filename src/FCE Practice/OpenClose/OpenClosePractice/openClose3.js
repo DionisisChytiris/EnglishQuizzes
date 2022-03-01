@@ -1,5 +1,5 @@
 import React from 'react'
-import OpenClose_3 from '../OpenClose_back.js/OpenClose_3'
+import OpenClose3Test from '../OpenClose_back.js/OpenClose_3'
 import Sidebar from '../Sidebar'
 
 
@@ -9,7 +9,7 @@ const OpenClose3 = () => {
              <div className="quizzes_page_quizzes1">
                 <Sidebar />
                 <div className='fce_mainPage'>
-                    <OpenClose_3/>
+                    <OpenClose3Test/>
                 </div>
             </div>
         </>

@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import emailjs from 'emailjs-com'
-import photo from '../img/colors.jpg'
-import photo1 from '../img/londoneyetiny.jpg'
-import photo2 from '../img/small.jpg'
+// import photo from '../img/colors.jpg'
+// import photo1 from '../img/londoneyetiny.jpg'
+// import photo2 from '../img/small.jpg'
 import photo3 from '../img/large.jpg'
 
 const ContactPage = styled.div`
@@ -11,7 +11,15 @@ const ContactPage = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    width: 100%;
     height: 100vh;
+`
+const ContactContainer = styled.div`
+    width: 200px;
+    height: 100%;
+    margin-left: 65%;
+    padding-top: 200px;
+    color: white;
 `
 
 const Contact = () => {
@@ -24,7 +32,7 @@ const Contact = () => {
     return (
         <>
             <ContactPage>
-                <div className="contact-box">
+                <ContactContainer>
                     <h1>Contact Form</h1>
                     <form onSubmit={sendEmail}>
                         <label>Name</label>
@@ -57,7 +65,7 @@ const Contact = () => {
                             value="Send"
                         />
                     </form>
-                </div>
+                </ContactContainer>
             </ContactPage>
         </>
     )

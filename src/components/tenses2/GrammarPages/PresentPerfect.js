@@ -6,6 +6,8 @@ import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
 
 const PresentPerfect = () => {
     return (
+        <>
+        <div className="fatline"></div>
         <Tenses2Grammar>
             <ShowSideBar/>
             <Tenses2Side>
@@ -48,6 +50,7 @@ const PresentPerfect = () => {
                 <QuizzesButtonGrammar page='/tenses2' text='Tenses 2 Quizzes'/>
             </Tenses2Main>
         </Tenses2Grammar>
+        </>
     )
 }
 

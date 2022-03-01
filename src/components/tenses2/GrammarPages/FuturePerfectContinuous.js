@@ -7,6 +7,8 @@ import { Tenses2Grammar, Tenses2Side, Tenses2Main, TensesTest2} from '../mainPag
 
 const FuturePerfectContinuous = () => {
     return (
+        <>
+        <div className="fatline"></div>
         <Tenses2Grammar>
             <ShowSideBar/>
             <Tenses2Side>
@@ -49,6 +51,7 @@ const FuturePerfectContinuous = () => {
                 <QuizzesButtonGrammar page='/tenses2' text='Tenses 2 Quizzes'/>
             </Tenses2Main>
         </Tenses2Grammar>
+        </>
     )
 }
 

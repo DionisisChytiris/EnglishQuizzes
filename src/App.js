@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Route} from 'react-router-dom'
 import Navbar1 from './Navbar1'
 import Footer from './Footer'
 import ScrollToTop from './General Pages/ScrollToTop'
@@ -7,7 +7,7 @@ import ScrollToTop from './General Pages/ScrollToTop'
 import Home from './Navbar/Home'
 import Quizzes from './Navbar/Quizzes'
 import Grammar from './Navbar/Grammar'
-import FCE_Practice from './Navbar/FCE_Practice'
+import FcePractice from './Navbar/FCE_Practice'
 import About from './Navbar/About'
 import Contact from './Navbar/Contact'
 // home pages
@@ -15,8 +15,8 @@ import Prepositions from './components/prepositions/mainPages/Prepositions_home'
 import Pronouns from './components/pronouns/mainPages/Pronouns_home';
 import Articles from './components/articles/mainPages/Articles_home';
 import Conditionals from './components/conditionals/mainPages/Conditionals_home'
-import Verbs_to_ing from './components/verbs_to_ing/mainPages/Verbs_to_ing_home';
-import MainPage_Tenses3 from './components/tenses3/mainPages/MainPage';
+import VerbsToIng from './components/verbs_to_ing/mainPages/Verbs_to_ing_home';
+import MainPageTenses3 from './components/tenses3/mainPages/MainPage';
 import Tenses1 from './components/tenses1/mainPages/Tenses_home';
 import Tenses2 from './components/tenses2/mainPages/Tenses_home';
 import Tenses3 from './components/tenses3/mainPages/Tenses_home';
@@ -33,7 +33,7 @@ import Quiz3 from './components/prepositions/quizzes_back/Quiz_3';
 import Quiz4 from './components/prepositions/quizzes_back/Quiz_4';
 import Quiz5 from './components/prepositions/quizzes_back/Quiz_5';
 import Quiz6 from './components/prepositions/quizzes_back/Quiz_6';
-import Test_1Prepositions from './components/prepositions/quizzes_back/Test_1';
+import Test1Prepositions from './components/prepositions/quizzes_back/Test_1';
 // Pronouns Quizzes
 import Quiz1Pronouns from './components/pronouns/quizzes_back/Quiz_1Pronouns';
 import Quiz2Pronouns from './components/pronouns/quizzes_back/Quiz_2Pronouns';
@@ -46,45 +46,45 @@ import Quiz2Articles from './components/articles/quizzes_back/Quiz_2Articles';
 import Quiz3Articles from './components/articles/quizzes_back/Quiz_3Articles';
 import Quiz4Articles from './components/articles/quizzes_back/Quiz_4Articles';
 // Tenses Quizzes
-import Quiz1Tenses from './components/tenses1/quizzes/Quiz1Tenses';
-import Quiz2Tenses from './components/tenses1/quizzes/Quiz2Tenses';
-import Quiz3Tenses from './components/tenses1/quizzes/Quiz3Tenses';
-import Quiz4Tenses from './components/tenses1/quizzes/Quiz4Tenses';
-import Quiz1Tenses2 from './components/tenses2/quizzes/Quiz1Tenses';
-import Quiz2Tenses2 from './components/tenses2/quizzes/Quiz2Tenses';
-import Quiz3Tenses2 from './components/tenses2/quizzes/Quiz3Tenses';
-import Quiz4Tenses2 from './components/tenses2/quizzes/Quiz4Tenses';
+import Quiz1Tenses from './components/tenses1/quizzes_back/Quiz_1Tenses';
+import Quiz2Tenses from './components/tenses1/quizzes_back/Quiz_2Tenses';
+import Quiz3Tenses from './components/tenses1/quizzes_back/Quiz_3Tenses';
+import Quiz4Tenses from './components/tenses1/quizzes_back/Quiz_4Tenses';
+import Quiz1Tenses2 from './components/tenses2/quizzes_back/Quiz_1Tenses';
+import Quiz2Tenses2 from './components/tenses2/quizzes_back/Quiz_2Tenses';
+import Quiz3Tenses2 from './components/tenses2/quizzes_back/Quiz_3Tenses';
+import Quiz4Tenses2 from './components/tenses2/quizzes_back/Quiz_4Tenses';
 import Quiz1Tenses3 from './components/tenses3/quizzes/Quiz1Tenses';
 import Quiz2Tenses3 from './components/tenses3/quizzes/Quiz2Tenses';
 import Quiz3Tenses3 from './components/tenses3/quizzes/Quiz3Tenses';
 import Quiz4Tenses3 from './components/tenses3/quizzes/Quiz4Tenses';
 // Gerund Quizzes
-import Quiz1Verb_ing from './components/verbs_to_ing/quizzes_back/Quiz_1'
-import Quiz2Verb_ing from './components/verbs_to_ing/quizzes_back/Quiz_2'
-import Quiz3Verb_ing from './components/verbs_to_ing/quizzes_back/Quiz_3'
-import Quiz4Verb_ing from './components/verbs_to_ing/quizzes_back/Quiz_4'
+import Quiz1VerbIng from './components/verbs_to_ing/quizzes_back/Quiz_1'
+import Quiz2VerbIng from './components/verbs_to_ing/quizzes_back/Quiz_2'
+import Quiz3VerbIng from './components/verbs_to_ing/quizzes_back/Quiz_3'
+import Quiz4VerbIng from './components/verbs_to_ing/quizzes_back/Quiz_4'
 // Modal Quizzes
-import Quiz1Modal from './components/modals/quizzes/Quiz1Modal'
-import Quiz2Modal from './components/modals/quizzes/Quiz2Modal'
-import Quiz3Modal from './components/modals/quizzes/Quiz3Modal'
+import Quiz1Modal from './components/modals/quizzes_back/Quiz_1Modal'
+import Quiz2Modal from './components/modals/quizzes_back/Quiz_2Modal'
+import Quiz3Modal from './components/modals/quizzes_back/Quiz_3Modal'
 // Passive Quizzes
-import Quiz1Passive from './components/passive/quizzes/Quiz1Passive'
-import Quiz2Passive from './components/passive/quizzes/Quiz2Passive'
-import Quiz3Passive from './components/passive/quizzes/Quiz3Passive'
+import Quiz1Passive from './components/passive/quizzes_back/Quiz_1Passive'
+import Quiz2Passive from './components/passive/quizzes_back/Quiz_2Passive'
+import Quiz3Passive from './components/passive/quizzes_back/Quiz_3Passive'
 // Conditionals Quizzes
-import Quiz_1Conditionals from './components/conditionals/quizzes_back/quiz_1Conditionals'
-import Quiz_2Conditionals from './components/conditionals/quizzes_back/quiz_2Conditionals'
-import Quiz_3Conditionals from './components/conditionals/quizzes_back/quiz_3Conditionals'
+import Quiz1Conditionals from './components/conditionals/quizzes_back/quiz_1Conditionals'
+import Quiz2Conditionals from './components/conditionals/quizzes_back/quiz_2Conditionals'
+import Quiz3Conditionals from './components/conditionals/quizzes_back/quiz_3Conditionals'
 // Grammar pages
 import GeneralTensesPage from './General Pages/GeneralTensesPage'
-import Prepositions_Grammar from './components/prepositions/mainPages/Grammar'
-import Articles_Grammar from './components/articles/mainPages/Grammar'
-import Pronouns_Grammar from './components/pronouns/mainPages/Grammar'
+import PrepositionsGrammar from './components/prepositions/mainPages/Grammar'
+import ArticlesGrammar from './components/articles/mainPages/Grammar'
+import PronounsGrammar from './components/pronouns/mainPages/Grammar'
 import Modal_Grammar from './components/modals/mainPages/Grammar'
 import Tenses1_Grammar from './components/tenses1/mainPages/Grammar'
 import Tenses2_Grammar from './components/tenses2/mainPages/Grammar'
 import Tenses3Grammar from './components/tenses3/mainPages/Grammar'
-import Verbs_to_ing_Grammar from './components/verbs_to_ing/mainPages/Grammar'
+import GerundGrammar from './components/verbs_to_ing/mainPages/Grammar'
 import Conditionals_Grammar from './components/conditionals/mainPages/Grammar'
 import Passive_Grammar from './components/passive/mainPages/Grammar'
 import PresentSimple from './components/tenses1/GrammarPages/PresentSimple'
@@ -113,13 +113,14 @@ function App() {
   return (
     <>
       <Router>
-        <ScrollToTop/>
         <Navbar1 />
+        <ScrollToTop/>
+        {/* <Switch> */}
         {/* Navbar */}
         <Route path='/' exact component={Home}/>
         <Route path='/quizzes' component={Quizzes}/>
         <Route path='/grammar' component={Grammar}/>
-        <Route path='/fce_practice' component={FCE_Practice}/>
+        <Route path='/fce_practice' component={FcePractice}/>
         <Route path='/about' component={About}/>
         <Route path='/contact' component={Contact} />
         {/* Home pages */}
@@ -129,9 +130,9 @@ function App() {
         <Route path='/modals' component={Modals}/>
         <Route path='/tenses1' component={Tenses1}/>
         <Route path='/tenses2' component={Tenses2}/>
-        <Route path='/tenses3' component={MainPage_Tenses3}/>
+        <Route path='/tenses3' component={MainPageTenses3}/>
         <Route path='/tenses3_quizzes' component={Tenses3} />
-        <Route path='/verbs_to_ing' component={Verbs_to_ing}/>
+        <Route path='/verbs_to_ing' component={VerbsToIng}/>
         <Route path='/conditionals' component={Conditionals}/>
         <Route path='/passive' component={Passive}/>
         <Route path='/openClose' component={OpenClose_home}/>
@@ -140,14 +141,14 @@ function App() {
         <Route path='/keyWordTransformations' component={keyWord_home}/>
         {/* Grammar pages */}
         <Route path='/generalTensesPage' component={GeneralTensesPage}/>
-        <Route path='/prepositions_grammar' component={Prepositions_Grammar}/>
-        <Route path='/articles_grammar' component={Articles_Grammar} />  
-        <Route path='/pronouns_grammar' component={Pronouns_Grammar} />  
+        <Route path='/prepositions_grammar' component={PrepositionsGrammar}/>
+        <Route path='/articles_grammar' component={ArticlesGrammar} />  
+        <Route path='/pronouns_grammar' component={PronounsGrammar} />  
         <Route path='/modal_grammar' component={Modal_Grammar} />  
         <Route path='/tenses1_grammar' component={Tenses1_Grammar} />  
         <Route path='/tenses2_grammar' component={Tenses2_Grammar} />
         <Route path='/tenses3_grammar' component={Tenses3Grammar} />
-        <Route path='/verbs_to_ing_grammar' component={Verbs_to_ing_Grammar} />
+        <Route path='/verbs_to_ing_grammar' component={GerundGrammar} />
         <Route path='/conditionals_grammar' component={Conditionals_Grammar} />
         <Route path='/passive_grammar' component={Passive_Grammar} />
         <Route path='/present_simple' component={PresentSimple}/>
@@ -169,7 +170,7 @@ function App() {
         <Route path='/quiz4' component={Quiz4} />
         <Route path='/quiz4_1' component={Quiz5} />
         <Route path='/quiz4_2' component={Quiz6} />
-        <Route path='/test1prepositions' component={Test_1Prepositions} />
+        <Route path='/test1prepositions' component={Test1Prepositions} />
         {/* Pronouns Quizzes */}
         <Route path='/quiz5' component={Quiz1Pronouns} />  
         <Route path='/quiz6' component={Quiz2Pronouns} />  
@@ -202,24 +203,25 @@ function App() {
         <Route path='/irregularVerbs' component={IrregularVerbs} />
         <Route path='/stativeVerbs' component={StativeVerbs} />
         {/* Gerund Quizzes */}
-        <Route path='/verbs_to_ing_1' component={Quiz1Verb_ing} />
-        <Route path='/verbs_to_ing_2' component={Quiz2Verb_ing} />
-        <Route path='/verbs_to_ing_3' component={Quiz3Verb_ing} />
-        <Route path='/verbs_to_ing_4' component={Quiz4Verb_ing} />
+        <Route path='/verbs_to_ing_1' component={Quiz1VerbIng} />
+        <Route path='/verbs_to_ing_2' component={Quiz2VerbIng} />
+        <Route path='/verbs_to_ing_3' component={Quiz3VerbIng} />
+        <Route path='/verbs_to_ing_4' component={Quiz4VerbIng} />
         {/* Passive Quizzes */}
         <Route path='/passive_1' component={Quiz1Passive} />
         <Route path='/passive_2' component={Quiz2Passive} />
         <Route path='/passive_3' component={Quiz3Passive} />
         {/* Conditionals Quizzes */}
-        <Route path='/conditionals_1' component={Quiz_1Conditionals}/>
-        <Route path='/conditionals_2' component={Quiz_2Conditionals}/>
-        <Route path='/conditionals_3' component={Quiz_3Conditionals} />
+        <Route path='/conditionals_1' component={Quiz1Conditionals}/>
+        <Route path='/conditionals_2' component={Quiz2Conditionals}/>
+        <Route path='/conditionals_3' component={Quiz3Conditionals} />
         {/* FCE pages */}
         <Route path='/openClose1' component={OpenClose1} />
         <Route path='/openClose2' component={OpenClose2} />
         <Route path='/openClose3' component={OpenClose3} />
         <Route path='/wordFormation1' component={WordFormation1} />
         <Route path='/multipleChoice1' component={MultipleChoice1} />
+        {/* </Switch> */}
         {/*  Footer  */}
         <Footer/>
       </Router>

@@ -5,9 +5,9 @@ import '../../modals/style.css'
 import ShowSideBar from './ShowSideBarQuiz'
 
 const InstructionsMain = styled.div`
-    height: 75vh;
-    /* height: 100%auto; */
-    width: 850px;
+    /* height: 75vh; */
+    height: 100%auto;
+    width: 70%;
     margin: 5% auto;
     display: flex;
     flex-direction: column;
@@ -18,6 +18,9 @@ const InstructionsMain = styled.div`
         font-size: clamp(1.8rem, 2vw, 2.2rem);
         margin-top: 80px;
         margin-bottom: 80px;
+    }
+    @media (max-width: 850px){
+       width: 95%;
     }
 `
 

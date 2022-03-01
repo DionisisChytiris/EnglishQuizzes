@@ -6,6 +6,8 @@ import { Tenses1Grammar, Tenses1Side, Tenses1Main, TensesTest1} from '../mainPag
 
 const FutureContinuous = () => {
     return (
+        <>
+        <div className="fatline"></div>
         <Tenses1Grammar>
             <ShowSideBar/>
             <Tenses1Side>
@@ -48,6 +50,7 @@ const FutureContinuous = () => {
                 <QuizzesButtonGrammar page='tenses1' text='Tenses 1 Quizzes'/>
             </Tenses1Main>
         </Tenses1Grammar>
+        </>
     )
 }
 

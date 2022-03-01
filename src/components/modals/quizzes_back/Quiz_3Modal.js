@@ -1,9 +1,11 @@
 import React, {useState} from 'react'
 import quiz3data from "../data/quiz3data"
 import { v4 as uuidv4 } from 'uuid'
+import Sidebar from '../../modals/Sidebar'
 import ShowSideBar from '../mainPages/ShowSideBarQuiz'
+import { QuizzesMain, QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
 
-const Quiz_3Modal = () => {
+const Quiz3Modal = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [score, setScore] = useState(0)
     const [clicked, setClicked] = useState(false)
@@ -35,7 +37,11 @@ const Quiz_3Modal = () => {
     }
 
     return (
-        <div className='trivia'>
+        <>
+        <div className='fatline'></div>
+        <QuizzesPageMain>
+            <Sidebar />
+            <QuizzesMain>
             {showScore ? (
             <div>      
                 <ShowSideBar/>
@@ -78,10 +84,12 @@ const Quiz_3Modal = () => {
             </>        
             )           
             }
-        </div>
+            </QuizzesMain>
+        </QuizzesPageMain>
+        </>
     )
 }
 
-export default Quiz_3Modal
+export default Quiz3Modal
 
 

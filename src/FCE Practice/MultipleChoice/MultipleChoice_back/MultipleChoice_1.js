@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import {BsCheck, BsX} from 'react-icons/bs'
+import React from 'react'
+// import {BsCheck, BsX} from 'react-icons/bs'
 
 const MultipleChoice_1 = () => {
     // const [name1, setName1] = useState('')

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const PronounsGrammar = styled.div`
+export const PronounsGrammarContainer = styled.div`
     background: white;
     height: 100%;
     display: flex;

@@ -1,10 +1,10 @@
 import React from 'react'
 import '../style.css'
-import SidebarGrammar from '../../../General Pages/SidebarGrammar'
+// import SidebarGrammar from '../../../General Pages/SidebarGrammar'
 import {IoArrowRedo} from 'react-icons/io5'
 import {
-    ModalGrammar,
-    ModalSide,
+    // ModalGrammar,
+    // ModalSide,
     ModalMain,
     ModalBox1,
     ModalBox2,
@@ -20,6 +20,7 @@ import {
 const Modal_Grammar = () => {
     return (
         <>
+        <div className="fatline"></div>
         {/* // <ModalGrammar> */}
             {/* <ModalSide>
                 <SidebarGrammar/>

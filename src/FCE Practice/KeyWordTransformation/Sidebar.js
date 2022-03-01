@@ -1,6 +1,6 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-import { articles_links } from '../../data_links'
+// import { NavLink } from 'react-router-dom'
+// import { articles_links } from '../../data_links'
 import {GoHome} from 'react-icons/go'
 
 const Sidebar = () => {

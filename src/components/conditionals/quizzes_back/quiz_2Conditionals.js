@@ -5,7 +5,7 @@ import { AnswerContainer, Explanation, Question, QuestionCounter, QuizzesMain, Q
 import Sidebar from '../Sidebar'
 import ShowSideBar from '../mainPages/ShowSidebarQuiz'
 
-const Quiz_2Conditionals = () => {
+const Quiz2Conditionals = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [score, setScore] = useState(0)
     const [clicked, setClicked] = useState(false)
@@ -28,7 +28,7 @@ const Quiz_2Conditionals = () => {
         setClicked(false)
         setShowExplanation(false)
         setWrongAnswer('')
-        setShowInfo(false)
+        setShowInfo(!showInfo)
         if (currentQuestion < quiz2data.length - 1) {
             setCurrentQuestion(currentQuestion + 1)
         } else {
@@ -37,6 +37,8 @@ const Quiz_2Conditionals = () => {
     }
 
     return (
+        <>
+        <div className='navLine'></div>
         <QuizzesPageMain>
             <Sidebar/>
             <QuizzesMain>
@@ -79,9 +81,10 @@ const Quiz_2Conditionals = () => {
                 }
             </QuizzesMain>
         </QuizzesPageMain>
+        </>
     )
 }
 
-export default Quiz_2Conditionals
+export default Quiz2Conditionals
 
 

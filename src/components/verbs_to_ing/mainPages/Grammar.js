@@ -1,10 +1,10 @@
 import React from 'react'
 import SidebarGrammar from '../../../General Pages/SidebarGrammar'
 import {
-    Verbs_to_ingGrammar,
-    Verbs_to_ingSide,
-    Verbs_to_ingMain,
-    Verbs_to_ing1,
+    VerbsToIngGrammarContainer,
+    VerbsToIngSide,
+    VerbsToIngMain,
+    VerbsToIng1,
     SameMeaning,
     DifferentMeaning,
     ContainerExample,
@@ -12,6 +12,7 @@ import {
 } from './grammar.styled'
 import ShowSideBar from '../../../General Pages/ShowSideBar'
 import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
+import { QuizzesButtonGrammarR } from '../../../General Pages/QuizzesButtonR'
 
 // alert functions
 const spelling = () => {
@@ -27,17 +28,19 @@ const verbs_object = () => {
     alert('After some verbs, we need to include an object before a to-infinitive. Check some of them below:\n\nallow, believe, cause, command, enable, encourage, entitle, force, invite, order, persuade, show, teach, tell')
 }
 
-const Verbs_to_ing_Grammar = () => {
+const GerundGrammar = () => {
     return (
-        <Verbs_to_ingGrammar>
+        <>
+        <div className="fatline"></div>
+        <VerbsToIngGrammarContainer>
             <ShowSideBar/>
             {/* Sidebar (left side)*/}
-            <Verbs_to_ingSide>
+            <VerbsToIngSide>
                 <SidebarGrammar/>
-            </Verbs_to_ingSide>
+            </VerbsToIngSide>
             {/* Grammar part (right side)*/}
-            <Verbs_to_ingMain>
-                <Verbs_to_ing1>
+            <VerbsToIngMain>
+                <VerbsToIng1>
                     <div className='title'>Gerunds / Infinitive</div>
                     {/* Introduction */}
                     <div>
@@ -105,7 +108,7 @@ const Verbs_to_ing_Grammar = () => {
                         </ul>
                     </div>
                     {/* Go to Quizzes */}
-                    <QuizzesButtonGrammar page='/verbs_to_ing' text='Verbs -to/-ing Quizzes'/>
+                    <QuizzesButtonGrammarR page='/verbs_to_ing' text='Verbs -to/-ing Quizzes'/>
                     {/* different meaning */}
                     <h1>Gerund or Infinitive?</h1>
                     <div className="gerund">
@@ -214,10 +217,11 @@ const Verbs_to_ing_Grammar = () => {
                         
                         <p></p>
                     </div>
-                </Verbs_to_ing1>
-            </Verbs_to_ingMain>
-        </Verbs_to_ingGrammar>
+                </VerbsToIng1>
+            </VerbsToIngMain>
+        </VerbsToIngGrammarContainer>
+        </>
     )
 }
 
-export default Verbs_to_ing_Grammar
+export default GerundGrammar

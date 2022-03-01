@@ -2,14 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { fce_practice_links } from '../data_links'
 
-const FCE_Practice = () => {
+const FcePractice = () => {
     return (
         <>
             <div className="fce_practice_page">
                 <h1>FCE Practice</h1>
                 <div className="fce_practice_boxes">
                     {fce_practice_links.map((a) => {
-                        const { id, url, text, info} = a
+                        const { id, url, text} = a
                         return (
                             <>
                             <Link to={url} className='fce_practice_box' key={id}>
@@ -30,4 +30,4 @@ const FCE_Practice = () => {
     )
 }
 
-export default FCE_Practice
+export default FcePractice

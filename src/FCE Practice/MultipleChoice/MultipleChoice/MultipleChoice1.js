@@ -1,5 +1,5 @@
 import React from 'react'
-import MultipleChoice_1 from '../MultipleChoice_back/MultipleChoice_1'
+import MultipleChoice1Test from '../MultipleChoice_back/MultipleChoice_1'
 
 import Sidebar from '../Sidebar'
 
@@ -9,7 +9,7 @@ const MultipleChoice1 = () => {
              <div className="quizzes_page_quizzes1">
                 <Sidebar />
                 <div className='fce_mainPage'>
-                    <MultipleChoice_1/>
+                    <MultipleChoice1Test/>
                 </div>
             </div>
         </>

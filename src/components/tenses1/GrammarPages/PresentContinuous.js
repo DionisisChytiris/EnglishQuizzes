@@ -6,6 +6,8 @@ import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
 
 const PresentContinuous = () => {
     return (
+        <>
+        <div className="fatline"></div>
         <Tenses1Grammar>
             <ShowSideBar/>
             <Tenses1Side>
@@ -48,6 +50,7 @@ const PresentContinuous = () => {
                 <QuizzesButtonGrammar page='tenses1' text='Tenses 1 Quizzes'/>
             </Tenses1Main>
         </Tenses1Grammar>
+        </>
     )
 }
 
