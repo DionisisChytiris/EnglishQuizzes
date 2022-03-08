@@ -6,15 +6,18 @@ export const QuizzesPageMain = styled.div`
     height: 100%;
     margin: auto;
     display: flex;
-
+    /* align-items: center ; */
+    
     @media (max-width: 1200px){
         width: 100%;
     }
     `
 
 export const QuizzesMain = styled.div`
-    height: 75vh;
+    height: 100%;
+    /* height: 80vh; */
     width: 70%;
+    padding-bottom: 200px;
     margin: 5% auto;
     display: flex;
     flex-direction: column;
@@ -31,9 +34,10 @@ export const QuizzesMain = styled.div`
         font-size: clamp(1.8rem, 2vw, 2.2rem);
         margin: 30px auto 20px auto;
         color: white;
+        padding: 40px;
     }
     @media (max-width: 850px){
-       width: 95%;
+       width: 100%;
     }
 `
 
@@ -101,7 +105,7 @@ export const Explanation = styled.div`
     /* border: 2px solid #eae6eb; */
     background: var(--cl-secondary-lightgrey);
     margin-top: 30px;
-    margin-bottom: 1rem;
+    margin-bottom: 100px;
     border-radius: 0.25rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 
@@ -138,10 +142,12 @@ export const ExplanationContent = styled.div`
 // Test quiz3
 export const QuizContainer = styled.div`
     width: 90%;
-    height: 70vh;
+    height: 100%;
     background-color: transparent;
+    /* background-color: yellow; */
     /* border: 10px solid grey; */
-    padding: 0px;
+    padding: 0px 30px;
+    /* margin-bottom: 150px; */
     border-radius: 10px;
 `
 
@@ -168,12 +174,18 @@ export const QuizCounter = styled.div`
         margin-top:32px;
         @media (max-width: 850px){
             margin-top: 24px;
+            /* padding: 0px 0px 0px 40px; */
         }
+    }
+    @media (max-width: 850px){
+        /* margin-top: 24px; */
+        padding: 0px 0px 0px 40px;
     }
     `
 export const QuizContent = styled.div`
     width: 80%;
     background: var(--cl-primary-lightgrey);
+    /* background: orange; */
     color: var(--cl-primary-darkblue);
     display: flex;
     align-items: center;
@@ -183,7 +195,7 @@ export const QuizContent = styled.div`
     padding: 0px 90px;
     border-radius: 0px 10px 0px 0px;
     @media (max-width: 850px){
-        padding: 0px 40px 0px 80px;
+        padding: 0px 0px 0px 60px;
     }
     `
 export const QuizTextCenter = styled.div`
@@ -217,8 +229,6 @@ export const QuizAnswerContainer = styled.div`
     .answer:hover {
         background: var(--cl-primary-lightgrey);
         cursor: pointer;
-        /* color: white; */
-        /* font-weight: 600; */
     }
     .answer.correct {
         background: var(--answer-green);
@@ -235,12 +245,12 @@ export const QuizAnswerContainer = styled.div`
 
 export const QuizExplanation = styled.div`
     width: 100%;
-    height: 25vh;
-    padding: 10px 30px 20px 30px;
+    height: 100%;
+    padding: 20px 50px;
     border-radius: 0px 0px 10px  10px;
     background: var(--cl-secondary-lightgrey);
     margin-top: 10px;
-    margin-bottom: 1rem;
+    margin-bottom: -100px;
     .title {
         background: transparent;
         border: none;
@@ -257,7 +267,7 @@ export const QuizExplanation = styled.div`
     }
     .content{
         color: var(--cl-primary-darkblue);
-        padding: 10px 20px;
+        padding: 20px 20px;
         text-align: center;
     }
     .next-btn{
@@ -265,46 +275,5 @@ export const QuizExplanation = styled.div`
         align-items: center;
         justify-content: center;
         margin: auto;
-    }
-    @media (max-width: 620px){
-        height: 28vh;
-    }
-`
-
-export const QuizResults = styled.div`
-    h1{
-        color: green;
-        text-align: center;
-        margin-top: 80px;
-    }
-    .score-section{
-        padding: 30px;
-        color: yellow;
-    }
-    .buttons-section{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-    }
-    .button{
-        color: white;
-        background: rgb(136, 159, 189);
-        cursor: pointer;
-        border-radius: 15px;
-        font-size: 20px;
-        margin: 10px;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .button:hover {
-        background-color: var(--cl-primary-darkblue);
-    }
-    .results{
-        padding-top: 40px;
-        text-align: center;
-        color: white
     }
 `

@@ -180,12 +180,4 @@
   }
 }
 
-/* footer */
-.footer-container {
-  height: 50px;
-  background: var(--cl-primary-darkblue);
-  color: white;
-  text-align: center;
-  padding-top: 15px;
-  border-top: 0.1rem solid rgb(122, 182, 241);
-}
+

@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route} from 'react-router-dom'
 import Navbar1 from './Navbar1'
-import Footer from './Footer'
+import Footer from './Footer/Footer'
 import ScrollToTop from './General Pages/ScrollToTop'
 // Navbar
 import Home from './Navbar/Home'

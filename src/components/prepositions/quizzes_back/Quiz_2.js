@@ -3,8 +3,8 @@ import quiz2data from "../data/quiz2data"
 import { v4 as uuidv4 } from 'uuid'
 import Sidebar from '../Sidebar'
 import ShowSideBar from '../mainPages/ShowSidebarQuiz'
-import { QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizTextCenter, QuizAnswerContainer, QuizExplanation } from '../../../General Styles/QuizzesPage.styled'
-
+import { QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizTextCenter, QuizAnswerContainer, QuizExplanation, } from '../../../General Styles/QuizzesPage.styled'
+import QuizResultsSection from '../../../General Pages/Quiz Results/ResultsTest'
 
 const Quiz2 = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -14,7 +14,7 @@ const Quiz2 = () => {
     const [showInfo, setShowInfo] = useState(false)
     const [showExplanation, setShowExplanation] = useState(false)
     const [wrongAnswer, setWrongAnswer] = useState('')
-
+    
     const handleCorrectAnswer = (isCorrect) => {
         if (isCorrect) {
             setScore(score + 1)
@@ -46,11 +46,35 @@ const Quiz2 = () => {
                 {showScore ? (
                 <div>
                     <ShowSideBar/>
-                    <div className="score-section">Your score: {score}/{quiz2data.length}</div>
-                    <div className='showscore-btns'>
-                        <a href="/verbs_to_ing_1" className='return'>Try Again</a>
-                        <a href="/verbs_to_ing_2" className='return'>Next Quiz</a>
-                    </div>
+                    <QuizResultsSection data={quiz2data} score={score} source1={'/quiz2'} source2={'/quiz3'}/>
+                    {/* <QuizResults>
+                        {score > quiz2data.length/2 ? <h1>Congratulations!!!</h1> : <h1>Try Again!</h1>}
+                        <div className="score-section">Your score is {score} out of {quiz2data.length}!!!</div>
+                        <div className='buttons-section'>
+                            <a href="/quiz2" className='button'>Try Again</a>
+                            <div className='button' onClick={()=>{setResults(!results)}}>Results</div>
+                            <a href="/quiz3" className='button'>Next Quiz</a>
+                        </div>
+                        {
+                            results &&
+                                <Results>
+                                    <div className='title'>Check the results</div>
+                                        {quiz2data.map((a)=> (
+                                            <Slide right>
+                                                <ResultBox>
+                                                    <div className='result-title1'>Question {a.id}</div>
+                                                    <div className='result-question'>{a.question}</div>
+                                                    <div className='result-a'>{a.answersList.map((c)=><div className={`answer-box ${c.isCorrect ? 'answer-correct' : 'answer-wrong'} `}>{c.answer}
+                                                    <div className='align'>{c.isCorrect ? <TiTick/> : <TiTimes/>}</div></div>)}</div>
+                                                    <div className='result-title2'>Explanation</div>
+                                                    <div className='result-explanation'>{a.help}</div>
+                                                </ResultBox>
+                                            </Slide>
+                                        )
+                                        )}  
+                                </Results>
+                        }
+                    </QuizResults> */}
                 </div>
                 ) :
                 (

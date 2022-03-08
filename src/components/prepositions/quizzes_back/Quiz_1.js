@@ -3,8 +3,8 @@ import quiz1data from "../data/quiz1data"
 import { v4 as uuidv4 } from 'uuid'
 import Sidebar from '../Sidebar'
 import ShowSideBar from '../mainPages/ShowSidebarQuiz'
-import { QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizTextCenter, QuizAnswerContainer, QuizExplanation, QuizResults } from '../../../General Styles/QuizzesPage.styled'
-
+import { QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizTextCenter, QuizAnswerContainer, QuizExplanation, } from '../../../General Styles/QuizzesPage.styled'
+import QuizResultsSection from '../../../General Pages/Quiz Results/ResultsTest'
 
 const Quiz1 = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -14,8 +14,7 @@ const Quiz1 = () => {
     const [showInfo, setShowInfo] = useState(false)
     const [showExplanation, setShowExplanation] = useState(false)
     const [wrongAnswer, setWrongAnswer] = useState('')
-    const [results, setResults] = useState(false)
-
+    
     const handleCorrectAnswer = (isCorrect) => {
         if (isCorrect) {
             setScore(score + 1)
@@ -47,27 +46,13 @@ const Quiz1 = () => {
                 {showScore ? (
                 <div>
                     <ShowSideBar/>
-                    <QuizResults>
-                        <h1>Congratulations!!!</h1>
-                        <div className="score-section">Your score is {score} out of {quiz1data.length}!!!</div>
-                        <div className='buttons-section'>
-                            <a href="/verbs_to_ing_1" className='button'>Try Again</a>
-                            <div className='button' onClick={()=>{setResults(!results)}}>Results</div>
-                            <a href="/verbs_to_ing_2" className='button'>Next Quiz</a>
-                        </div>
-                        {
-                            results &&
-                                <div className='results'>
-                                    {quiz1data[currentQuestion].question}  
-                                </div>
-                        }
-                    </QuizResults>
+                    <QuizResultsSection data={quiz1data} score={score} source1={'/quiz1'} source2={'/quiz2'}/>
                 </div>
                 ) :
                 (
                 <>
                     <ShowSideBar/>
-                    <h2>Prepositions of Place (on, in, at)</h2>
+                    <h2>Prepositions of Time (on, in, at)</h2>
                     <QuizContainer>
                         <QuizTitle>
                             <QuizCounter>
@@ -82,19 +67,19 @@ const Quiz1 = () => {
                         </QuizTitle>
                         <QuizAnswerContainer>
                             {quiz1data[currentQuestion].answersList.map((a) => (
-                                <div disabled={clicked} className={`answer ${clicked && a.isCorrect ? "correct" : wrongAnswer}`} key={uuidv4()} onClick={()=>handleCorrectAnswer(a.isCorrect)}>{a.answer}</div>
+                                <div disabled={clicked} className={`answer ${clicked && a.isCorrect ? "correct" : wrongAnswer}`} key={uuidv4()}onClick={()=>handleCorrectAnswer(a.isCorrect)}>{a.answer}</div>
                             ))}
-                        </QuizAnswerContainer>
-                        {showExplanation &&
-                            <QuizExplanation>
-                                <>
-                                    <div className='title'>Explanation</div>
-                                    <div className="line"></div>
-                                    <div className='content'>{quiz1data[currentQuestion].help}</div>
-                                    <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button>
-                                </>
-                            </QuizExplanation>
-                        }
+                            </QuizAnswerContainer>
+                            {showExplanation &&
+                                <QuizExplanation>
+                                    <>
+                                        <div className='title'>Explanation</div>
+                                        <div className="line"></div>
+                                        <div className='content'>{quiz1data[currentQuestion].help}</div>
+                                        <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button>
+                                    </>
+                                </QuizExplanation>
+                            }
                     </QuizContainer>            
                 </>        
                 )           
@@ -106,5 +91,3 @@ const Quiz1 = () => {
 }
 
 export default Quiz1
-
-

@@ -3,8 +3,8 @@ import quiz3data from "../data/quiz3data"
 import { v4 as uuidv4 } from 'uuid'
 import Sidebar from '../Sidebar'
 import ShowSideBar from '../mainPages/ShowSidebarQuiz'
-import { QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizTextCenter, QuizAnswerContainer, QuizExplanation } from '../../../General Styles/QuizzesPage.styled'
-
+import { QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizTextCenter, QuizAnswerContainer, QuizExplanation,  } from '../../../General Styles/QuizzesPage.styled'
+import QuizResultsSection from '../../../General Pages/Quiz Results/ResultsTest'
 
 const Quiz3 = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -46,11 +46,7 @@ const Quiz3 = () => {
                 {showScore ? (
                 <div>
                     <ShowSideBar/>
-                    <div className="score-section">Your score: {score}/{quiz3data.length}</div>
-                    <div className='showscore-btns'>
-                        <a href="/verbs_to_ing_1" className='return'>Try Again</a>
-                        <a href="/verbs_to_ing_2" className='return'>Next Quiz</a>
-                    </div>
+                    <QuizResultsSection data={quiz3data} score={score} source1={'/quiz3'} source2={'/quiz4'}/>
                 </div>
                 ) :
                 (
