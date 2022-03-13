@@ -9,7 +9,7 @@ import Img4 from '../../img/img-4.jpg'
 
 export const HomeData = [
     {
-        title: 'Tower Bridge',
+        title: 'Tower Bridge. This is a test text. To find out the width of this line.',
         text: 'Tower Bridge',
         image: Img1,
         alt: 'Tower Bridge'

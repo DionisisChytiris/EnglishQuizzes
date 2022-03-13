@@ -9,7 +9,7 @@ import {
     PrepositionContainerNew
 } from './grammar.styled'
 import ShowSideBar from '../../../General Pages/ShowSideBar'
-import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
+import { QuizzesButtonGrammar } from '../../../General Pages/Show Quiz Buttons/QuizzesButton'
 import '../style.css'
 
 const PrepositionsGrammar = () => {

@@ -76,7 +76,7 @@ import Quiz1Conditionals from './components/conditionals/quizzes_back/quiz_1Cond
 import Quiz2Conditionals from './components/conditionals/quizzes_back/quiz_2Conditionals'
 import Quiz3Conditionals from './components/conditionals/quizzes_back/quiz_3Conditionals'
 // Grammar pages
-import GeneralTensesPage from './General Pages/GeneralTensesPage'
+import GeneralTensesPage from './General Pages/General Tenses Page/GeneralTensesPage'
 import PrepositionsGrammar from './components/prepositions/mainPages/Grammar'
 import ArticlesGrammar from './components/articles/mainPages/Grammar'
 import PronounsGrammar from './components/pronouns/mainPages/Grammar'
@@ -222,7 +222,7 @@ function App() {
         <Route path='/wordFormation1' component={WordFormation1} />
         <Route path='/multipleChoice1' component={MultipleChoice1} />
         {/* </Switch> */}
-        {/*  Footer  */}
+         {/* Footer  */}
         <Footer/>
       </Router>
     </>

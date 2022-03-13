@@ -1,6 +1,6 @@
 import React from 'react'
-import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
-import { QuizzesButtonGrammarR } from '../../../General Pages/QuizzesButtonR'
+import { QuizzesButtonGrammar } from '../../../General Pages/Show Quiz Buttons/QuizzesButton'
+import { QuizzesButtonGrammarR } from '../../../General Pages/Show Quiz Buttons/QuizzesButtonR'
 import ShowSideBar from '../../../General Pages/ShowSideBar'
 import SidebarGrammar from '../../../General Pages/SidebarGrammar'
 import {

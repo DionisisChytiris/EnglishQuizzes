@@ -1,5 +1,5 @@
 /* show score page */
-.trivia {
+/* .trivia {
   margin-top: -150px;
   height: 100%;
   display: flex;
@@ -11,9 +11,9 @@
 .trivia p {
   font-size: 18px;
   margin-bottom: 30px;
-}
+} */
 
-.score-section {
+/* .score-section {
   display: grid;
   font-size: 24px;
   align-items: center;
@@ -22,18 +22,18 @@
 .pronouns-title {
   margin-bottom: 55px;
   font-size: 25px;
-}
+} */
 
 /* alert sign (?) */
-.pronouns-explanation {
+/* .pronouns-explanation {
   background: transparent;
   border: none;
   color: grey;
   font-size: 14px;
   margin-left: 250px;
   margin-bottom: -25px;
-}
-
+} */
+/* 
 .pronouns-explanation1 {
   background: transparent;
   border: none;
@@ -41,15 +41,15 @@
   font-size: 14px;
   margin-left: 300px;
   margin-bottom: -25px;
-}
-
+} */
+/* 
 .pronouns-explanation:hover,
 .pronouns-explanation1:hover {
   color: black;
-}
+} */
 
 /*  */
-.question-quiz1 {
+/* .question-quiz1 {
   width: 450px;
   background: linear-gradient(rgb(238, 242, 247), rgb(39, 119, 224));
   border: 2px solid white;
@@ -58,8 +58,8 @@
   padding: 20px;
   border-radius: 15px;
   font-size: 20px;
-}
-
+} */
+/* 
 .question-quiz2 {
   width: 450px;
   background: linear-gradient(rgb(238, 242, 247), rgb(218, 39, 224));
@@ -69,8 +69,8 @@
   padding: 20px;
   border-radius: 15px;
   font-size: 20px;
-}
-
+} */
+/* 
 .question-quiz3 {
   width: 70%;
   background: linear-gradient(rgb(238, 242, 247), rgb(39, 224, 199));
@@ -80,8 +80,8 @@
   padding: 20px;
   border-radius: 15px;
   font-size: 20px;
-}
-
+} */
+/* 
 .question-quiz4 {
   width: 90%;
   background: linear-gradient(rgb(238, 242, 247), rgb(224, 82, 39));
@@ -97,8 +97,8 @@
   .question-quiz1 {
     width: 300px;
   }
-}
-
+} */
+/* 
 .enter-input {
   width: 50px;
   border-radius: 4px;
@@ -107,8 +107,8 @@
   padding: 2px;
   margin-bottom: 1px;
   outline: none;
-}
-
+} */
+/* 
 .answers-quiz4 {
   width: 60%;
   display: flex;
@@ -124,8 +124,8 @@
   align-items: center;
   justify-content: center;
   margin-top: 30px;
-}
-
+} */
+/* 
 .answer-quiz2 {
   width: 300px;
   padding: 10px;
@@ -139,8 +139,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
+} */
+/* 
 .answer-quiz4 {
   width: 150px;
   padding: 10px;
@@ -154,15 +154,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
+} */
+/* 
 .answer-quiz2:hover,
 .answer-quiz4:hover {
   background: rgb(130, 176, 245);
   cursor: pointer;
   color: white;
-}
-
+} */
+/* 
 .answer-quiz4.correct,
 .answer-quiz2.correct {
   background: rgb(126, 255, 126);
@@ -176,8 +176,8 @@
 
 .answer-quiz4.wrong {
   background: rgb(250, 76, 111);
-}
-
+} */
+/* 
 .quiz1-count {
   margin-top: -20px;
   margin-left: 60%;
@@ -187,8 +187,8 @@
 .quiz4-count {
   margin-bottom: 20px;
   font-size: 20px;
-}
-
+} */
+/* 
 .next-btn {
   padding: 10px;
   width: 80px;
@@ -202,8 +202,8 @@
 
 .next-btn:hover {
   background-color: #698199;
-}
-
+} */
+/* 
 .test-box {
   padding: 20px;
   width: 500px;
@@ -214,10 +214,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+} */
 
 /* show explanation box */
-.help-box {
+/* .help-box {
   width: 400px;
   padding: 1rem 1.5rem;
   border: 2px solid #eae6eb;
@@ -231,8 +231,8 @@
 .help-box p {
   margin-top: 10px;
   font-size: 16px;
-}
-
+} */
+/* 
 .help {
   width: 8rem;
   height: 2rem;
@@ -249,16 +249,16 @@
 .help:hover {
   font-size: 16px;
   width: 10rem;
-}
-
+} */
+/* 
 .help-line {
   border-bottom: 1px solid black;
 }
 
 .help-explanation {
   color: rgb(119, 118, 118);
-}
-
+} */
+/* 
 @media screen and (max-width: 900px) {
   .help-box {
     width: 300px;
@@ -284,20 +284,20 @@
   .help-box {
     width: 300px;
   }
-}
-
+} */
+/* 
 .score-section {
   margin-bottom: 30px;
   text-align: center;
-}
-
+} */
+/* 
 .showscore-btns {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-}
-
+} */
+/* 
 .return {
   color: white;
   background: rgb(136, 159, 189);
@@ -313,7 +313,7 @@
 
 .return:hover {
   background-color: #2f5a92;
-}
+} */
 
 .showscore {
   font-size: 14px;

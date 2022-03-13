@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 import Slide from 'react-reveal/Slide'
 
+// Quizzes button slide from the left
+
 const Container = styled.div`
     width: 300px;
     overflow: hidden;

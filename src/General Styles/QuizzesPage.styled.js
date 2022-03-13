@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 
 export const QuizzesPageMain = styled.div`
-    width: 1200px;
+    /* width: 1200px; */
+    width: 75%;
     background: rgb(253, 251, 251);
+    /* background: yellow; */
     height: 100%;
     margin: auto;
     display: flex;
+    
     /* align-items: center ; */
     
     @media (max-width: 1200px){
@@ -275,5 +278,16 @@ export const QuizExplanation = styled.div`
         align-items: center;
         justify-content: center;
         margin: auto;
+        padding: 10px;
+        width: 80px;
+        border-radius: 15px;
+        cursor: pointer;
+        background-color: rgb(136, 159, 189);
+        border: none;
+        color: white;
     }
+    .next-btn:hover {
+        background-color: var(--cl-primary-darkblue);
+    } 
 `
+  

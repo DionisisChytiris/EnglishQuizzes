@@ -21,7 +21,7 @@ import {BsArrowUpRight, BsArrowUpLeft} from 'react-icons/bs'
 import { grammardata1 } from '../data/grammardata1'
 import SidebarGrammar from '../../../General Pages/SidebarGrammar'
 import ShowSideBar from '../../../General Pages/ShowSideBar'
-import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
+import { QuizzesButtonGrammar } from '../../../General Pages/Show Quiz Buttons/QuizzesButton'
 
 const Passive_Grammar = () => {
     return (

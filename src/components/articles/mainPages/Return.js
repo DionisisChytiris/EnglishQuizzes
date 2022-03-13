@@ -1,37 +1,21 @@
 import React from 'react'
-// import '../style.css'
-// import ShowSidebar from './ShowSidebarQuiz'
-import styled from 'styled-components'
+import QuizInstructions from '../../../General Pages/Quiz Instructions/QuizInstructions'
 import ShowSideBar from '../mainPages/ShowSidebarQuiz'
-
-const InstructionsMain = styled.div`
-    /* height: 75vh; */
-    height: 100%auto;
-    width: 70%;
-    margin: 5% auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: aqua;
-
-    h1{
-        font-size: clamp(1.8rem, 2vw, 2.2rem);
-        margin-top: 80px;
-        margin-bottom: 80px;
-    }
-    @media (max-width: 850px){
-       width: 95%;
-    }
-`
 
 const Return = () => {
     
     return (
         <>
             <ShowSideBar/>
-            <InstructionsMain>
-                <h1>Instructions</h1>
-            </InstructionsMain>
+            <QuizInstructions
+                focus={'Articles'} 
+                number={'12'}
+                test1={'Hello'}
+                test2={'World'}
+                advice1={'Hello'}
+                advice2={'World'}
+                advice3={'!!!'}
+            />
         </>
     )
 }

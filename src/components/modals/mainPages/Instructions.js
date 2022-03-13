@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import QuizInstructions from '../../../General Pages/Quiz Instructions/QuizInstructions'
 import ShowSideBar from './ShowSideBarQuiz'
 
 const InstructionsMain = styled.div`
@@ -28,6 +29,15 @@ const Return = () => {
     return (
         <>
         <ShowSideBar/>
+        <QuizInstructions
+            focus={'Modals'} 
+            number={'12'}
+            test1={'Hello'}
+            test2={'World'}
+            advice1={'Hello'}
+            advice2={'World'}
+            advice3={'!!!'}
+        />
         <InstructionsMain>
             <div>Instructions</div>
             <Link to='/modal_grammar'>

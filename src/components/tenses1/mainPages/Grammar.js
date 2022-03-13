@@ -7,7 +7,7 @@ import {
     Tenses1Main,
     Tenses1Box1
 } from './grammar.styled'
-import {QuizzesButtonGrammar} from '../../../General Pages/QuizzesButton'
+import {QuizzesButtonGrammar} from '../../../General Pages/Show Quiz Buttons/QuizzesButton'
 
 const Tenses1_Grammar = () => {
     return (

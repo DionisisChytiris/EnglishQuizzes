@@ -14,7 +14,7 @@ const QuizResults = styled.div`
         margin-top: 80px;
     }
     .smile{
-        font-size: 50px;
+        font-size: clamp(2.1rem, 3vw, 3.7rem);
         text-align: center;
         margin-top: 80px;
     }

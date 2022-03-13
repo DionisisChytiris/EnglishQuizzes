@@ -15,8 +15,7 @@ export const ShowSideBarButton = styled.div`
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: var(--cl-primary-darkblue);
-            /* width: 100vh; */
+            background-color: lightgrey;
             cursor: pointer;
         }
         .icon{
@@ -24,24 +23,25 @@ export const ShowSideBarButton = styled.div`
             align-items: center;
             justify-content: center;
             font-size: 30px;
-            color: white;
+            color: var(--cl-primary-darkblue) ;
+        }
+        .icon:hover{
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: grey;
         }
         .a{
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 15px;
-            /* position: absolute; */
-            /* opacity: 999; */
             padding: 10px 15px;
-            color: white;
-            margin-left: 300px;
+            color: var(--cl-primary-darkblue);
         }
         .a:hover{
-            background-color: green;
-        }
-        .icon:hover{
-            /* transform: rotate(270deg); */
+            background-color: grey;
         }
     }
 `
@@ -52,7 +52,8 @@ export const ShowContent = styled.div`
         display: block;
         position: absolute;
         top: 15px;
-        left: 190px;
+        /* left: 190px; */
+        left: 220px;
         opacity: 1;
     }
 `

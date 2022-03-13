@@ -2,7 +2,7 @@ import React from 'react'
 import ShowSideBar from '../../../General Pages/ShowSideBar'
 import SidebarGrammar from '../../../General Pages/SidebarGrammar'
 import { Tenses1Grammar, Tenses1Side, Tenses1Main, TensesTest1} from '../mainPages/grammar.styled'
-import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
+import { QuizzesButtonGrammar } from '../../../General Pages/Show Quiz Buttons/QuizzesButton'
 
 const PresentContinuous = () => {
     return (

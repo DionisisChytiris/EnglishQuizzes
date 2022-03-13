@@ -7,7 +7,7 @@ import {
     Tenses2Box1
 } from './grammar.styled'
 import ShowSideBar from '../../../General Pages/ShowSideBar'
-import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
+import { QuizzesButtonGrammar } from '../../../General Pages/Show Quiz Buttons/QuizzesButton'
 
 const Tenses2_Grammar = () => {
     return (

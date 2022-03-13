@@ -2,36 +2,18 @@ import styled from 'styled-components'
 import photo from '../../img/colors.jpg'
 
 export const HomeImageTest = styled.div`
-    /* padding-top: 0px; */
     background-image: url(${photo});
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 60vh;
     width: 100%;
-    /* background-color: blue; */
-    /* position: relative; */
-    /* top: 0; */
-    /* left: 0; */
-    /* object-fit: cover; */
-
-/* img{
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-} */
 `
 
 export const HomeSection = styled.section`
     height: 100%;
-    position: relative;
-    /* top: 0; */
+    width: 100%;
     overflow: hidden;
-    /* width: 80vw;
-    margin: auto; */
 `
 
 export const Home1 = styled.div`
@@ -94,13 +76,13 @@ export const HomeSlide = styled.div`
     z-index: 1;
     width: 60%;
     height: 75%;
-    /* text-align: center; */
 `
 export const HomeSlider = styled.div` 
     position: absolute;
     top: 0;
     left: 0;
-    width: 60%;
+    /* width: 60%; */
+    width: 100%;
     height: 75%;
     display: flex;
     align-items: center;
@@ -113,9 +95,11 @@ export const HomeContent = styled.div`
     flex-direction: column;
     max-width: 1100px;
     width: calc(100% - 100px);
+    padding: 30px;
     color: #fff;
-    margin-left: 80%;
-    margin-bottom: -80%;
+    margin-bottom: -30%;
+    background-color: green;
+    text-align: center;
 `
 
 export const HomeImage = styled.img`
@@ -125,11 +109,21 @@ export const HomeImage = styled.img`
     width: 55vw;
     height: 67vh;
     object-fit: cover;
-
+    
     @media (max-width: 1100px){
-        width: 100vw;
+        left: 10%;
+        width: 85vw;
         height: 67vh;
         object-fit: cover;
+    } 
+    @media (max-width: 750px){
+        left: 0;
+        width: 100vw;
+        height: 57vh;
+        object-fit: cover;
+    } 
+    @media (max-width: 520px){
+        height: 50vh;
     } 
 `
 export const HomePart2 = styled.div`

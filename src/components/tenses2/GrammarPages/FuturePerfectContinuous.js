@@ -1,5 +1,5 @@
 import React from 'react'
-import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
+import { QuizzesButtonGrammar } from '../../../General Pages/Show Quiz Buttons/QuizzesButton'
 import ShowSideBar from '../../../General Pages/ShowSideBar'
 import SidebarGrammar from '../../../General Pages/SidebarGrammar'
 import { Tenses2Grammar, Tenses2Side, Tenses2Main, TensesTest2} from '../mainPages/grammar.styled'

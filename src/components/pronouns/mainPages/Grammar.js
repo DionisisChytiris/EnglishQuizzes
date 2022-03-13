@@ -11,8 +11,8 @@ import {
     PronounsChartIndefinite,
 } from './grammar.styled'
 import {FaCheck, FaTimes} from 'react-icons/fa'
-import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
-import { QuizzesButtonGrammarR } from '../../../General Pages/QuizzesButtonR'
+import { QuizzesButtonGrammar } from '../../../General Pages/Show Quiz Buttons/QuizzesButton'
+import { QuizzesButtonGrammarR } from '../../../General Pages/Show Quiz Buttons/QuizzesButtonR'
 import { Line } from '../../../General Pages/Special Pages/Line'
 import DelayLine from '../../../General Pages/Special Pages/DelayLine'
 

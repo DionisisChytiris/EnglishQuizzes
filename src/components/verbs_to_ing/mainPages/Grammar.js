@@ -11,8 +11,8 @@ import {
     ContainerFlex
 } from './grammar.styled'
 import ShowSideBar from '../../../General Pages/ShowSideBar'
-import { QuizzesButtonGrammar } from '../../../General Pages/QuizzesButton'
-import { QuizzesButtonGrammarR } from '../../../General Pages/QuizzesButtonR'
+import { QuizzesButtonGrammar } from '../../../General Pages/Show Quiz Buttons/QuizzesButton'
+import { QuizzesButtonGrammarR } from '../../../General Pages/Show Quiz Buttons/QuizzesButtonR'
 
 // alert functions
 const spelling = () => {

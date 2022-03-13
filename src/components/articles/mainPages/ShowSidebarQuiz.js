@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { ShowContent, ShowSideBarButton } from '../../../General Styles/ShowSideBarQuiz.styled'
 import Sidebar from '../Sidebar'
-import {FaAngleLeft } from 'react-icons/fa'
+import {FaAngleLeft, FaTimes } from 'react-icons/fa'
 
 const ShowSideBar = () => {
     const [show, setShow] = useState(false)
@@ -10,7 +10,7 @@ const ShowSideBar = () => {
         <>
         <ShowSideBarButton>
                 <button onClick={() => setShow(!show)}>
-                    <div className="icon"><FaAngleLeft /></div>
+                    <div className="icon">{show? (<button className='a'><FaTimes /></button>): <FaAngleLeft/>}</div>
                 </button>
         </ShowSideBarButton>
             {show &&

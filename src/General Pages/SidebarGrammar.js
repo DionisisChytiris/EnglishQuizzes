@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import {FaChevronDown, FaChevronUp} from 'react-icons/fa'
+import {FaChevronDown} from 'react-icons/fa'
 
 /////////// STYLING ////////////////////
 const Sidebar = styled.div`
@@ -8,26 +8,27 @@ const Sidebar = styled.div`
     margin-right: 20px;
     margin-top: 30%;
     margin-bottom: 30%;
-    /* background-color: #e7e6e6; */
-    /* background: var(--cl-secondary-lightgrey); */
-    background: var(--cl-primary-lightgrey);
-    border: 0.4rem solid #e7e6e6;
+    /* background: var(--cl-primary-lightgrey); */
+    background: linear-gradient(to bottom right, #00003A 5%,#0707A9 );
+    /* border: 0.4rem solid #e7e6e6; */
     padding: 20px;
-    border-radius: 2px;
-    /* font-weight: 600; */
+    border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    .bar{
+    .activeA{
         height: 100%;
-        height: 110vh;
+        /* height: 110vh; */
     }
-    .active{
-        height: 140vh;
-    }
+    /* .active{
+        height: 120vh;
+    } */
     h1{
         padding-top: 10px;
         font-size: 20px;
         margin-bottom: 50px;
         text-decoration: underline;
+        background: linear-gradient(to right, white, aqua, white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     .side {
         margin: 5px 0px;
@@ -39,9 +40,11 @@ const Sidebar = styled.div`
     }
     .side.bold{
         font-weight: 600;
+        margin-bottom: 150px;
     }
     .side.color{
-        color: var(--cl-primary-darkblue);
+        /* color: var(--cl-primary-darkblue); */
+        color: white;
         /* margin-left: 10px; */
         padding-right: 20px;
         padding-left: 10px;
@@ -55,13 +58,13 @@ const Sidebar = styled.div`
         color: green;
     }
     .side a {
-        color: var(--cl-primary-darkblue);
+        /* color: var(--cl-primary-darkblue); */
         margin-left: 10px;
+        color: white
     }
     .side a:hover,
     .side.color:hover {
         color: var(--cl-primary-blue);
-        /* text-decoration-line: underline; */
     }
     .tenses-container{
         display: flex;
@@ -94,14 +97,11 @@ const Sidebar = styled.div`
         padding-right: 15px;
     }
     @media (max-width: 1150px){
-        /* display: none; */
         position: absolute;
-        z-index: 1000;
+        z-index: 1;
         margin-left: -300px;
         background-color: var(--cl-primary-darkblue);
         color: white;
-        /* height: 600px;
-        overflow: hidden; */
         .side{
             border: none
         }
@@ -240,24 +240,26 @@ const SidebarGrammar = () => {
     const [tenses1, setTenses1] = useState(false)
     const [tenses2, setTenses2] = useState(false)
     const [height, setHeight] = useState()
-    const [arrow1, setArrow1] = useState()
-    const [arrow2, setArrow2] = useState()
+    // const [arrow1, setArrow1] = useState()
+    // const [arrow2, setArrow2] = useState()
 
     const showTenses1 = () => {
         setTenses1(!tenses1)
         setTenses2(false)
         setHeight(!height)
-        setArrow1(!arrow1)
+        // setArrow1(!arrow1)
+        // setArrow2(arrow2)
     }
     const showTenses2 = () => {
         setTenses2(!tenses2)
         setTenses1(false)
         setHeight(!height)
-        setArrow2(!arrow2)
+        // setArrow2(!arrow2)
+        // setArrow1(arrow1)
     }
     return (
         <Sidebar>
-            <div className={height ? 'active' : 'bar'}>
+            <div className={height ? 'activeA' : ''}>
                 <h1>More Grammar...</h1>
                 {/* Grammar pages A */}
                 {sidebarGrammarA.map((a) => {
@@ -271,7 +273,8 @@ const SidebarGrammar = () => {
                 {/* Tenses 1 page */}
                 <div className="side color" onClick={showTenses1}>
                     <div>Tenses 1</div>
-                    <div className='arrow'>{arrow1 ? <FaChevronUp/> : <FaChevronDown/>}</div>
+                    <div className='arrow'><FaChevronDown/></div>
+                    {/* <div className='arrow'>{arrow1 ? <FaChevronDown/> : <FaTimes/>}</div> */}
                 </div>
                 {tenses1 && (
                     <div className='tenses-container'>
@@ -288,7 +291,8 @@ const SidebarGrammar = () => {
                 {/* Tenses 2 page */}
                 <div className="side color" onClick={showTenses2}>
                     <div>Tenses 2 </div>
-                    <div className='arrow'>{arrow2 ? <FaChevronUp/> : <FaChevronDown/>}</div>
+                    <div className='arrow'><FaChevronDown/></div>
+                    {/* <div className='arrow'>{arrow2 ? <FaChevronDown/> : <FaChevronUp/>}</div> */}
                 </div>
                 {tenses2 && (
                     <div className='tenses-container re'>

@@ -32,11 +32,12 @@ const Quizzes = () => {
                                             <div className="blur">
                                                 <div style={{
                                                     height: '100px',
-                                                    width: '400px',
+                                                    width: '100%',
                                                     margin: 'auto', 
                                                     overflow: 'scroll',
                                                     overflowX: 'hidden',
-                                                    overflowY: 'scroll'
+                                                    overflowY: 'scroll',
+                                                    // padding: '0px 0px 0px 20px'
                                                 }}>
                                                     <p>{info1}</p>
                                                     <p>{info2}</p>

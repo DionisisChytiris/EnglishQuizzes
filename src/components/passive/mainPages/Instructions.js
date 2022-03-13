@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import '../../modals/style.css'
 import ShowSideBar from './ShowSideBarQuiz'
+import QuizInstructions from '../../../General Pages/Quiz Instructions/QuizInstructions'
 
 const InstructionsMain = styled.div`
     /* height: 75vh; */
@@ -28,6 +29,15 @@ const Instructions = () => {
     return (
         <>
         <ShowSideBar/>
+        <QuizInstructions
+            focus={'Passive'} 
+            number={'12'}
+            test1={'Hello'}
+            test2={'World'}
+            advice1={'Hello'}
+            advice2={'World'}
+            advice3={'!!!'}
+        />
         <InstructionsMain>
             <h1>Instructions</h1>
             <Link to='/passive_grammar'>
