@@ -2,7 +2,6 @@ import React, {useState, useEffect, useRef} from 'react'
 // import LazyLoad from 'react-lazyload'
 import { Link } from 'react-router-dom'
 import { HomeData } from '../Navbar/Navbar Data/HomeData'
-// import photo1 from '../img/colors.jpg'
 import {
     HomeImageTest,
     HomeSection,
@@ -16,6 +15,8 @@ import {
     HomeContent,
     HomeButtonTitle,
     HomePart2,
+    HomeGrammar,
+    ImageSection,
     // TestContainer
 }from './Navbar Styles/Home.styled'
 import Slide from 'react-reveal/Slide'
@@ -27,10 +28,52 @@ import ScrollAnimation from 'react-animate-on-scroll'
 const Home = () => {
     const [name, setName] = useState(null)
     const [submit, setSubmit] = useState(false)
+    const [userName, setUserName] = useState(()=>{
+        const local =  localStorage.getItem('userName')
+        return local ? JSON.parse(local) : [] 
+      })
     const [current, setCurrent] = useState(0)
     const length = HomeData.length
     const timeout = useRef(null)
+    
+    
+    // First method of user input
+    // const getName = (val) => {
+    //     setName(val.target.value)
+    //     setSubmit(false)
+    //     console.log(val.target.value)
+    // }
 
+    // Second method of user input
+    const addUserName = (e)=>{
+        e.preventDefault()
+        const newUserName = {
+            id: Math.random().toString(35).substr(2,9),
+            text: e.target.userName.value
+        }
+        setUserName([...userName, newUserName])
+        setSubmit(true)
+        e.target.userName.value=''
+    }
+
+    const deleteUserName = (isDelete)=>{
+        setUserName(userName.filter((userN)=>userN.id !== isDelete))
+        setSubmit(false)
+    }
+
+    useEffect(()=>{
+        localStorage.setItem('userName', JSON.stringify(userName))
+    },[userName])
+    
+    useEffect(()=> {
+        const json = localStorage.getItem('userName')
+        const savedNotes = JSON.parse(json)
+        if(savedNotes){
+          setUserName(savedNotes)
+        }
+      }, [])
+    
+    // photos slider
     useEffect(() => {
         const nextSlide = () => {
             setCurrent(current => (current === length -1 ? 0 : current + 1))
@@ -56,12 +99,7 @@ const Home = () => {
         return null
     }
 
-    // input 
-    const getName = (val) => {
-        setName(val.target.value)
-        setSubmit(false)
-        console.log(val.target.value)
-    }
+    
 
     return (
         <>
@@ -70,29 +108,90 @@ const Home = () => {
                     {/* <img src={photo1} alt="this is the photo" /> */}
                 </HomeImageTest>
                 <Home1>
-                    <h1 className='fade-in'>Home</h1>
-                    <br/>
+                    {/* <br/> */}
+                    {/* First method of user input */}
+                    {/* {
+                        submit ? <div>Hello {name}</div> : (
+                            <>
+                                <input type='text' onChange={getName} placeholder='Enter your name...'/>
+                                <button onClick={()=>setSubmit(true)}>Submit</button>
+                            </>
+                        )
+                    } */}
+                    {/* Second method of user input */}
                     {
-                        submit ? <p>Hello {name}</p> : null
+                        submit ? (
+                            <div className='show-userName'>
+                                <div style={{marginRight: '4px'}}>Hello </div>
+                                <div>
+                                    {userName.map((userN)=>{
+                                        const {id, text} = userN
+                                        return (
+                                            <>
+                                                <div key={id}> {text}</div>
+                                                <button onClick={()=> deleteUserName(id)} className='delete-userName'>Delete Name</button>
+                                            </>
+                                        )
+                                    })}
+                                </div>
+                            </div>
+                            ): (
+                            <>
+                                <form onSubmit={addUserName} className='form'>
+                                   <input type='text' name='userName' placeholder='Enter your name...'/>
+                                   <input type='submit'/>
+                                </form>
+                                <div className='show-userName'>
+                                    <div>
+                                        {userName.map((userN)=>{
+                                            const {id, text} = userN
+                                            return (
+                                                <>
+                                                <div style={{marginRight: '4px'}}>Hello </div>
+                                                    <div key={id}> {text}</div>
+                                                    <button onClick={()=> deleteUserName(id)} className='delete-userName'>Delete Name</button>
+                                                </>
+                                            )
+                                        })}
+                                    </div>
+                                </div>
+                            </>
+                        )
                     }
-                    <input type='text' onChange={getName} placeholder='Enter your name...'/>
-                    <button onClick={()=>setSubmit(true)}>Submit</button>
-                    <ScrollAnimation delay={500}animateIn='fadeIn' animateOut='fadeOut'>
+                    <br/>
+                    <h1 className='fade-in'>Refresher Grammar Website</h1>
+                    <p>Practise your English grammar with clear grammar explanations and practice exercises to test your understanding. All learners, whatever their level, have questions and doubts about grammar as they're learning English and this guide helps to explain the verb tenses and grammar rules in a clear and simple way.</p>
+
+                    {/* <ScrollAnimation delay={500}animateIn='fadeIn' animateOut='fadeOut'>
                         <Link  className="home-box" to='/fce_practice'>                  
                             <HomeButtonTitle>Practice</HomeButtonTitle>                
                         </Link>              
-                    </ScrollAnimation> 
+                    </ScrollAnimation>  */}
                 </Home1>
                 <Home2>
-                    <HomeWrapper>
+                    <h1>hello</h1>
+                    <p>Practise your English grammar with clear grammar explanations and practice exercises to test your understanding. All learners, whatever their level, have questions and doubts about . </p>
+                    <ImageSection>
+                        {HomeData.map((pic, index) => {
+                            return (
+                                <div key={index}>
+                                    {index === current && (
+                                        <>
+                                            <img src={pic.image} alt='photo'/>
+                                            <div className='title'>{pic.title}</div>               
+                                        </>
+                                    )}
+                                </div>
+                            )
+                        })}
+                    </ImageSection>
+
+                    {/* <HomeWrapper>
                         {HomeData.map((pic, index) => {
                             return (
                                 <HomeSlide key={index}>
                                     {index === current && (
                                         <HomeSlider>
-                                            {/* <LazyLoad height={20}>
-                                                <HomeImage  src={pic.image} />
-                                            </LazyLoad> */}
                                             <HomeImage  src={pic.image} />
                                             <HomeContent>
                                                 <div>{pic.title}</div>
@@ -103,19 +202,29 @@ const Home = () => {
                                 </HomeSlide>
                             )
                         })}
-                    </HomeWrapper>
+                    </HomeWrapper> */}
+                    {/* <br/> */}
+                    {/* <p>Practise your English grammar with clear grammar explanations and practice exercises to test your understanding. All learners, whatever their level, have questions and doubts about g</p> */}
                 </Home2>
                 <Home3>
                     <HomePart2>   
-                        <Slide right duration={2000}>
-                            <Link className="home-boxes1" to='/quizzes'>
-                                <HomeButtonTitle> Grammar Quizzes</HomeButtonTitle>                    
-                            </Link>       
-                        </Slide>                    
                         <Slide right duration={1000}>
-                            <Link className="home-boxes1" to='/grammar'>
-                                <HomeButtonTitle> Grammar</HomeButtonTitle>                    
-                            </Link>       
+                            <HomeGrammar>
+                                <h1>Grammar Quizzes</h1>
+                                <p>Practise your English grammar with clear grammar explanations and practice exercises to test your understanding. All learners, whatever their level, have questions and doubts about g</p>
+                                <Link className="home-button" to='/quizzes'>
+                                    <HomeButtonTitle style={{margin: '40px auto'}}> Grammar Quizzes</HomeButtonTitle>                    
+                                </Link>       
+                            </HomeGrammar>
+                        </Slide>                    
+                        <Slide left duration={1000}>
+                            <HomeGrammar>
+                                <h1>Grammar</h1>
+                                <p>Practise your English grammar with clear grammar explanations and practice exercises to test your understanding. All learners, whatever their level, have questions and doubts about g</p>
+                                <Link className="home-button" to='/grammar'>
+                                    <HomeButtonTitle style={{margin: '40px auto'}}> Grammar</HomeButtonTitle>                    
+                                </Link>       
+                            </HomeGrammar>  
                         </Slide>  
                         <Flash right>
                             <Link  className="home-boxes1" to='/fce_practice'>                  

@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid'
 import Sidebar from '../Sidebar'
 import ShowSideBar from '../mainPages/ShowSidebarQuiz'
 import { QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizTextCenter, QuizAnswerContainer, QuizExplanation } from '../../../General Styles/QuizzesPage.styled'
+import QuizResultsSection from '../../../General Pages/Quiz Results/ResultsTest'
 
 
 const Quiz6 = () => {
@@ -46,11 +47,7 @@ const Quiz6 = () => {
                 {showScore ? (
                 <div>
                     <ShowSideBar/>
-                    <div className="score-section">Your score: {score}/{quiz6data.length}</div>
-                    <div className='showscore-btns'>
-                        <a href="/verbs_to_ing_1" className='return'>Try Again</a>
-                        <a href="/verbs_to_ing_2" className='return'>Next Quiz</a>
-                    </div>
+                    <QuizResultsSection data={quiz6data} score={score} source1={'/quiz6'} source2={'/quiz6'}/>
                 </div>
                 ) :
                 (

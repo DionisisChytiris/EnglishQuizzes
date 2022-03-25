@@ -54,6 +54,7 @@ const Quiz1 = () => {
                     <ShowSideBar/>
                     <h2>Prepositions of Time (on, in, at)</h2>
                     <QuizContainer>
+                        <div className='question'>Question  {currentQuestion + 1} / {quiz1data.length}</div>
                         <QuizTitle>
                             <QuizCounter>
                                 {currentQuestion + 1}
@@ -69,17 +70,17 @@ const Quiz1 = () => {
                             {quiz1data[currentQuestion].answersList.map((a) => (
                                 <div disabled={clicked} className={`answer ${clicked && a.isCorrect ? "correct" : wrongAnswer}`} key={uuidv4()}onClick={()=>handleCorrectAnswer(a.isCorrect)}>{a.answer}</div>
                             ))}
-                            </QuizAnswerContainer>
-                            {showExplanation &&
-                                <QuizExplanation>
-                                    <>
-                                        <div className='title'>Explanation</div>
-                                        <div className="line"></div>
-                                        <div className='content'>{quiz1data[currentQuestion].help}</div>
-                                        <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button>
-                                    </>
-                                </QuizExplanation>
-                            }
+                        </QuizAnswerContainer>
+                        {showExplanation &&
+                            <QuizExplanation>
+                                <>
+                                    <div className='title'>Explanation</div>
+                                    <div className="line"></div>
+                                    <div className='content'>{quiz1data[currentQuestion].help}</div>
+                                    <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button>
+                                </>
+                            </QuizExplanation>
+                        }
                     </QuizContainer>            
                 </>        
                 )           

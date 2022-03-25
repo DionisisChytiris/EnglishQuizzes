@@ -1,5 +1,6 @@
 const quiz2data = [
     {
+      id: 1,
       question: "My father hasn't eaten anything today. He __ be very hungry.",
       answersList: [
         {answer: "must", isCorrect: true},
@@ -8,6 +9,7 @@ const quiz2data = [
       help: "We use 'must' to show we are sure something is true and we have reasons for our belief."
     },
     {
+      id: 2,
       question: "Mobile phones ___ not be used whilst driving.",
       answersList: [
         {answer: "should", isCorrect: false},
@@ -16,6 +18,7 @@ const quiz2data = [
       help: "We use 'must not' for prohibitions."
     },
     {
+      id: 3,
       question: "___ you like me to make some coffee for you?",
       answersList: [
         {answer: "Would", isCorrect: true},
@@ -24,6 +27,7 @@ const quiz2data = [
       help: "We can use 'Would like' when we make an offer. 'Will' is wrong."
     },
     {
+      id: 4,
       question: "'Where is your brother?''He __ be at home.'",
       answersList: [
         {answer: "must", isCorrect: false},
@@ -32,6 +36,7 @@ const quiz2data = [
       help: "We use 'could', 'may' and 'might' to say that something is possible, but not certain."
     },
     {
+      id: 5,
       question: "___ you open the door for me, please? (less polite)",
       answersList: [
         {answer: "Will", isCorrect: true},
@@ -40,6 +45,7 @@ const quiz2data = [
       help: "We use 'can' and 'will' as less polite ways of telling or asking someone to do something. "
     },
     {
+      id: 6,
       question: "London is a huge city. You __ easily get lost there.",
       answersList: [
         {answer: "may", isCorrect: false},
@@ -48,6 +54,7 @@ const quiz2data = [
       help: "We use 'can' to make general statements about what is possible."
     },
     {
+      id: 7,
       question: "You ___ buy a new car.",
       answersList: [
         {answer: "should", isCorrect: true},
@@ -56,6 +63,7 @@ const quiz2data = [
       help: "We use 'should' and 'shouldn`t' to make suggestions and give advice."
     },
     {
+      id: 8,
       question: "My brother is coughing a lot. He ___ stop smoking.",
       answersList: [
         {answer: "have", isCorrect: false},
@@ -64,6 +72,7 @@ const quiz2data = [
       help: "'Must' expresses what the speaker thinks is necessary."
     },
     {
+      id: 9,
       question: "We ___ go for dinner tonight.",
       answersList: [
         {answer: "could", isCorrect: true},
@@ -72,6 +81,7 @@ const quiz2data = [
       help: "We use 'could' to make positive suggestions."
     },
     {
+      id: 10,
       question: "In this area, dogs ___ be kept on a lead.",
       answersList: [
         {answer: "must", isCorrect: true},
@@ -80,6 +90,7 @@ const quiz2data = [
       help: "We use 'must' to say that it is necessary to do something."
     },
     {
+      id: 11,
       question: "It's nearly seven o'clock. My parents ___ come back soon.",
       answersList: [
         {answer: "should", isCorrect: true},
@@ -88,6 +99,7 @@ const quiz2data = [
       help: "We use 'should' to suggest something is true and we have reasons for our suggestion."
     },
     {
+      id: 12,
       question: "Students ___ not leave bicycles here. ",
       answersList: [
         {answer: "must", isCorrect: true},

@@ -1,5 +1,6 @@
 const quiz2data = [
     {
+      id: 1,
       question: "Guernica ___ by Pablo Picasso.",
       answersList: [
         {answer: "was painted", isCorrect: true},
@@ -8,6 +9,7 @@ const quiz2data = [
       help: "We use the passive voice when we want to change the focus of the sentence. We are more interesting in the painting than the artist in this sentence."
     },
     {
+      id: 2,
       question: "Somebody ___ my car.",
       answersList: [
         {answer: "has been stolen", isCorrect: false},
@@ -16,6 +18,7 @@ const quiz2data = [
       help: "When the subject performs the action of the verb, we use the active voice."
     },
     {
+      id: 3,
       question: "John stole money from his company and few days later he ___. ",
       answersList: [
         {answer: "was arrested", isCorrect: true},
@@ -24,6 +27,7 @@ const quiz2data = [
       help: "We use the passive voice when who causes the action is obvious (the police in this sentence)."
     },
     {
+      id: 4,
       question: "Most volcanoes eruptions ___ by tectonic plates moving towards each other, which usually produces violent eruptions.",
       answersList: [
         {answer: "are caused ", isCorrect: true},
@@ -32,6 +36,7 @@ const quiz2data = [
       help: "We use the passive voice when we are writing formal or scientific texts."
     },
     {
+      id: 5,
       question: "While I was sleeping, someone broke the window and stole my laptop.",
       answersList: [
         {answer: "Active voice", isCorrect: true},
@@ -40,6 +45,7 @@ const quiz2data = [
       help: "When the subject performs the action of the verb, we use the active voice."
     },
     {
+      id: 6, 
       question: "My office ____ every morning before start working.",
       answersList: [
         {answer: "is being cleaned", isCorrect: true},
@@ -48,6 +54,7 @@ const quiz2data = [
       help: "We use the passive voice when we think who causes the action is not important or interesting."
     },
     {
+      id: 7,
       question: "Gabriel José García Márquez ___ 'One Hundred Years of Solitude'.",
       answersList: [
         {answer: "has been written", isCorrect: false},
@@ -56,6 +63,7 @@ const quiz2data = [
       help: "When the subject performs the action of the verb, we use the active voice."
     },
     {
+      id: 8,
       question: "Highway 15 ____ due to a serious car accident.",
       answersList: [
         {answer: "is closed", isCorrect: true},
@@ -64,6 +72,7 @@ const quiz2data = [
       help: "The passive voice is often used to report something or to state a fact."
     },
     {
+      id: 9,
       question: "A lot of houses ____ in the storm.",
       answersList: [
         {answer: "were destroyed", isCorrect: true},
@@ -72,6 +81,7 @@ const quiz2data = [
       help: "We use the passive voice when we want to emphasize the receiver (houses) of the action."
     },
     {
+      id: 10,
       question: "Last night someone ____ an accident and they closed the highway for 30 minutes.",
       answersList: [
         {answer: "caused", isCorrect: true},
@@ -80,6 +90,7 @@ const quiz2data = [
       help: "When the subject performs the action of the verb, we use the active voice."
     },
     {
+      id: 11,
       question: "Yogurt is a usually daily product made by bacterial fermentation of milk.",
       answersList: [
         {answer: "Active voice", isCorrect: false},
@@ -88,6 +99,7 @@ const quiz2data = [
       help: "The passive voice is used when we describe procedures or processes."
     },
     {
+      id: 12,
       question: "I ____ by how many people came to my concert.",
       answersList: [
         {answer: "was surprised", isCorrect: true},

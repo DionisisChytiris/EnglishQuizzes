@@ -26,7 +26,8 @@ const QuizResults = styled.div`
     }
     .score-section{
         padding: 30px;
-        color: yellow;
+        text-align: center;
+        /* background-color: yellow; */
     }
     .answer-correct{
         color: rgb(126, 255, 126);
@@ -52,6 +53,10 @@ const QuizResults = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        
+        @media (max-width: 850px){
+            font-size: 14px;
+        }
     }
     .btn-correct{
         background-color: rgb(126, 255, 126);
@@ -81,6 +86,11 @@ const Results= styled.div`
         font-weight: 600;
         padding-bottom: 20px;
         color: white;
+    }
+    @media (max-width: 850px){
+       .title{
+           font-size: 24px;
+       }
     }
 `
 const ResultBox = styled.div`
@@ -126,6 +136,7 @@ const ResultBox = styled.div`
     }
     .align{
         margin: -20px -50px 0px 0px;
+        padding-top: 4px;
     }
     .result-explanation{
         font-size: 13px;

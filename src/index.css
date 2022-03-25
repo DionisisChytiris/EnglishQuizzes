@@ -27,6 +27,7 @@ body {
   /* font-size: "Segoe UI"; */
   width: 100%;
   background: #e7e6e6;
+  /* font-family: 'Georgia', serif; */
   /* background: yellow; */
   /* color: hsl(209, 61%, 16%); */
   /* line-height: 1.5rem; */
@@ -51,10 +52,11 @@ a {
 .navLine {
   width: 100%;
   height: 145px;
-  background-image: url("./img/img-1.jpg");
+  background: linear-gradient(to bottom right, #041E42 5%,#0707A9 );
+  /* background-image: url("./img/img-1.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
 }
 /*/////////////*/
 .quizzes_page {

@@ -9,7 +9,7 @@ export const SidebarMain = styled.div`
   font-size: 18px;
   margin: 50px 20px 50px 30px;
   border-radius: 20px;
-  border: 0.05rem solid white;
+  /* border: 0.05rem solid white; */
   h4 {
     margin-top: -90px;
     font-size: 20px;

@@ -49,13 +49,14 @@ const About = () => {
             <div >
             <Iframe url="http://www.youtube.com/embed/xDMP3i36naA"
                 position="relative"
-                width="600"
-                height="400"
+                width="50%"
+                height="250vh"
                 id="myId"
                 // className="myClassname"
                 // styles={{height: "25px"}}
             />
             </div>
+            <br/>
             </div>
             </LazyLoad>
         </>
