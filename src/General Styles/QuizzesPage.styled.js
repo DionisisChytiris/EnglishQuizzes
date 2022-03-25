@@ -358,6 +358,7 @@ export const QuizExplanation = styled.div`
     .content{
         color: var(--cl-primary-darkblue);
         text-align: center;
+        padding: 15px;
     }
     .next-btn{
         display: flex;

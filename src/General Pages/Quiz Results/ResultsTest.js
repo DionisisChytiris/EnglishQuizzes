@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components';
 import { TiTick, TiTimes } from "react-icons/ti";
 import Slide from 'react-reveal/Slide';
@@ -149,17 +149,55 @@ const ResultBox = styled.div`
 const QuizResultsSection = (props) => {
     const [results, setResults] = useState(false)
     const score = props.score > props.data.length/2
+    const [userName, setUserName] = useState(()=>{
+        const local = localStorage.getItem('userName')
+        return local ? JSON.parse(local) : [] 
+    })
+
+    useEffect(()=>{
+        const json = localStorage.getItem('userName')
+        const savedNotes = JSON.parse(json)
+        if(savedNotes){
+            setUserName(savedNotes)
+        }
+    }, [])
 
   return (
     <QuizResults>
         {score ? (              
             <div className={`smile ${score ? 'answer-correct' : 'answer-wrong'}`}>
-                <div style={{paddingBottom: '30px'}}>Congratulations!!!</div>
+                <div style={{paddingBottom: '30px'}}>
+                    <div>Congratulations</div>
+                    <div>
+                        {userName.map((note)=> {
+                            const {id, text} =note
+                            return (
+                                <div className='text' key={id}>
+                                    <div>{text}</div>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    <div>!!!</div>
+                </div>
                 <FaSmileWink/>
             </div>       
         ) : (
             <div className={`sad ${score ? 'answer-correct' : 'answer-wrong'}`}>
-                <div style={{paddingBottom: '30px'}}>Try Again!!!</div>
+                <div style={{paddingBottom: '30px'}}>
+                    <div>Try Again</div>
+                        <div>
+                        {userName.map((note)=> {
+                            const {id, text} =note
+                            return (
+                                <div className='text' key={id}>
+                                    <div>{text}</div>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    <div>!!!</div>
+                </div>
                 <FaRegSadTear/>
             </div>
         )}

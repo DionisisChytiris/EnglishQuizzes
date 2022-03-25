@@ -61,9 +61,6 @@ export const Home1 = styled.div`
         margin-top: -15px;
         margin-left: 60%;
     }
-    .form2{
-        display: none
-    }
     input{
         border: none;
         padding: 10px;
@@ -72,10 +69,50 @@ export const Home1 = styled.div`
         display: flex;
         flex-direction: row;
     }
+    .show-flex-row{
+        /* position: absolute; */
+        display: flex;
+        flex-direction: row;
+    }
+    .show-greeting{
+        font-size: 50px;
+        font-weight: 600;
+        margin-right: 20px;
+    }
+    .show-name{
+        font-size: 50px;
+        font-weight: 600;
+    }
+    .delete-background{
+        width: 350px;
+        height: 100px;
+        background: #e7e6e6;
+        /* background: #ccc; */
+        position: absolute;
+        margin-left: 30%;
+        margin-top: -35px;
+    }
+    .delete-background1{
+        width: 300px;
+        height: 100px;
+        background: #e7e6e6;
+        position: absolute;
+        margin-left: 25%;
+        margin-top: -65px;
+    }
     .delete-userName{
         position: absolute;
         margin-left: 30%;
-        margin-top: -30px;
+        margin-top: 20px;
+        width: 100px;
+        border: none;
+        background-color: yellow;
+        border-radius: 10px;
+    }
+    .delete-userName1{
+        position: absolute;
+        margin-left: 30%;
+        margin-top: 50px;
         width: 100px;
         border: none;
         background-color: yellow;

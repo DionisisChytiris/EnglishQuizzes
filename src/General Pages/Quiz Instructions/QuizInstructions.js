@@ -6,20 +6,20 @@ const QuizInstructions = (props) => {
     <InstructionsMain>
      <h1>Quiz Structure</h1> 
      <InstructionsContainer>
-      <p><gradient>Task Type: </gradient> <light> Grammar practice </light></p>
-      <p>Focus: <light> {props.focus} </light></p>
-      <p>Format: <light> helo world </light></p>
-      <p>Number of questions: <light> {props.number} </light></p>
+      <p>Task Type:   Grammar practice </p>
+      <p>Focus:  {props.focus} </p>
+      <p>Format:  helo world </p>
+      <p>Number of questions:  {props.number} </p>
       <p>What is testing: 
-        <ul><light> {props.test1} </light></ul>
-        <ul><light> {props.test2} </light></ul>
+        <div> {props.test1} </div>
+        <div> {props.test2} </div>
       </p>
       <br/>
      
       <p>General Advice:
-        <ul><light> {props.advice1} </light></ul>
-        <ul><light> {props.advice2} </light></ul>
-        <ul><light> {props.advice3} </light></ul>
+        <div> {props.advice1} </div>
+        <div> {props.advice2} </div>
+        <div> {props.advice3} </div>
       </p>
       <br/>
      </InstructionsContainer>

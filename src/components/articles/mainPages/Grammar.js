@@ -138,18 +138,18 @@ const ArticlesGrammar = () => {
                         <div className="return_indefinite2">We use <span>a</span> before a consonant sound and <span>an</span> before a vowel sound.</div>
                         <div className="return_indefinite_example">
                             <div>e.g</div>
-                            <ul>
+                            <div>
                                 <li><span>a b</span>anana</li>
                                 <li><span>a u</span>niversity</li>
                                 <li><span>an o</span>range</li>
                                 <li><span>an h</span>our</li>
-                            </ul>
-                            <ul>
+                            </div>
+                            <div>
                                 <li> (consonant letter, /b/)</li>
                                 <li> (consonant sound, /j/)</li>
                                 <li> (vowel letter, /o/)</li>
                                 <li> (vowel sound, /au/)</li>
-                            </ul>
+                            </div>
                         </div>
                         <hr />
                         <br />

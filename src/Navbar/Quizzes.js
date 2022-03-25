@@ -27,7 +27,7 @@ const Quizzes = () => {
                             <>
                             <Link to={url} className='quizzes_box' key={id}>
                                 <div className="quizzes_box_inner">
-                                    <div className="quizzes_box_front" key={IDBDatabase}>{text}</div>
+                                    <div className="quizzes_box_front" key={id}>{text}</div>
                                         <div className="quizzes_box_back">
                                             <div className="blur">
                                                 <div style={{

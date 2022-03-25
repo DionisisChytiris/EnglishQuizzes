@@ -26,7 +26,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 
 
 const Home = () => {
-    const [name, setName] = useState(null)
+    // const [name, setName] = useState(null)
     const [submit, setSubmit] = useState(false)
     const [userName, setUserName] = useState(()=>{
         const local =  localStorage.getItem('userName')
@@ -122,14 +122,16 @@ const Home = () => {
                     {
                         submit ? (
                             <div className='show-userName'>
-                                <div style={{marginRight: '4px'}}>Hello </div>
+                                <div className='show-greeting'>Hey </div>
                                 <div>
                                     {userName.map((userN)=>{
                                         const {id, text} = userN
                                         return (
                                             <>
-                                                <div key={id}> {text}</div>
-                                                <button onClick={()=> deleteUserName(id)} className='delete-userName'>Delete Name</button>
+                                                <div className='show-name' key={id}> {text}</div>
+                                                <div className='delete-background1'>
+                                                    <button onClick={()=> deleteUserName(id)} className='delete-userName'>Delete Name</button>
+                                                </div>
                                             </>
                                         )
                                     })}
@@ -146,11 +148,13 @@ const Home = () => {
                                         {userName.map((userN)=>{
                                             const {id, text} = userN
                                             return (
-                                                <>
-                                                <div style={{marginRight: '4px'}}>Hello </div>
-                                                    <div key={id}> {text}</div>
-                                                    <button onClick={()=> deleteUserName(id)} className='delete-userName'>Delete Name</button>
-                                                </>
+                                                <div className='show-flex-row'>
+                                                    <div className='show-greeting'>Hello </div>
+                                                    <div className='show-name' key={id}> {text}</div>
+                                                    <div className='delete-background'>
+                                                        <button onClick={()=> deleteUserName(id)} className='delete-userName1'>Change Name</button>
+                                                    </div>
+                                                </div>
                                             )
                                         })}
                                     </div>
