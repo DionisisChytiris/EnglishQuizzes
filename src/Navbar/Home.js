@@ -24,9 +24,7 @@ import Flash from 'react-reveal/Flash'
 import ScrollAnimation from 'react-animate-on-scroll'
     
 
-
 const Home = () => {
-    // const [name, setName] = useState(null)
     const [submit, setSubmit] = useState(false)
     const [userName, setUserName] = useState(()=>{
         const local =  localStorage.getItem('userName')
@@ -37,14 +35,7 @@ const Home = () => {
     const timeout = useRef(null)
     
     
-    // First method of user input
-    // const getName = (val) => {
-    //     setName(val.target.value)
-    //     setSubmit(false)
-    //     console.log(val.target.value)
-    // }
-
-    // Second method of user input
+    //  user input
     const addUserName = (e)=>{
         e.preventDefault()
         const newUserName = {
@@ -108,17 +99,7 @@ const Home = () => {
                     {/* <img src={photo1} alt="this is the photo" /> */}
                 </HomeImageTest>
                 <Home1>
-                    {/* <br/> */}
-                    {/* First method of user input */}
-                    {/* {
-                        submit ? <div>Hello {name}</div> : (
-                            <>
-                                <input type='text' onChange={getName} placeholder='Enter your name...'/>
-                                <button onClick={()=>setSubmit(true)}>Submit</button>
-                            </>
-                        )
-                    } */}
-                    {/* Second method of user input */}
+                    {/* user input */}
                     {
                         submit ? (
                             <div className='show-userName fade-in'>
@@ -127,12 +108,12 @@ const Home = () => {
                                     {userName.map((userN)=>{
                                         const {id, text} = userN
                                         return (
-                                            <>
-                                                <div className='show-name' key={id}> {text}</div>
+                                            <div key={id}>
+                                                <div className='show-name'> {text}</div>
                                                 <div className='delete-background1'>
                                                     <button onClick={()=> deleteUserName(id)} className='delete-userName'>Delete Name</button>
                                                 </div>
-                                            </>
+                                            </div>
                                         )
                                     })}
                                 </div>
@@ -148,9 +129,9 @@ const Home = () => {
                                         {userName.map((userN)=>{
                                             const {id, text} = userN
                                             return (
-                                                <div className='show-flex-row'>
+                                                <div className='show-flex-row' key={id}>
                                                     <div className='show-greeting fade-in'>Hello </div>
-                                                    <div className='show-name fade-in' key={id}> {text}</div>
+                                                    <div className='show-name fade-in' > {text}</div>
                                                     <div className='delete-background'>
                                                         <button onClick={()=> deleteUserName(id)} className='delete-userName1'>Change Name</button>
                                                     </div>
@@ -190,26 +171,6 @@ const Home = () => {
                             )
                         })}
                     </ImageSection>
-
-                    {/* <HomeWrapper>
-                        {HomeData.map((pic, index) => {
-                            return (
-                                <HomeSlide key={index}>
-                                    {index === current && (
-                                        <HomeSlider>
-                                            <HomeImage  src={pic.image} />
-                                            <HomeContent>
-                                                <div>{pic.title}</div>
-                                                <div>{pic.text}</div>
-                                            </HomeContent>
-                                        </HomeSlider>
-                                    )}
-                                </HomeSlide>
-                            )
-                        })}
-                    </HomeWrapper> */}
-                    {/* <br/> */}
-                    {/* <p>Practise your English grammar with clear grammar explanations and practice exercises to test your understanding. All learners, whatever their level, have questions and doubts about g</p> */}
                 </Home2>
                 <Home3>
                     <HomePart2>   

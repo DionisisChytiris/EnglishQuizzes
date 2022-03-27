@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import Navbar1 from './Navbar1'
 import Footer from './Footer/Footer'
 import ScrollToTop from './General Pages/ScrollToTop'
@@ -16,7 +16,6 @@ import Pronouns from './components/pronouns/mainPages/Pronouns_home';
 import Articles from './components/articles/mainPages/Articles_home';
 import Conditionals from './components/conditionals/mainPages/Conditionals_home'
 import VerbsToIng from './components/verbs_to_ing/mainPages/Verbs_to_ing_home';
-import MainPageTenses3 from './components/tenses3/mainPages/MainPage';
 import Tenses1 from './components/tenses1/mainPages/Tenses_home';
 import Tenses2 from './components/tenses2/mainPages/Tenses_home';
 import Tenses3 from './components/tenses3/mainPages/Tenses_home';
@@ -111,121 +110,120 @@ import StativeVerbs from './General Pages/StativeVerbs'
 
 function App() {
   return (
-    <>
-      <Router>
-        <Navbar1 />
-        <ScrollToTop/>
+    <BrowserRouter>
+      <Navbar1 />
+      <ScrollToTop/>
+      <Routes>
         {/* <Switch> */}
         {/* Navbar */}
-        <Route path='/' exact component={Home}/>
-        <Route path='/quizzes' component={Quizzes}/>
-        <Route path='/grammar' component={Grammar}/>
-        <Route path='/fce_practice' component={FcePractice}/>
-        <Route path='/about' component={About}/>
-        <Route path='/contact' component={Contact} />
+        <Route path='/' exact element={<Home/>}/>
+        <Route path='/quizzes' element={<Quizzes/>}/>
+        <Route path='/grammar' element={<Grammar/>}/>
+        <Route path='/fce_practice' element={<FcePractice/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/contact' element={<Contact/>} />
         {/* Home pages */}
-        <Route path='/prepositions' component={Prepositions}/>
-        <Route path='/pronouns' component={Pronouns}/>
-        <Route path='/articles' component={Articles}/>
-        <Route path='/modals' component={Modals}/>
-        <Route path='/tenses1' component={Tenses1}/>
-        <Route path='/tenses2' component={Tenses2}/>
-        <Route path='/tenses3' component={MainPageTenses3}/>
-        <Route path='/tenses3_quizzes' component={Tenses3} />
-        <Route path='/verbs_to_ing' component={VerbsToIng}/>
-        <Route path='/conditionals' component={Conditionals}/>
-        <Route path='/passive' component={Passive}/>
-        <Route path='/openClose' component={OpenClose_home}/>
-        <Route path='/wordFormation' component={WordFormation_home}/>
-        <Route path='/multipleChoice' component={MultipleChoice_home}/>
-        <Route path='/keyWordTransformations' component={keyWord_home}/>
+        <Route path='/prepositions' element={<Prepositions/>}/>
+        <Route path='/pronouns' element={<Pronouns/>}/>
+        <Route path='/articles' element={<Articles/>}/>
+        <Route path='/modals' element={<Modals/>}/>
+        <Route path='/tenses1' element={<Tenses1/>}/>
+        <Route path='/tenses2' element={<Tenses2/>}/>
+        <Route path='/tenses3' element={<Tenses3/>} />
+        <Route path='/verbs_to_ing' element={<VerbsToIng/>}/>
+        <Route path='/conditionals' element={<Conditionals/>}/>
+        <Route path='/passive' element={<Passive/>}/>
+        <Route path='/openClose' element={<OpenClose_home/>}/>
+        <Route path='/wordFormation' element={<WordFormation_home/>}/>
+        <Route path='/multipleChoice' element={<MultipleChoice_home/>}/>
+        <Route path='/keyWordTransformations' element={<keyWord_home/>}/>
         {/* Grammar pages */}
-        <Route path='/generalTensesPage' component={GeneralTensesPage}/>
-        <Route path='/prepositions_grammar' component={PrepositionsGrammar}/>
-        <Route path='/articles_grammar' component={ArticlesGrammar} />  
-        <Route path='/pronouns_grammar' component={PronounsGrammar} />  
-        <Route path='/modal_grammar' component={Modal_Grammar} />  
-        <Route path='/tenses1_grammar' component={Tenses1_Grammar} />  
-        <Route path='/tenses2_grammar' component={Tenses2_Grammar} />
-        <Route path='/tenses3_grammar' component={Tenses3Grammar} />
-        <Route path='/verbs_to_ing_grammar' component={GerundGrammar} />
-        <Route path='/conditionals_grammar' component={Conditionals_Grammar} />
-        <Route path='/passive_grammar' component={Passive_Grammar} />
-        <Route path='/present_simple' component={PresentSimple}/>
-        <Route path='/past_simple' component={PastSimple}/>
-        <Route path='/future_simple' component={FutureSimple}/>
-        <Route path='/present_continuous' component={PresentContinuous}/>
-        <Route path='/past_continuous' component={PastContinuous}/>
-        <Route path='/future_continuous' component={FutureContinuous}/>
-        <Route path='/future_perfect' component={FuturePerfect}/>
-        <Route path='/past_perfect' component={PastPerfect}/>
-        <Route path='/present_perfect' component={PresentPerfect}/>
-        <Route path='/past_perfect_continuous' component={PastPerfectContinuous}/>
-        <Route path='/present_perfect_continuous' component={PresentPerfectContinuous}/>
-        <Route path='/future_perfect_continuous' component={FuturePerfectContinuous}/>
+        <Route path='/generalTensesPage' element={<GeneralTensesPage/>}/>
+        <Route path='/prepositions_grammar' element={<PrepositionsGrammar/>}/>
+        <Route path='/articles_grammar' element={<ArticlesGrammar/>} />  
+        <Route path='/pronouns_grammar' element={<PronounsGrammar/>} />  
+        <Route path='/modal_grammar' element={<Modal_Grammar/>} />  
+        <Route path='/tenses1_grammar' element={<Tenses1_Grammar/>} />  
+        <Route path='/tenses2_grammar' element={<Tenses2_Grammar/>} />
+        <Route path='/tenses3_grammar' element={<Tenses3Grammar/>} />
+        <Route path='/verbs_to_ing_grammar' element={<GerundGrammar/>} />
+        <Route path='/conditionals_grammar' element={<Conditionals_Grammar/>} />
+        <Route path='/passive_grammar' element={<Passive_Grammar/>} />
+        <Route path='/present_simple' element={<PresentSimple/>}/>
+        <Route path='/past_simple' element={<PastSimple/>}/>
+        <Route path='/future_simple' element={<FutureSimple/>}/>
+        <Route path='/present_continuous' element={<PresentContinuous/>}/>
+        <Route path='/past_continuous' element={<PastContinuous/>}/>
+        <Route path='/future_continuous' element={<FutureContinuous/>}/>
+        <Route path='/future_perfect' element={<FuturePerfect/>}/>
+        <Route path='/past_perfect' element={<PastPerfect/>}/>
+        <Route path='/present_perfect' element={<PresentPerfect/>}/>
+        <Route path='/past_perfect_continuous' element={<PastPerfectContinuous/>}/>
+        <Route path='/present_perfect_continuous' element={<PresentPerfectContinuous/>}/>
+        <Route path='/future_perfect_continuous' element={<FuturePerfectContinuous/>}/>
         {/* Prepositions Quizzes */}
-        <Route path='/quiz1' component={Quiz1}/>
-        <Route path='/quiz2' component={Quiz2}/>
-        <Route path='/quiz3' component={Quiz3}/>
-        <Route path='/quiz4' component={Quiz4} />
-        <Route path='/quiz4_1' component={Quiz5} />
-        <Route path='/quiz4_2' component={Quiz6} />
-        <Route path='/test1prepositions' component={Test1Prepositions} />
+        <Route path='/quiz1' element={<Quiz1/>}/>
+        <Route path='/quiz2' element={<Quiz2/>}/>
+        <Route path='/quiz3' element={<Quiz3/>}/>
+        <Route path='/quiz4' element={<Quiz4/>} />
+        <Route path='/quiz4_1' element={<Quiz5/>} />
+        <Route path='/quiz4_2' element={<Quiz6/>} />
+        <Route path='/test1prepositions' element={<Test1Prepositions/>} />
         {/* Pronouns Quizzes */}
-        <Route path='/quiz5' component={Quiz1Pronouns} />  
-        <Route path='/quiz6' component={Quiz2Pronouns} />  
-        <Route path='/quiz7' component={Quiz3Pronouns} />  
-        <Route path='/quiz8' component={Quiz4Pronouns} />  
+        <Route path='/quiz5' element={<Quiz1Pronouns/>} />  
+        <Route path='/quiz6' element={<Quiz2Pronouns/>} />  
+        <Route path='/quiz7' element={<Quiz3Pronouns/>} />  
+        <Route path='/quiz8' element={<Quiz4Pronouns/>} />  
         {/* Modal Quizzes */}
-        <Route path='/modal1' component={Quiz1Modal} />  
-        <Route path='/modal2' component={Quiz2Modal} />  
-        <Route path='/modal3' component={Quiz3Modal} />
+        <Route path='/modal1' element={<Quiz1Modal/>} />  
+        <Route path='/modal2' element={<Quiz2Modal/>} />  
+        <Route path='/modal3' element={<Quiz3Modal/>} />
         {/* Article Quizzes */}
-        <Route path='/quiz-9' component={Quiz0Articles} />  
-        <Route path='/quiz9' component={Quiz1Articles} />  
-        <Route path='/quiz10' component={Quiz2Articles} />  
-        <Route path='/quiz11' component={Quiz3Articles} />  
-        <Route path='/quiz12' component={Quiz4Articles} />  
+        <Route path='/quiz-9' element={<Quiz0Articles/>} />  
+        <Route path='/quiz9' element={<Quiz1Articles/>} />  
+        <Route path='/quiz10' element={<Quiz2Articles/>} />  
+        <Route path='/quiz11' element={<Quiz3Articles/>} />  
+        <Route path='/quiz12' element={<Quiz4Articles/>} />  
         {/* Tenses */}    
-        <Route path='/tenses1quiz1' component={Quiz1Tenses} />  
-        <Route path='/tenses1quiz2' component={Quiz2Tenses} />  
-        <Route path='/tenses1quiz3' component={Quiz3Tenses} />  
-        <Route path='/tenses1quiz4' component={Quiz4Tenses} />
-        <Route path='/tenses2quiz1' component={Quiz1Tenses2} />
-        <Route path='/tenses2quiz2' component={Quiz2Tenses2} />
-        <Route path='/tenses2quiz3' component={Quiz3Tenses2} />
-        <Route path='/tenses2quiz4' component={Quiz4Tenses2} />
-        <Route path='/tenses3quiz1' component={Quiz1Tenses3} />
-        <Route path='/tenses3quiz2' component={Quiz2Tenses3} />
-        <Route path='/tenses3quiz3' component={Quiz3Tenses3} />
-        <Route path='/tenses3quiz4' component={Quiz4Tenses3} />
+        <Route path='/tenses1quiz1' element={<Quiz1Tenses/>} />  
+        <Route path='/tenses1quiz2' element={<Quiz2Tenses/>} />  
+        <Route path='/tenses1quiz3' element={<Quiz3Tenses/>} />  
+        <Route path='/tenses1quiz4' element={<Quiz4Tenses/>} />
+        <Route path='/tenses2quiz1' element={<Quiz1Tenses2/>} />
+        <Route path='/tenses2quiz2' element={<Quiz2Tenses2/>} />
+        <Route path='/tenses2quiz3' element={<Quiz3Tenses2/>} />
+        <Route path='/tenses2quiz4' element={<Quiz4Tenses2/>} />
+        <Route path='/tenses3quiz1' element={<Quiz1Tenses3/>} />
+        <Route path='/tenses3quiz2' element={<Quiz2Tenses3/>} />
+        <Route path='/tenses3quiz3' element={<Quiz3Tenses3/>} />
+        <Route path='/tenses3quiz4' element={<Quiz4Tenses3/>} />
         {/* Extra pages */}
-        <Route path='/irregularVerbs' component={IrregularVerbs} />
-        <Route path='/stativeVerbs' component={StativeVerbs} />
+        <Route path='/irregularVerbs' element={<IrregularVerbs/>} />
+        <Route path='/stativeVerbs' element={<StativeVerbs/>} />
         {/* Gerund Quizzes */}
-        <Route path='/verbs_to_ing_1' component={Quiz1VerbIng} />
-        <Route path='/verbs_to_ing_2' component={Quiz2VerbIng} />
-        <Route path='/verbs_to_ing_3' component={Quiz3VerbIng} />
-        <Route path='/verbs_to_ing_4' component={Quiz4VerbIng} />
+        <Route path='/verbs_to_ing_1' element={<Quiz1VerbIng/>} />
+        <Route path='/verbs_to_ing_2' element={<Quiz2VerbIng/>} />
+        <Route path='/verbs_to_ing_3' element={<Quiz3VerbIng/>} />
+        <Route path='/verbs_to_ing_4' element={<Quiz4VerbIng/>} />
         {/* Passive Quizzes */}
-        <Route path='/passive_1' component={Quiz1Passive} />
-        <Route path='/passive_2' component={Quiz2Passive} />
-        <Route path='/passive_3' component={Quiz3Passive} />
+        <Route path='/passive_1' element={<Quiz1Passive/>} />
+        <Route path='/passive_2' element={<Quiz2Passive/>} />
+        <Route path='/passive_3' element={<Quiz3Passive/>} />
         {/* Conditionals Quizzes */}
-        <Route path='/conditionals_1' component={Quiz1Conditionals}/>
-        <Route path='/conditionals_2' component={Quiz2Conditionals}/>
-        <Route path='/conditionals_3' component={Quiz3Conditionals} />
+        <Route path='/conditionals_1' element={<Quiz1Conditionals/>}/>
+        <Route path='/conditionals_2' element={<Quiz2Conditionals/>}/>
+        <Route path='/conditionals_3' element={<Quiz3Conditionals/>} />
         {/* FCE pages */}
-        <Route path='/openClose1' component={OpenClose1} />
-        <Route path='/openClose2' component={OpenClose2} />
-        <Route path='/openClose3' component={OpenClose3} />
-        <Route path='/wordFormation1' component={WordFormation1} />
-        <Route path='/multipleChoice1' component={MultipleChoice1} />
+        <Route path='/openClose1' element={<OpenClose1/>} />
+        <Route path='/openClose2' element={<OpenClose2/>} />
+        <Route path='/openClose3' element={<OpenClose3/>} />
+        <Route path='/wordFormation1' element={<WordFormation1/>} />
+        <Route path='/multipleChoice1' element={<MultipleChoice1/>} />
         {/* </Switch> */}
-         {/* Footer  */}
-        <Footer/>
-      </Router>
-    </>
+      </Routes>
+        {/* Footer  */}
+      <Footer/>
+    </BrowserRouter>
   );
 }
 

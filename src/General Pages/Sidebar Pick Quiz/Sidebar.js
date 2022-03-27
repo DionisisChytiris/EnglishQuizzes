@@ -10,13 +10,13 @@ const SidebarGlobal = (props) => {
             {props.data1.map((a) => {
                 const { id, url, text, level, hola} = a
                 return (
-                    <>
+                    <div key={id}>
                         <h6>{level}</h6>
-                        <NavLink activeClassName='is-active' to={url} key={id}>
+                        <NavLink className={(navigationData) => navigationData.isActive ? 'is-active' : null } to={url} >
                             <p>{text}</p>
                         </NavLink> 
                         <h5>{hola}</h5>
-                    </>
+                    </div>
                 )
             })}
             <SidebarContainerFixed>
@@ -24,11 +24,11 @@ const SidebarGlobal = (props) => {
                 {props.data2.map((a) => {
                     const { id, url, text } = a
                     return (
-                        <>
-                            <NavLink activeClassName='is-active' to={url} key={id}>
-                                <div className='home-buttons' key={id}>{text}</div>
+                        <div key={id}>
+                            <NavLink className={(navigationData) => navigationData.isActive ? 'is-active' : null } to={url} key={id}>
+                                <div className='home-buttons' >{text}</div>
                             </NavLink>
-                        </>
+                        </div>
                     )
                 })}
             </SidebarContainerFixed>

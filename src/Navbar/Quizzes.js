@@ -1,23 +1,11 @@
 import React from 'react'
-// import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { quizzes_links } from '../data_links'
-// import photo from '../img/quiz.jpg'
-
-// const QuizzesImage = styled.div`
-//      background-image: url(${photo});
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-size: cover;
-//     height: 60vh;
-//     width: 100%;
-// `
 
 const Quizzes = () => {
     return (
         <>
             <div className="navLine"></div>
-            {/* <QuizzesImage></QuizzesImage> */}
             <div className="quizzes_page">
                 <h1>Grammar Quizzes</h1>
                 <div className="quizzes_boxes">

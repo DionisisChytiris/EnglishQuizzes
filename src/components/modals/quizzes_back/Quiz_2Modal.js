@@ -5,7 +5,7 @@ import pickmore from '../data/pickmore'
 import pickquiz from '../data/pickquiz'
 import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import ShowSideBar from '../mainPages/ShowSideBarQuiz'
-import { QuizzesMain, QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
+import { QuizAnswerContainer, QuizContainer, QuizContent, QuizCounter, QuizExplanation, QuizTextCenter, QuizTitle, QuizzesMain, QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
 
 const Quiz2Modal = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -30,7 +30,7 @@ const Quiz2Modal = () => {
         setClicked(false)
         setShowExplanation(false)
         setWrongAnswer('')
-        setShowInfo(false)
+        setShowInfo(!showInfo)
         if (currentQuestion < quiz2data.length - 1) {
             setCurrentQuestion(currentQuestion + 1)
         } else {
@@ -57,32 +57,37 @@ const Quiz2Modal = () => {
             (
             <>
                 <ShowSideBar/>
-                <h6>Modals II</h6>
-                    <p>?</p>
-                <div className="quiz1-count">
-                Question {currentQuestion + 1} / {quiz2data.length}
-                </div>        
-                <div className="question-quiz1">
-                     {currentQuestion + 1}. {quiz2data[currentQuestion].question}  
-                </div>
-                <div className="answers-quiz4">
-                    {quiz2data[currentQuestion].answersList.map((a) => (
-                        <div disabled={clicked} className={`answer-quiz4 ${clicked && a.isCorrect ? "correct" : wrongAnswer}`} key={uuidv4()}onClick={()=>handleCorrectAnswer(a.isCorrect)}>{a.answer}</div>
-                    ))}
-                </div>
-                <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button>
-                {
-                    showExplanation ? (
-                        <div className="help-box">
-                        <button className='help' onClick={() => setShowInfo(!showInfo)}> { showInfo ? 'Hide' : 'Show Explanation' }</button>
-                        <div className="help-line"></div>
-                                {
-                                    showInfo &&
-                                    <p className='help-explanation'>{quiz2data[currentQuestion].help}</p>
-                                }                         
-                        </div>
-                    ) : ''
-                }                  
+                <h2>Modals II</h2>
+                <QuizContainer>
+                    <div className="question">
+                    Question {currentQuestion + 1} / {quiz2data.length}
+                    </div> 
+                    <QuizTitle> 
+                        <QuizCounter>
+                            {currentQuestion + 1} <small>/ {quiz2data.length}</small>  
+                        </QuizCounter>
+                        <QuizContent>
+                            <QuizTextCenter>
+                                {quiz2data[currentQuestion].question}
+                            </QuizTextCenter>
+                        </QuizContent>
+                    </QuizTitle>       
+                    <QuizAnswerContainer>
+                        {quiz2data[currentQuestion].answersList.map((a) => (
+                            <div disabled={clicked} className={`answer ${clicked && a.isCorrect ? "correct" : wrongAnswer}`} key={uuidv4()}onClick={()=>handleCorrectAnswer(a.isCorrect)}>{a.answer}</div>
+                        ))}
+                    </QuizAnswerContainer>
+                    {showExplanation && 
+                        <QuizExplanation>
+                            <>
+                                <div className='title'>Explanation</div>
+                                <div className="line"></div>
+                                <div className='content'>{quiz2data[currentQuestion].help}</div>
+                                <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button>
+                            </>
+                        </QuizExplanation>         
+                    }  
+                </QuizContainer>                
             </>        
             )           
             }

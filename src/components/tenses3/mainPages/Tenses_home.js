@@ -8,6 +8,7 @@ import Return from './Return'
 const Tenses3 = () => {
     return (
         <>
+            <div className="fatline"></div>
             <QuizzesPageMain>
                 <SidebarGlobal title='Tenses 3' data1={pickquiz} data2={pickmore}/>
                 <Return />

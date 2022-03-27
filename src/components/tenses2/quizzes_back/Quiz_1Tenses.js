@@ -5,14 +5,13 @@ import pickmore from '../data/pickmore'
 import pickquiz from '../data/pickquiz'
 import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import ShowSideBar from '../mainPages/ShowSideBarQuiz'
-import { QuizzesMain, QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
+import { QuizAnswerContainer, QuizContainer, QuizContent, QuizCounter, QuizExplanation, QuizTextCenter, QuizTitle, QuizzesMain, QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
 
 const Quiz1Tenses2 = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [score, setScore] = useState(0)
     const [clicked, setClicked] = useState(false)
     const [showScore, setShowScore] = useState(false)
-    const [showInfo, setShowInfo] = useState(false)
     const [showExplanation, setShowExplanation] = useState(false)
     const [wrongAnswer, setWrongAnswer] = useState('')
 
@@ -58,35 +57,37 @@ const Quiz1Tenses2 = () => {
             (
             <>
                 <ShowSideBar/>
-                <h6>Tenses 2</h6>
-                <p>Present Perfect / Present Perfect Continuous</p>
-                <div className="quiz1-count">
-                Question {currentQuestion + 1} / {quiz1data.length}
-                </div>        
-                <div className="question-quiz1">
-                     {currentQuestion + 1}. {quiz1data[currentQuestion].question}  
-                </div>
-                <div className="answers-quiz4">
-                    {quiz1data[currentQuestion].answersList.map((a) => (
-                        <div disabled={clicked} className={`answer-quiz4 ${clicked && a.isCorrect ? "correct" : wrongAnswer}`} key={uuidv4()}onClick={()=>handleCorrectAnswer(a.isCorrect)}>{a.answer}</div>
-                    ))}
-                </div>
-                <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button>
-                {
-                    showExplanation ? (
-                        <div className="help-box">
-                        <button className='help' onClick={() => setShowInfo(!showInfo)}> { showInfo ? 'Hide' : 'Show Explanation' }</button>
-                        <div className="help-line"></div>
-                                {
-                                    showInfo &&
-                                        <>
-                                             <p className='help-explanation'>{quiz1data[currentQuestion].help}</p>
-                                            <p className='help-explanation'>{quiz1data[currentQuestion].help1}</p>
-                                        </>
-                                }                         
-                        </div>
-                    ) : ''
-                }                  
+                <h2>Present Perfect / Present Perfect Continuous</h2>
+                <QuizContainer>
+                    <div className="question">
+                    Question {currentQuestion + 1} / {quiz1data.length}
+                    </div> 
+                    <QuizTitle> 
+                        <QuizCounter>
+                            {currentQuestion + 1} <small>/ {quiz1data.length}</small>  
+                        </QuizCounter>
+                        <QuizContent>
+                            <QuizTextCenter>
+                                {quiz1data[currentQuestion].question}
+                            </QuizTextCenter>
+                        </QuizContent>
+                    </QuizTitle>       
+                    <QuizAnswerContainer>
+                        {quiz1data[currentQuestion].answersList.map((a) => (
+                            <div disabled={clicked} className={`answer ${clicked && a.isCorrect ? "correct" : wrongAnswer}`} key={uuidv4()}onClick={()=>handleCorrectAnswer(a.isCorrect)}>{a.answer}</div>
+                        ))}
+                    </QuizAnswerContainer>
+                    {showExplanation && 
+                        <QuizExplanation>
+                            <>
+                                <div className='title'>Explanation</div>
+                                <div className="line"></div>
+                                <div className='content'>{quiz1data[currentQuestion].help}</div>
+                                <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button>
+                            </>
+                        </QuizExplanation>         
+                    }  
+                </QuizContainer>         
             </>        
             )           
             }
