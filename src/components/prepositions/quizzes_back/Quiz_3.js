@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
 import quiz3data from "../data/quiz3data"
+import pickmore from '../data/pickmore'
+import pickquiz from '../data/pickquiz'
 import { v4 as uuidv4 } from 'uuid'
-import Sidebar from '../Sidebar'
 import ShowSideBar from '../mainPages/ShowSidebarQuiz'
+import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import { QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizTextCenter, QuizAnswerContainer, QuizExplanation,  } from '../../../General Styles/QuizzesPage.styled'
 import QuizResultsSection from '../../../General Pages/Quiz Results/ResultsTest'
 
@@ -41,7 +43,7 @@ const Quiz3 = () => {
         <>
         <div className='fatline'></div>
         <QuizzesPageMain>
-            <Sidebar />
+            <SidebarGlobal title='Prepositions' data1={pickquiz} data2={pickmore}/>
             <QuizzesMain>
                 {showScore ? (
                 <div>

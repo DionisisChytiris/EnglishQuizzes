@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import quiz5data from "../data/quiz5data"
-import Sidebar from '../Sidebar'
+import pickmore from '../data/pickmore'
+import pickquiz from '../data/pickquiz'
 import ShowSideBar from '../mainPages/ShowSidebarQuiz'
+import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import { QuizzesMain, QuizzesPageMain} from '../../../General Styles/QuizzesPage.styled'
 import QuizResultsSection from '../../../General Pages/Quiz Results/ResultsTest'
 import QuizGrammarPage from '../../../General Pages/Quiz Grammar Page/QuizGrammarPage'
@@ -21,7 +23,7 @@ const Quiz5 = (props) => {
         <>
         <div className='fatline'></div>
         <QuizzesPageMain>
-            <Sidebar />
+            <SidebarGlobal title='Prepositions' data1={pickquiz} data2={pickmore}/>
             <QuizzesMain>
                 {showScore ? (
                 <div>

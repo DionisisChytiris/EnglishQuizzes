@@ -121,7 +121,7 @@ const Home = () => {
                     {/* Second method of user input */}
                     {
                         submit ? (
-                            <div className='show-userName'>
+                            <div className='show-userName fade-in'>
                                 <div className='show-greeting'>Hey </div>
                                 <div>
                                     {userName.map((userN)=>{
@@ -143,14 +143,14 @@ const Home = () => {
                                    <input type='text' name='userName' placeholder='Enter your name...'/>
                                    <input type='submit'/>
                                 </form>
-                                <div className='show-userName'>
+                                <div className='show-userName '>
                                     <div>
                                         {userName.map((userN)=>{
                                             const {id, text} = userN
                                             return (
                                                 <div className='show-flex-row'>
-                                                    <div className='show-greeting'>Hello </div>
-                                                    <div className='show-name' key={id}> {text}</div>
+                                                    <div className='show-greeting fade-in'>Hello </div>
+                                                    <div className='show-name fade-in' key={id}> {text}</div>
                                                     <div className='delete-background'>
                                                         <button onClick={()=> deleteUserName(id)} className='delete-userName1'>Change Name</button>
                                                     </div>
@@ -163,7 +163,8 @@ const Home = () => {
                         )
                     }
                     <br/>
-                    <h1 className='fade-in'>Refresher Grammar Website</h1>
+                    {/* <h1 className='fade-in'>Refresher Grammar Website</h1> */}
+                    <h1>Refresher Grammar Website</h1>
                     <p>Practise your English grammar with clear grammar explanations and practice exercises to test your understanding. All learners, whatever their level, have questions and doubts about grammar as they're learning English and this guide helps to explain the verb tenses and grammar rules in a clear and simple way.</p>
 
                     {/* <ScrollAnimation delay={500}animateIn='fadeIn' animateOut='fadeOut'>

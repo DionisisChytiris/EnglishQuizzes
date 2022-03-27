@@ -2,7 +2,9 @@ import React, {useState} from 'react'
 import quiz3data from "../data/quiz3data"
 import {AiOutlineQuestionCircle} from 'react-icons/ai'
 import { v4 as uuidv4 } from 'uuid'
-import Sidebar from '../Sidebar'
+import pickmore from '../data/pickmore'
+import pickquiz from '../data/pickquiz'
+import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import ShowSideBar from '../mainPages/ShowSideBarQuiz'
 import { QuizzesPageMain, QuizzesMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizAnswerContainer, QuizExplanation, QuizTextCenter } from '../../../General Styles/QuizzesPage.styled'
 
@@ -47,7 +49,7 @@ const Quiz3Pronouns = () => {
         <>
         <div className='navLine'></div>
         <QuizzesPageMain>
-            <Sidebar />
+            <SidebarGlobal title='Pronouns' data1={pickquiz} data2={pickmore}/>
             <QuizzesMain>
             {showScore ? (
             <div>

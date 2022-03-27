@@ -59,7 +59,7 @@ export const social = [
 /*  GRAMMAR QUIZZES */ 
 export const quizzes_links = [
   {
-    id: 1,
+    ids: 1,
     url: '/prepositions',
     text: 'Prepositions',
     info1: 'Prepositions of Time (on, in, at)',
@@ -67,7 +67,7 @@ export const quizzes_links = [
     info3: <MdFace/>
   },
   {
-    id: 2,
+    ids: 2,
     url: '/articles',
     text: 'Articles',
     info1: 'Definite Article (the)',
@@ -75,7 +75,7 @@ export const quizzes_links = [
     info3: 'No Article'
   },
   {
-    id: 3,
+    ids: 3,
     url: '/pronouns',
     text: 'Pronouns',
     info1: 'Personal Pronouns',
@@ -88,7 +88,7 @@ export const quizzes_links = [
     info8: 'Reciprocal Pronouns',
   },
   {
-    id: 4,
+    ids: 4,
     url: '/modals',
     text: 'Modals',
     info1: 'modals 1',
@@ -96,7 +96,7 @@ export const quizzes_links = [
     info3: 'modals 3'
   },
   {
-    id: 5,
+    ids: 5,
     url: '/tenses1',
     text: 'Tenses 1',
     info1: 'Present Simple',
@@ -107,7 +107,7 @@ export const quizzes_links = [
     info6: 'Future Continuous'
   },
   {
-    id: 6,
+    ids: 6,
     url: '/tenses2',
     text: 'Tenses 2',
     info1: 'Present Perfect',
@@ -118,7 +118,7 @@ export const quizzes_links = [
     info6: 'Future Perfect Continuous'
   },
   {
-    id: 7,
+    ids: 7,
     url: '/tenses3',
     text: 'Tenses 3',
     info1: <VscRemove/>,
@@ -126,7 +126,7 @@ export const quizzes_links = [
     info3: <MdRowing/>,
   },
   {
-    id: 8,
+    ids: 8,
     url: '/verbs_to_ing',
     text: 'Verbs +to / +ing',
     info1: 'Gerund',
@@ -134,7 +134,7 @@ export const quizzes_links = [
     info3: <MdInsertEmoticon/>
   },
   {
-    id: 9,
+    ids: 9,
     url: '/passive',
     text: 'Passive Voice',
     info1: 'Passive voice',
@@ -142,7 +142,7 @@ export const quizzes_links = [
     info3: <MdInsertEmoticon/>
   },
   {
-    id: 10,
+    ids: 10,
     url: '/conditionals',
     text: 'Conditionals',
     info1: '-',
@@ -154,25 +154,25 @@ export const quizzes_links = [
 /* FCE PRACTICE */ 
 export const fce_practice_links = [
   {
-    id: 1,
+    id: 10,
     url: '/openClose',
     text: 'Open Close',
     info: 'Prepositions of Time I, II'
   },
   {
-    id: 2,
+    id: 20,
     url: '/multipleChoice',
     text: 'Multiple Choice Cloze',
     info: 'hello world'
   },
   {
-    id: 3,
+    id: 30,
     url: '/wordFormation',
     text: 'Word Formation',
     info: 'hello'
   },
   {
-    id: 4,
+    id: 40,
     url: '/keyWordTransformations',
     text: 'Key Word Transformations',
     info: 'hello world'

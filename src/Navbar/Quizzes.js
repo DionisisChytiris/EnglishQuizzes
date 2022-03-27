@@ -22,12 +22,12 @@ const Quizzes = () => {
                 <h1>Grammar Quizzes</h1>
                 <div className="quizzes_boxes">
                     {quizzes_links.map((a) => {
-                        const { id, url, text, info1, info2, info3, info4, info5, info6, info7, info8, info9, } = a
+                        const { id, ids, url, text, info1, info2, info3, info4, info5, info6, info7, info8, info9, } = a
                         return (
                             <>
                             <Link to={url} className='quizzes_box' key={id}>
                                 <div className="quizzes_box_inner">
-                                    <div className="quizzes_box_front" key={id}>{text}</div>
+                                    <div className="quizzes_box_front" key={ids}>{text}</div>
                                         <div className="quizzes_box_back">
                                             <div className="blur">
                                                 <div style={{

@@ -1,13 +1,15 @@
 import React from 'react'
 import { QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
-import Sidebar from '../Sidebar'
+import pickmore from '../data/pickmore'
+import pickquiz from '../data/pickquiz'
+import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import Return from './Return'
 
 const Tenses3 = () => {
     return (
         <>
             <QuizzesPageMain>
-                <Sidebar />
+                <SidebarGlobal title='Tenses 3' data1={pickquiz} data2={pickmore}/>
                 <Return />
             </QuizzesPageMain>
         </>

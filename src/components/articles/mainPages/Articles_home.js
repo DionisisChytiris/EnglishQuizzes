@@ -1,6 +1,8 @@
 import React from 'react'
+import pickmore from '../data/pickmore'
+import pickquiz from '../data/pickquiz'
 import { QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
-import Sidebar from '../Sidebar'
+import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import Return from './Return'
 
 const Articles = () => {
@@ -8,7 +10,7 @@ const Articles = () => {
         <>
         <div className="fatline"></div>
             <QuizzesPageMain>
-                <Sidebar />
+            <SidebarGlobal title='Articles' data1={pickquiz} data2={pickmore}/>
                 <Return />
             </QuizzesPageMain>
         </>

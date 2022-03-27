@@ -1,6 +1,8 @@
 import React from 'react'
 import { QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
-import Sidebar from '../Sidebar'
+import pickmore from '../data/pickmore'
+import pickquiz from '../data/pickquiz'
+import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import Instructions from './Instructions'
 
 const VerbsToIng = () => {
@@ -8,7 +10,7 @@ const VerbsToIng = () => {
         <>
         <div className="fatline"></div>
             <QuizzesPageMain>
-                <Sidebar />
+                <SidebarGlobal title='Gerund/Infinitive' data1={pickquiz} data2={pickmore}/>
                 <Instructions />
             </QuizzesPageMain>
         </>

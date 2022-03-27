@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Sidebar from '../Sidebar'
+// import Sidebar from '../Sidebar'
 import {FaAngleLeft, FaTimes} from 'react-icons/fa'
 import styled from 'styled-components'
 

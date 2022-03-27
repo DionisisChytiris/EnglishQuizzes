@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import quiz2data from "../data/quiz2data"
 import { v4 as uuidv4 } from 'uuid'
-import Sidebar from '../../passive/Sidebar'
+import pickmore from '../data/pickmore'
+import pickquiz from '../data/pickquiz'
+import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import ShowSideBar from '../mainPages/ShowSideBarQuiz'
 import { QuizzesMain, QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
 
@@ -40,7 +42,7 @@ const Quiz2Passive = () => {
         <>
         <div className='fatline'></div>
         <QuizzesPageMain>
-            <Sidebar />
+            <SidebarGlobal title='Passive' data1={pickquiz} data2={pickmore}/>
             <QuizzesMain>
             {showScore ? (
             <div>      

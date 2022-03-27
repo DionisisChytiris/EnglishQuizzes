@@ -1,5 +1,7 @@
 import React from 'react'
-import Sidebar from '../Sidebar'
+import pickmore from '../data/pickmore'
+import pickquiz from '../data/pickquiz'
+import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import Instructions from './Instructions'
 import {QuizzesPageMain} from '../../../General Styles/QuizzesPage.styled'
 
@@ -8,7 +10,7 @@ const Passive = () => {
         <>
         <div className="fatline"></div>
             <QuizzesPageMain>
-                <Sidebar />
+                <SidebarGlobal title='Passive' data1={pickquiz} data2={pickmore}/>
                 <Instructions />
             </QuizzesPageMain>
         </>

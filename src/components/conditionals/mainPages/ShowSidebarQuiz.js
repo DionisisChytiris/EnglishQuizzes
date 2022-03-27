@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
+import pickmore from '../data/pickmore'
+import pickquiz from '../data/pickquiz'
+import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import { ShowContent, ShowSideBarButton } from '../../../General Styles/ShowSideBarQuiz.styled'
-import Sidebar from '../Sidebar'
 import {FaAngleLeft, FaTimes } from 'react-icons/fa'
 
 const ShowSideBar = () => {
@@ -15,7 +17,7 @@ const ShowSideBar = () => {
         </ShowSideBarButton>
             {show &&
                 <ShowContent>
-                    <Sidebar/>
+                    <SidebarGlobal title='Conditionals' data1={pickquiz} data2={pickmore}/>
                 </ShowContent>}
         </>
     )

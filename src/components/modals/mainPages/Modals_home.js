@@ -1,17 +1,16 @@
 import React from 'react'
 import { QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
-import Sidebar from '../Sidebar'
+import pickmore from '../data/pickmore'
+import pickquiz from '../data/pickquiz'
+import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import Instructions from './Instructions'
-
-
-
 
 const Modals = () => {
     return (
         <>
         <div className="fatline"></div>
             <QuizzesPageMain>
-                <Sidebar />
+                <SidebarGlobal title='Modals' data1={pickquiz} data2={pickmore}/>
                 <Instructions />
             </QuizzesPageMain>
         </>

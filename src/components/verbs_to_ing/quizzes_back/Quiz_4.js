@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import quiz4data from "../data/quiz4data"
 import { v4 as uuidv4 } from 'uuid'
-import Sidebar from '../Sidebar'
+import pickmore from '../data/pickmore'
+import pickquiz from '../data/pickquiz'
+import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import { QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizAnswerContainer, QuizExplanation, QuizTextCenter } from '../../../General Styles/QuizzesPage.styled'
 import ShowSideBar from '../mainPages/ShowSideBarQuiz'
 
@@ -41,7 +43,7 @@ const Quiz4VerbIng = () => {
         <>
         <div className='navLine'></div>
         <QuizzesPageMain>
-            <Sidebar />
+            <SidebarGlobal title='Gerund/Infinitive' data1={pickquiz} data2={pickmore}/>
             <QuizzesMain>
                 {showScore ? (
                 <div>

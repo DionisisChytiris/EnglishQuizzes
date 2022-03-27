@@ -33,7 +33,7 @@ export const Home1 = styled.div`
         color: var(--cl-primary-blue);
     }
     .fade-in {
-        animation: fade-in 2s;
+        animation: fade-in 3s;
     }
     p{
         width: 60%;
@@ -75,12 +75,14 @@ export const Home1 = styled.div`
         flex-direction: row;
     }
     .show-greeting{
-        font-size: 50px;
+        font-size: 40px;
         font-weight: 600;
         margin-right: 20px;
     }
     .show-name{
-        font-size: 50px;
+        position: relative;
+        z-index: 100;
+        font-size: 40px;
         font-weight: 600;
     }
     .delete-background{

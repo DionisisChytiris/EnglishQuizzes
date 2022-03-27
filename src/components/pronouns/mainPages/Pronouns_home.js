@@ -1,6 +1,8 @@
 import React from 'react'
 import Instructions from './Instructions'
-import Sidebar from '../Sidebar'
+import pickmore from '../data/pickmore'
+import pickquiz from '../data/pickquiz'
+import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import {QuizzesPageMain} from '../../../General Styles/QuizzesPage.styled'
 
 
@@ -9,7 +11,7 @@ const Pronouns = () => {
         <>
         <div className="fatline"></div>
             <QuizzesPageMain>
-                <Sidebar/>
+                <SidebarGlobal title='Pronouns' data1={pickquiz} data2={pickmore}/>
                 <Instructions/>           
             </QuizzesPageMain>
         </>

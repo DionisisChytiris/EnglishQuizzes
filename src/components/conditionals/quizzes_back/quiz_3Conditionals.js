@@ -1,9 +1,11 @@
 import React, {useState} from 'react'
 import quiz3data from "../data/quiz3data"
+import pickmore from '../data/pickmore'
+import pickquiz from '../data/pickquiz'
+import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import { v4 as uuidv4 } from 'uuid'
 // import { QuizAnswerContainer, AnswerContainer, Question, QuestionCounter, QuizzesMain, QuizzesPageMain, Explanation, ExplanationTitle, ExplanationContent, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizExplanation } from '../../../General Styles/QuizzesPage.styled'
 import { QuizAnswerContainer, QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizExplanation } from '../../../General Styles/QuizzesPage.styled'
-import Sidebar from '../Sidebar'
 import ShowSideBar from '../mainPages/ShowSidebarQuiz'
 
 const Quiz3Conditionals = () => {
@@ -41,7 +43,7 @@ const Quiz3Conditionals = () => {
         <>
         <div className='navLine'></div>
         <QuizzesPageMain>
-            <Sidebar/>
+            <SidebarGlobal title='Conditionals' data1={pickquiz} data2={pickmore}/>
             <QuizzesMain>
                 {showScore ? (
                 <div>
