@@ -80,6 +80,7 @@ export const Conditional1 = styled.div`
     .example{
         display: flex;
         margin-left: 30px;
+        align-items: center;
     }
     .example1{
         width: 5px;
@@ -195,6 +196,7 @@ export const ConditionalType = styled.div`
     }
     .example{
         margin-left: 50px;
+        align-items: center;
     }
     .box3 {
         display: flex;

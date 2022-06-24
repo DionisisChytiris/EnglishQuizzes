@@ -4,7 +4,8 @@ import pickmore from '../data/pickmore'
 import pickquiz from '../data/pickquiz'
 import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import { v4 as uuidv4 } from 'uuid'
-import { AnswerContainer, Explanation, Question, QuestionCounter, QuizzesMain, QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
+import { QuizzesMain, QuizzesPageMain,  QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizTextCenter, QuizAnswerContainer, QuizExplanation, } from '../../../General Styles/QuizzesPage.styled'
+import QuizResultsSection from '../../../General Pages/Quiz Results/ResultsTest'
 import ShowSideBar from '../mainPages/ShowSidebarQuiz'
 
 const Quiz2Conditionals = () => {
@@ -45,39 +46,44 @@ const Quiz2Conditionals = () => {
              <SidebarGlobal title='Conditionals' data1={pickquiz} data2={pickmore}/>
             <QuizzesMain>
                 {showScore ? (
-                <div>      
-                    <div className="score-section">Your score: {score}/{quiz2data.length}</div>
-                    <div className='showscore-btns'>
-                        <a href="/quiz1" className='return'>Try Again</a>
-                        <a href="/quiz2" className='return'>Next Quiz</a>
-                    </div>
+                <div>    
+                    <ShowSideBar/>  
+                    <QuizResultsSection data={quiz2data} score={score} source1={'conditionals_2'} source2={'conditionals_3'}/>
                 </div>
                 ) :
                 (
                 <>
                     <ShowSideBar/>
-                    <h1>Conditionals 2</h1>
-                    <QuestionCounter>
-                        Question {currentQuestion + 1} / {quiz2data.length}
-                    </QuestionCounter>        
-                    <Question>
-                        {currentQuestion + 1}. {quiz2data[currentQuestion].question}  
-                    </Question>
-                    <AnswerContainer>
+                    <h2>Conditionals 2</h2>
+                    <QuizContainer>
+                    <div className='question'>Question  {currentQuestion + 1} / {quiz2data.length}</div>
+                    <QuizTitle>
+                        <QuizCounter>
+                            {currentQuestion + 1}
+                            <small>/ {quiz2data.length}</small>
+                        </QuizCounter>
+                        <QuizContent>
+                            <QuizTextCenter>
+                                {quiz2data[currentQuestion].question}       
+                            </QuizTextCenter>      
+                        </QuizContent>
+                    </QuizTitle>
+                    <QuizAnswerContainer>
                         {quiz2data[currentQuestion].answersList.map((a) => (
                             <div disabled={clicked} className={`answer ${clicked && a.isCorrect ? "correct" : wrongAnswer}`} key={uuidv4()}onClick={()=>handleCorrectAnswer(a.isCorrect)}>{a.answer}</div>
                         ))}
-                    </AnswerContainer>
-                    {showExplanation &&                       
-                        <Explanation>                              
+                    </QuizAnswerContainer>
+                    {showExplanation &&
+                        <QuizExplanation>
                             <>
-                                <div className='help'>Explanation</div>
-                                <div className="help-line"></div>    
-                                <p className='help-explanation'>{quiz2data[currentQuestion].help}</p>
+                                <div className='title'>Explanation</div>
+                                <div className="line"></div>
+                                <div className='content'>{quiz2data[currentQuestion].help}</div>
                                 <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button>
-                            </>                       
-                        </Explanation>                
-                    }             
+                            </>
+                        </QuizExplanation>
+                    }
+                 </QuizContainer>            
                 </>        
                 )           
                 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 
 const FooterSection = styled.div`
     width: 100%;
@@ -7,6 +8,18 @@ const FooterSection = styled.div`
     margin: auto;
     background: var(--cl-primary-darkblue);
     color: white;
+    .copyright{
+        text-align: center;
+        position: relative;
+        top: -50px;
+        font-size: 12px;
+        color: lightgrey
+    }
+    @media (max-width: 650px){
+     .copyright{
+         top: -20px;
+     }
+  }
 `
 const FooterContainer = styled.div`
   padding: 80px;
@@ -23,7 +36,18 @@ const FooterContainer = styled.div`
   `
 const FooterColumn = styled.div`
     padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    .link{
+        color: white;
+        padding: 3px;
+    }
+    .link:hover{
+        color: lightblue;
+    }
     @media (max-width: 650px){
+        align-items: center;
         margin: 10px;
     }
 `
@@ -33,27 +57,19 @@ const Footer = () => {
         <FooterSection>
             <FooterContainer>
                 <FooterColumn>
-                    <div>hello world</div>
-                    <div>hello world</div>
-                    <div>hello world</div>
-                    <div>hello world</div>
-                    <p>copyright 2021</p>
+                    <Link to='/about' className='link'>About</Link>
+                    <Link to='/contact' className='link'>Contact</Link>
+                    <Link to='/grammar' className='link'>Grammar</Link>
+                    <Link to='/quizzes' className='link'>Grammar Quizzes</Link>
                 </FooterColumn>
                 <FooterColumn>
-                    <div>hello world</div>
-                    <div>hello world</div>
-                    <div>hello world</div>
-                    <div>hello world</div>
-                    <p>copyright 2021</p>
-                </FooterColumn>
-                <FooterColumn>
-                    <div>hello world</div>
-                    <div>hello world</div>
-                    <div>hello world</div>
-                    <div>hello world</div>
-                    <p>copyright 2021</p>
+                    <Link to='/about' className='link'>About</Link>
+                    <Link to='/contact' className='link'>Contact</Link>
+                    <Link to='/' className='link'>Term of Use</Link>
+                    <Link to='/' className='link'>Term of Use</Link>
                 </FooterColumn>
             </FooterContainer>
+            <div className='copyright'>copyright 2022</div>
         </FooterSection>
     )
 }

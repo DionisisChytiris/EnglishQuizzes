@@ -8,20 +8,16 @@ import {
     Home1,
     Home2,
     Home3,
-    HomeImage,
-    HomeWrapper,
-    HomeSlide,
-    HomeSlider,
-    HomeContent,
-    HomeButtonTitle,
+    // HomeButtonTitle,
     HomePart2,
     HomeGrammar,
     ImageSection,
     // TestContainer
 }from './Navbar Styles/Home.styled'
 import Slide from 'react-reveal/Slide'
-import Flash from 'react-reveal/Flash'
-import ScrollAnimation from 'react-animate-on-scroll'
+// import Flash from 'react-reveal/Flash'
+// import ScrollAnimation from 'react-animate-on-scroll'
+import {FaAngleDoubleRight, FaCircle} from 'react-icons/fa'
     
 
 const Home = () => {
@@ -90,7 +86,9 @@ const Home = () => {
         return null
     }
 
-    
+    const help =()=>{
+        alert('Optional personalization \n----------------------------------------- \nEnter your name or a nickname for a more personal experience, or just ignore it and go on. \n \nYou can type maximum 10 characters. \n \nIf you want to delete or change your name, press the "Change Name" button which will show up after your submission.')
+    }
 
     return (
         <>
@@ -111,7 +109,7 @@ const Home = () => {
                                             <div key={id}>
                                                 <div className='show-name'> {text}</div>
                                                 <div className='delete-background1'>
-                                                    <button onClick={()=> deleteUserName(id)} className='delete-userName'>Delete Name</button>
+                                                    <button onClick={()=> deleteUserName(id)} className='delete-userName'>Change Name</button>
                                                 </div>
                                             </div>
                                         )
@@ -121,8 +119,17 @@ const Home = () => {
                             ): (
                             <>
                                 <form onSubmit={addUserName} className='form'>
-                                   <input type='text' name='userName' placeholder='Enter your name...'/>
+                                   <input 
+                                        type='text' 
+                                        name='userName' 
+                                        placeholder='Enter your name...' 
+                                        maxLength={10}
+                                        pattern="[a-zA-Z]+" 
+                                        title='Enter only letters, maximum 10.'
+                                        required
+                                    />
                                    <input type='submit'/>
+                                   <div className='help' onClick={help}>?</div>
                                 </form>
                                 <div className='show-userName '>
                                     <div>
@@ -131,7 +138,7 @@ const Home = () => {
                                             return (
                                                 <div className='show-flex-row' key={id}>
                                                     <div className='show-greeting fade-in'>Hello </div>
-                                                    <div className='show-name fade-in' > {text}</div>
+                                                    <div className='show-name fade-in' > {text}!</div>
                                                     <div className='delete-background'>
                                                         <button onClick={()=> deleteUserName(id)} className='delete-userName1'>Change Name</button>
                                                     </div>
@@ -155,60 +162,94 @@ const Home = () => {
                     </ScrollAnimation>  */}
                 </Home1>
                 <Home2>
-                    <h1>hello</h1>
-                    <p>Practise your English grammar with clear grammar explanations and practice exercises to test your understanding. All learners, whatever their level, have questions and doubts about . </p>
+                    <h1>The importance of learning English</h1>
+                    <p>Practice your English grammar with clear grammar explanations and practice exercises to test your understanding. All learners, whatever their level, have questions and doubts about . </p>
                     <ImageSection>
                         {HomeData.map((pic, index) => {
                             return (
                                 <div key={index}>
                                     {index === current && (
                                         <>
-                                            <img src={pic.image} alt='photo'/>
-                                            <div className='title'>{pic.title}</div>               
+                                            <img src={pic.image} alt='photography' className='fade'/>
+                                            <div className='title fade1'>{pic.title}</div>               
+                                            {/* <div className='title fade1'>{pic.text}</div>                */}
                                         </>
                                     )}
                                 </div>
                             )
                         })}
                     </ImageSection>
+
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div>English is one of the most widely spoken languages.One in five people in the world (the whole world!) can speak, or at least understand, English</div>
+                    <br/>
+                    <div>Its a very handy language for travel and communication</div>
+                    <br/>
+                    <div>English gives you wider access to knowledge</div>
+                    <br/>
+                    <div>Career booster</div>
+                    <br/>
+                    <div>Education</div>
                 </Home2>
                 <Home3>
+                    <div className='vertical-line'>
+                        <div className='dot a'><FaCircle/></div>
+                        <div className='dot b'><FaCircle/></div>
+                        <div className='dot c'><FaCircle/></div>
                     <HomePart2>   
                         <Slide right duration={1000}>
                             <HomeGrammar>
                                 <h1>Grammar Quizzes</h1>
                                 <p>Practise your English grammar with clear grammar explanations and practice exercises to test your understanding. All learners, whatever their level, have questions and doubts about g</p>
-                                <Link className="home-button" to='/quizzes'>
-                                    <HomeButtonTitle style={{margin: '40px auto'}}> Grammar Quizzes</HomeButtonTitle>                    
+                                <Link className='home-button' to='/quizzes'>
+                                    <div className='button-flex'>
+                                        <div className='button-icon'><FaAngleDoubleRight/></div>
+                                        <div className='button-title'> Grammar Quizzes</div>                    
+                                    </div>
                                 </Link>       
                             </HomeGrammar>
                         </Slide>                    
-                        <Slide left duration={1000}>
+                        <Slide right duration={1000}>
                             <HomeGrammar>
                                 <h1>Grammar</h1>
-                                <p>Practise your English grammar with clear grammar explanations and practice exercises to test your understanding. All learners, whatever their level, have questions and doubts about g</p>
-                                <Link className="home-button" to='/grammar'>
-                                    <HomeButtonTitle style={{margin: '40px auto'}}> Grammar</HomeButtonTitle>                    
+                                <p>Practice your English grammar with clear grammar explanations and practice exercises to test your understanding. </p>
+                                <Link className="home-button a" to='/grammar'>
+                                <div className='button-flex'>
+                                            <div className='button-icon'><FaAngleDoubleRight/></div>
+                                            <div className='button-title'> Grammar</div>                    
+                                        </div>                 
                                 </Link>       
                             </HomeGrammar>  
                         </Slide>  
-                        <Flash right>
+                        <Slide right duration={1000}>
+                            <HomeGrammar>
+                                <h1>FCE Practice</h1>
+                                <p>Practice your English grammar with clear grammar explanations and practice exercises to test your understanding. </p>
+                                <Link className="home-button b" to='/fce_practice'>
+                                <div className='button-flex'>
+                                            <div className='button-icon'><FaAngleDoubleRight/></div>
+                                            <div className='button-title'>FCE</div>                    
+                                        </div>                 
+                                </Link>       
+                            </HomeGrammar>  
+                        </Slide>  
+                        {/* <Flash right>
                             <Link  className="home-boxes1" to='/fce_practice'>                  
                                 <HomeButtonTitle>FCE Practice</HomeButtonTitle>                    
                             </Link>       
-                        </Flash>  
-                        <ScrollAnimation delay={100}animateIn='fadeIn' animateOut='fadeOut'>
+                        </Flash>   */}
+                        {/* <ScrollAnimation delay={100}animateIn='fadeIn' animateOut='fadeOut'>
                             <Link  className="home-box" to='/fce_practice'>                  
                                 <HomeButtonTitle>Practice</HomeButtonTitle>                
                             </Link>              
-                        </ScrollAnimation> 
-                        <ScrollAnimation delay={200}animateIn='fadeIn' animateOut='fadeOut'>
-                            <Link  className="home-box" to='/fce_practice'>                  
-                                <HomeButtonTitle>Practice</HomeButtonTitle>                
-                            </Link>              
-                        </ScrollAnimation> 
+                        </ScrollAnimation>  */}
                     </HomePart2>
-                    
+                    </div>
                 </Home3>
             </HomeSection>
         </>

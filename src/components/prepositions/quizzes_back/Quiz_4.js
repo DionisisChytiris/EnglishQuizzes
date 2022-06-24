@@ -58,6 +58,7 @@ const Quiz4 = () => {
                     <ShowSideBar/>
                     <h2>Prepositions of Time (on, in, at)</h2>
                     <QuizContainer>
+                    <div className='question'>Question  {currentQuestion + 1} / {quiz4data.length}</div>
                         <QuizTitle>
                             <QuizCounter>
                                 {currentQuestion + 1}

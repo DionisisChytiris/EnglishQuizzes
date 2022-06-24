@@ -1,0 +1,5 @@
+export { default as Quiz0Articles } from  './Quiz_0Articles'
+export { default as Quiz1Articles } from  './Quiz_1Articles'
+export { default as Quiz2Articles } from  './Quiz_2Articles'
+export { default as Quiz3Articles } from  './Quiz_3Articles'
+export { default as Quiz4Articles } from  './Quiz_4Articles'

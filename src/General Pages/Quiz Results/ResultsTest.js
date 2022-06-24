@@ -6,12 +6,11 @@ import { FaSmileWink, FaRegSadTear } from "react-icons/fa";
 
 
 const QuizResults = styled.div`
-    padding-bottom: 100px;
-
+    /* padding-bottom: 100px; */
     h1{
         color: green;
         text-align: center;
-        margin-top: 80px;
+        padding-top: 80px;
     }
     .smile{
         font-size: clamp(2.1rem, 3vw, 3.7rem);
@@ -25,9 +24,15 @@ const QuizResults = styled.div`
         font-size: 50px;
     }
     .score-section{
+        font-size: clamp(1.4rem, 1.6vw, 1.8rem);
         padding: 30px;
         text-align: center;
         /* background-color: yellow; */
+    }
+    .score-percentage{
+        font-size: clamp(2.1rem, 3vw, 3.7rem);
+        text-align: center;
+        margin-top: 20px;
     }
     .answer-correct{
         color: rgb(126, 255, 126);
@@ -64,6 +69,9 @@ const QuizResults = styled.div`
     }
     .btn-wrong{
         background: rgb(136, 159, 189);
+    }
+    .btn-hide{
+        display: none;
     }
     .button:hover {
         background-color: var(--cl-primary-darkblue);
@@ -145,7 +153,6 @@ const ResultBox = styled.div`
         color: grey
     }
 `
-
 const QuizResultsSection = (props) => {
     const [results, setResults] = useState(false)
     const score = props.score > props.data.length/2
@@ -163,8 +170,8 @@ const QuizResultsSection = (props) => {
     }, [])
 
   return (
-    <QuizResults>
-        {score ? (              
+    <QuizResults>           
+        {score ? ( 
             <div className={`smile ${score ? 'answer-correct' : 'answer-wrong'}`}>
                 <div style={{paddingBottom: '30px'}}>
                     <div>Congratulations</div>
@@ -173,15 +180,15 @@ const QuizResultsSection = (props) => {
                             const {id, text} =note
                             return (
                                 <div className='text' key={id}>
-                                    <div>{text}</div>
+                                    <div>{text} !!!</div>
                                 </div>
                             )
                         })}
                     </div>
-                    <div>!!!</div>
                 </div>
                 <FaSmileWink/>
-            </div>       
+            </div> 
+                  
         ) : (
             <div className={`sad ${score ? 'answer-correct' : 'answer-wrong'}`}>
                 <div style={{paddingBottom: '30px'}}>
@@ -191,21 +198,21 @@ const QuizResultsSection = (props) => {
                             const {id, text} =note
                             return (
                                 <div className='text' key={id}>
-                                    <div>{text}</div>
+                                    <div>{text} !</div>
                                 </div>
                             )
                         })}
                     </div>
-                    <div>!!!</div>
                 </div>
                 <FaRegSadTear/>
             </div>
         )}
+        <div className={`score-percentage ${score ? 'answer-correct' : 'answer-wrong'}`}>{(props.score * 100)/ props.data.length}%</div>
         <div className={`score-section ${score ? 'answer-correct' : 'answer-wrong'}`}>Your score is {props.score} out of {props.data.length}!!!</div>
         <div className='buttons-section'>
-            <a href={props.source1} className={`button ${score ? 'btn-correct' : 'btn-wrong'}`}>Try Again</a>
-            <div className={`button ${score ? 'btn-correct' : 'btn-wrong'}`} onClick={()=>{setResults(!results)}}>Results</div>
-            <a href={props.source2} className={`button ${score ? 'btn-correct' : 'btn-wrong'}`}>Next Quiz</a>
+            <a href={props.source1} className={`button ${score ? 'btn-hide' : 'btn-wrong'}`}>Try Again</a>
+            <div className={`button ${score ? 'btn-correct' : 'btn-wrong'}`} onClick={()=>{setResults(!results)}}>Answers</div>
+            <a href={props.source2} className={`button ${score ? 'btn-correct' : 'btn-hide'}`}>Next Quiz</a>
         </div>
         {
             results &&

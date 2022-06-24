@@ -4,12 +4,7 @@ import Navbar1 from './Navbar1'
 import Footer from './Footer/Footer'
 import ScrollToTop from './General Pages/ScrollToTop'
 // Navbar
-import Home from './Navbar/Home'
-import Quizzes from './Navbar/Quizzes'
-import Grammar from './Navbar/Grammar'
-import FcePractice from './Navbar/FCE_Practice'
-import About from './Navbar/About'
-import Contact from './Navbar/Contact'
+import { Home, Quizzes, Grammar, FcePractice, About, Contact} from './Navbar/index'
 // home pages
 import Prepositions from './components/prepositions/mainPages/Prepositions_home';
 import Pronouns from './components/pronouns/mainPages/Pronouns_home';
@@ -26,54 +21,23 @@ import WordFormation_home from './FCE Practice/WordFormation/WordFormation_home'
 import MultipleChoice_home from './FCE Practice/MultipleChoice/MultipleChoice_home'
 import keyWord_home from './FCE Practice/KeyWordTransformation/KeyWord_home'
 // Prepositions Quizzes
-import Quiz1 from './components/prepositions/quizzes_back/Quiz_1';
-import Quiz2 from './components/prepositions/quizzes_back/Quiz_2';
-import Quiz3 from './components/prepositions/quizzes_back/Quiz_3';
-import Quiz4 from './components/prepositions/quizzes_back/Quiz_4';
-import Quiz5 from './components/prepositions/quizzes_back/Quiz_5';
-import Quiz6 from './components/prepositions/quizzes_back/Quiz_6';
-import Test1Prepositions from './components/prepositions/quizzes_back/Test_1';
+import {Quiz1, Quiz2, Quiz3, Quiz4, Quiz5, Quiz6, Test1Prepositions} from './components/prepositions/quizzes_back'
 // Pronouns Quizzes
-import Quiz1Pronouns from './components/pronouns/quizzes_back/Quiz_1Pronouns';
-import Quiz2Pronouns from './components/pronouns/quizzes_back/Quiz_2Pronouns';
-import Quiz3Pronouns from './components/pronouns/quizzes_back/Quiz_3Pronouns';
-import Quiz4Pronouns from './components/pronouns/quizzes_back/Quiz_4Pronouns';
+import { Quiz1Pronouns, Quiz2Pronouns, Quiz3Pronouns, Quiz4Pronouns} from './components/pronouns/quizzes_back'
 // Article Quizzes
-import Quiz0Articles from './components/articles/quizzes_back/Quiz_0Articles';
-import Quiz1Articles from './components/articles/quizzes_back/Quiz_1Articles';
-import Quiz2Articles from './components/articles/quizzes_back/Quiz_2Articles';
-import Quiz3Articles from './components/articles/quizzes_back/Quiz_3Articles';
-import Quiz4Articles from './components/articles/quizzes_back/Quiz_4Articles';
+import { Quiz0Articles, Quiz1Articles, Quiz2Articles, Quiz3Articles, Quiz4Articles} from './components/articles/quizzes_back'
 // Tenses Quizzes
-import Quiz1Tenses from './components/tenses1/quizzes_back/Quiz_1Tenses';
-import Quiz2Tenses from './components/tenses1/quizzes_back/Quiz_2Tenses';
-import Quiz3Tenses from './components/tenses1/quizzes_back/Quiz_3Tenses';
-import Quiz4Tenses from './components/tenses1/quizzes_back/Quiz_4Tenses';
-import Quiz1Tenses2 from './components/tenses2/quizzes_back/Quiz_1Tenses';
-import Quiz2Tenses2 from './components/tenses2/quizzes_back/Quiz_2Tenses';
-import Quiz3Tenses2 from './components/tenses2/quizzes_back/Quiz_3Tenses';
-import Quiz4Tenses2 from './components/tenses2/quizzes_back/Quiz_4Tenses';
-import Quiz1Tenses3 from './components/tenses3/quizzes/Quiz1Tenses';
-import Quiz2Tenses3 from './components/tenses3/quizzes/Quiz2Tenses';
-import Quiz3Tenses3 from './components/tenses3/quizzes/Quiz3Tenses';
-import Quiz4Tenses3 from './components/tenses3/quizzes/Quiz4Tenses';
+import { Quiz1Tenses, Quiz2Tenses, Quiz3Tenses, Quiz4Tenses} from './components/tenses1/quizzes_back'
+import { Quiz1Tenses2, Quiz2Tenses2, Quiz3Tenses2, Quiz4Tenses2 } from './components/tenses2/quizzes_back'
+import { Quiz1Tenses3, Quiz2Tenses3, Quiz3Tenses3, Quiz4Tenses3 } from './components/tenses3/quizzes_back'
 // Gerund Quizzes
-import Quiz1VerbIng from './components/verbs_to_ing/quizzes_back/Quiz_1'
-import Quiz2VerbIng from './components/verbs_to_ing/quizzes_back/Quiz_2'
-import Quiz3VerbIng from './components/verbs_to_ing/quizzes_back/Quiz_3'
-import Quiz4VerbIng from './components/verbs_to_ing/quizzes_back/Quiz_4'
+import { Quiz1VerbIng, Quiz2VerbIng, Quiz3VerbIng, Quiz4VerbIng} from './components/verbs_to_ing/quizzes_back'
 // Modal Quizzes
-import Quiz1Modal from './components/modals/quizzes_back/Quiz_1Modal'
-import Quiz2Modal from './components/modals/quizzes_back/Quiz_2Modal'
-import Quiz3Modal from './components/modals/quizzes_back/Quiz_3Modal'
+import { Quiz1Modal, Quiz2Modal, Quiz3Modal} from './components/modals/quizzes_back'
 // Passive Quizzes
-import Quiz1Passive from './components/passive/quizzes_back/Quiz_1Passive'
-import Quiz2Passive from './components/passive/quizzes_back/Quiz_2Passive'
-import Quiz3Passive from './components/passive/quizzes_back/Quiz_3Passive'
+import { Quiz1Passive, Quiz2Passive, Quiz3Passive } from './components/passive/quizzes_back'
 // Conditionals Quizzes
-import Quiz1Conditionals from './components/conditionals/quizzes_back/quiz_1Conditionals'
-import Quiz2Conditionals from './components/conditionals/quizzes_back/quiz_2Conditionals'
-import Quiz3Conditionals from './components/conditionals/quizzes_back/quiz_3Conditionals'
+import { Quiz1Conditionals, Quiz2Conditionals, Quiz3Conditionals} from './components/conditionals/quizzes_back'
 // Grammar pages
 import GeneralTensesPage from './General Pages/General Tenses Page/GeneralTensesPage'
 import PrepositionsGrammar from './components/prepositions/mainPages/Grammar'
@@ -86,18 +50,8 @@ import Tenses3Grammar from './components/tenses3/mainPages/Grammar'
 import GerundGrammar from './components/verbs_to_ing/mainPages/Grammar'
 import Conditionals_Grammar from './components/conditionals/mainPages/Grammar'
 import Passive_Grammar from './components/passive/mainPages/Grammar'
-import PresentSimple from './components/tenses1/GrammarPages/PresentSimple'
-import PastSimple from './components/tenses1/GrammarPages/PastSimple'
-import FutureSimple from './components/tenses1/GrammarPages/FutureSimple'
-import PresentContinuous from './components/tenses1/GrammarPages/PresentContinuous'
-import PastContinuous from './components/tenses1/GrammarPages/PastContinuous'
-import FutureContinuous from './components/tenses1/GrammarPages/FutureContinuous'
-import FuturePerfect from './components/tenses2/GrammarPages/FuturePerfect'
-import PastPerfect from './components/tenses2/GrammarPages/PastPerfect'
-import PresentPerfect from './components/tenses2/GrammarPages/PresentPerfect'
-import PresentPerfectContinuous from './components/tenses2/GrammarPages/PresentPerfectContinuous'
-import PastPerfectContinuous from './components/tenses2/GrammarPages/PastPerfectContinuous'
-import FuturePerfectContinuous from './components/tenses2/GrammarPages/FuturePerfectContinuous'
+import { PresentSimple, PresentContinuous, PastSimple, PastContinuous, FutureSimple, FutureContinuous} from './components/tenses1/GrammarPages'
+import { PresentPerfect, PresentPerfectContinuous, PastPerfect, PastPerfectContinuous, FuturePerfect, FuturePerfectContinuous } from './components/tenses2/GrammarPages'
 // FCE
 import OpenClose1 from './FCE Practice/OpenClose/OpenClosePractice/openClose1'
 import OpenClose2 from './FCE Practice/OpenClose/OpenClosePractice/openClose2'

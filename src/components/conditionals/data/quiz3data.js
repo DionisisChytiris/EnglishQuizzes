@@ -6,25 +6,27 @@ const quiz3data = [
         {answer: "A. red", isCorrect: true},
         {answer: "B. green", isCorrect: false},
       ],
-      help: "Hello world, this is my new english quizzes website. Thsi is the first website in dhfh sdhf welcomw weolcmo This This this is isi website welcome welcome welcom hwello hello hello werold hello wrold worold world hello wrold world !"
+      help: ""
     },
     {
       id: 2,
-      question: "Helelo therer",
+      question: "when it ___, I always ___ the bus.",
       answersList: [
-        {answer: "sdf", isCorrect: true},
-        {answer: " climate", isCorrect: false},
+        {answer: "rains / take ", isCorrect: true},
+        {answer: " will rain  / take", isCorrect: false},
       ],
-      help: "World climate change"
+      help: "We use Zero Conditional when the result will always happen and we are talking in general. The structure is: ",
+      help1: " if + present simple, present simple"
     },
     {
       id: 3,
-      question: "",
+      question: "If you place this order now, you ___ it by noon tomorrow.",
       answersList: [
-        {answer: "", isCorrect: true},
-        {answer: "", isCorrect: false},
+        {answer: "will receive", isCorrect: true},
+        {answer: "receive", isCorrect: false},
       ],
-      help: ""
+      help: "When there is a real possibility that this condition will happen we use first conditional. The structure is:  ",
+      help1: "if + present simple , will + infinitive"
     },
     {
       id: 4,
@@ -37,21 +39,23 @@ const quiz3data = [
     },
     {
       id: 5,
-      question: "",
+      question: "If you ___ to visit the iconic Wembley Stadium, ___ a ticket.",
       answersList: [
-        {answer: "", isCorrect: true},
-        {answer: "", isCorrect: false},
+        {answer: "want / buy", isCorrect: true},
+        {answer: "wanted / will buy", isCorrect: false},
       ],
-      help: ""
+      help: "We use Zero Conditional to give instructions or to tell people what to do. The structure is: ",
+      help1: " if + present simple, present simple"
     },
     {
       id: 6,
-      question: "",
+      question: "If I ___ your card, I ___ give it back to you.",
       answersList: [
-        {answer: "", isCorrect: true},
-        {answer: "", isCorrect: false},
+        {answer: "find / will", isCorrect: true},
+        {answer: "found / will", isCorrect: false},
       ],
-      help: ""
+      help: "When there is a real possibility that this condition will happen we use first conditional. The structure is:  ",
+      help1: "if + present simple , will + infinitive"
     },
     {
       id: 7,
@@ -73,12 +77,13 @@ const quiz3data = [
     },
     {
       id: 9,
-      question: "",
+      question: "I ___ tell Maria to phone you if I ___ her.",
       answersList: [
-        {answer: "", isCorrect: true},
-        {answer: "", isCorrect: false},
+        {answer: "will / see", isCorrect: true},
+        {answer: "will have / saw", isCorrect: false},
       ],
-      help: ""
+      help: "When there is a real possibility that this condition will happen we use first conditional. The structure is:  ",
+      help1: "if + present simple , will + infinitive"
     },
     {
       id: 10,
@@ -100,12 +105,13 @@ const quiz3data = [
     },
     {
       id: 12,
-      question: "",
+      question: "What ___ you do if it ___ tomorrow?",
       answersList: [
-        {answer: "", isCorrect: true},
-        {answer: "", isCorrect: false},
+        {answer: "do / is snowing", isCorrect: false},
+        {answer: "will / snows", isCorrect: true},
       ],
-      help: ""
+      help: "When there is a real possibility that this condition will happen we use first conditional. we are talking about one particular situation, not in general. The structure is:  ",
+      help1: "if + present simple , will + infinitive"
     },
     
 ]

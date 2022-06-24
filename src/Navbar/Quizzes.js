@@ -1,4 +1,7 @@
 import React from 'react'
+import {
+    QuizPage
+} from './Navbar Styles/Quizzes.styled'
 import { Link } from 'react-router-dom'
 import { quizzes_links } from '../data_links'
 
@@ -6,7 +9,7 @@ const Quizzes = () => {
     return (
         <>
             <div className="navLine"></div>
-            <div className="quizzes_page">
+            <QuizPage>
                 <h1>Grammar Quizzes</h1>
                 <div className="quizzes_boxes">
                     {quizzes_links.map((a) => {
@@ -46,7 +49,7 @@ const Quizzes = () => {
                         )
                     })}
                 </div>
-            </div>
+            </QuizPage>
         </>
     )
 }

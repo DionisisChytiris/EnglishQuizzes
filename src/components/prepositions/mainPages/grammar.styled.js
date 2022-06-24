@@ -28,8 +28,8 @@ export const PrepositionsContext =styled.div`
     height: 100%;
     width: 800px;
     .title{
-        padding: 20px;
-        margin-bottom: 30px;
+        padding: 20px 0px 0px 20px ;
+        margin-bottom: 3%;
         /* font-size: clamp(2.2rem, 2.5vw, 2.8rem); */
         font-size: var(--main-title);
         font-weight: 600;
@@ -40,19 +40,23 @@ export const PrepositionsContext =styled.div`
         background: var(--cl-primary-lightgrey);
         margin: 40px 20px 20px 20px;
     }
-    p{
+    .category{
         font-size: var(--main-text);
-        padding: 20px;
+        padding: 20px 0px 20px 30px
     }
     .short-example{
         padding-left: 50px;
+        color: var(--cl-primary-darkblue)
+    }
+    .note{
+        padding-left: 10px;
         color: var(--cl-primary-darkblue)
     }
     .examples{
         padding: 20px;
     }
     ul{
-        padding: 20px 0px 20px 150px;
+        padding: 20px 0px 20px 20%;
         /* margin-right: 20px; */
         font-size: clamp(1.1rem, 1.3vw, 1.3rem);
         background-color: var(--cl-secondary-lightgrey);
@@ -63,5 +67,13 @@ export const PrepositionsContext =styled.div`
     }
     @media (max-width: 1100px){
         width: 90%;
+    }
+    @media (max-width: 750px){
+        ul{
+            padding: 20px 10px;
+        }
+        li{
+            font-size: 14px;
+        }
     }
 `

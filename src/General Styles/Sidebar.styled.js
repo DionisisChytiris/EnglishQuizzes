@@ -62,6 +62,7 @@ export const SidebarMain = styled.div`
   @media (max-width: 850px){
     width: 220px;
     position: absolute;
+    z-index: 1000;
     top: 0;
     left: 0;
     margin-top: 110px;

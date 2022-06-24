@@ -2,9 +2,10 @@ import styled from 'styled-components'
 
 export const InstructionsMain = styled.div`
     /* height: 75vh; */
-    height: 100%auto;
+    height: 100%;
     width: 70%;
     margin: 5% auto;
+    padding: 30px 0px 80px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,15 +28,13 @@ export const InstructionsMain = styled.div`
 export const InstructionsContainer = styled.div`
     width: 80%;
     /* height: 100%; */
-    padding: 50px ;
+    padding: 50px 0px 50px 50px;
     background-color: lightgray;
     margin-bottom: 40px;
 
-    p{
+    .instructions{
         margin-bottom: 5px;
         font-size: 18px;
-        font-weight: 600;
-        /* border: 0.1rem solid black; */
     }
     gradient{
         background: linear-gradient(to right, blue, aquamarine, blue);
@@ -49,6 +48,55 @@ export const InstructionsContainer = styled.div`
         color: black;
     }
     ul{
-        margin-left: 130px;
+        margin: 0px 0px 10px 40px;
+    }
+    li{
+        margin-top: 5px;
+        list-style: disc;
+    }
+    .left-space{
+        padding-left: 20px;
+        font-size: clamp(1rem, 1.2vw, 1.2rem)
+    }
+    .symbols-guide{
+        padding-left: 10px;
+        color: green;
+    }
+    .line{
+        display: flex;
+        flex-direction: row;
+        padding-top: 3px;
+    }
+    .a{
+        padding-top: 10px;
+    }
+    .b{
+        padding-top: 2px;
+    }
+    .sideBar-symbols{
+        padding: 20px 20px 10px 20px;
+        font-size: clamp(0.75rem, 0.85vw, 1rem);
+        color: green;
+    }
+    .icon{
+        color: var(--cl-primary-darkblue)
+    }
+    .icon1{
+        color: var(--cl-primary-darkblue);
+        font-size: 22px;
+        margin-left: -4px;
+    }
+    .icon2{
+        color: var(--cl-primary-darkblue);
+        font-size: 15px;
+    }
+    .gap-left{
+        padding-left: 20px;
+    }
+    @media (max-width: 450px){
+       padding: 20px;
+       p{
+           font-size: 16px;
+       }
     }
 `

@@ -5,7 +5,8 @@ import pickmore from '../data/pickmore'
 import pickquiz from '../data/pickquiz'
 import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import ShowSideBar from '../mainPages/ShowSideBarQuiz'
-import { QuizzesMain, QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
+import { QuizzesMain, QuizzesPageMain,  QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizTextCenter, QuizAnswerContainer, QuizExplanation, } from '../../../General Styles/QuizzesPage.styled'
+import QuizResultsSection from '../../../General Pages/Quiz Results/ResultsTest'
 
 const Quiz1Passive = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -30,7 +31,7 @@ const Quiz1Passive = () => {
         setClicked(false)
         setShowExplanation(false)
         setWrongAnswer('')
-        setShowInfo(false)
+        setShowInfo(!showInfo)
         if (currentQuestion < quiz1data.length - 1) {
             setCurrentQuestion(currentQuestion + 1)
         } else {
@@ -47,42 +48,42 @@ const Quiz1Passive = () => {
             {showScore ? (
             <div>      
                 <ShowSideBar/>
-                <div className="score-section">Your score: {score}/{quiz1data.length}</div>
-                <div className='showscore-btns'>
-                    <a href="/quiz1" className='return'>Try Again</a>
-                    <a href="/quiz2" className='return'>Next Quiz</a>
-                </div>
+                <QuizResultsSection data={quiz1data} score={score} source1={'passive_1'} source2={'passive_2'}/>
             </div>
             ) :
             (
             <>
                 <ShowSideBar/>
-                <h6>Passive Voice</h6>
-                    <p>?</p>
-                <div className="quiz1-count">
-                Question {currentQuestion + 1} / {quiz1data.length}
-                </div>        
-                <div className="question-quiz1">
-                     {currentQuestion + 1}. {quiz1data[currentQuestion].question}  
-                </div>
-                <div className="answers-quiz4">
-                    {quiz1data[currentQuestion].answersList.map((a) => (
-                        <div disabled={clicked} className={`answer-quiz4 ${clicked && a.isCorrect ? "correct" : wrongAnswer}`} key={uuidv4()}onClick={()=>handleCorrectAnswer(a.isCorrect)}>{a.answer}</div>
-                    ))}
-                </div>
-                <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button>
-                {
-                    showExplanation ? (
-                        <div className="help-box">
-                        <button className='help' onClick={() => setShowInfo(!showInfo)}> { showInfo ? 'Hide' : 'Show Explanation' }</button>
-                        <div className="help-line"></div>
-                                {
-                                    showInfo &&
-                                    <p className='help-explanation'>{quiz1data[currentQuestion].help}</p>
-                                }                         
-                        </div>
-                    ) : ''
-                }                  
+                <h2>Passive Voice</h2>
+                <QuizContainer>
+                    <div className='question'>Question  {currentQuestion + 1} / {quiz1data.length}</div>
+                    <QuizTitle>
+                        <QuizCounter>
+                            {currentQuestion + 1}
+                            <small>/ {quiz1data.length}</small>
+                        </QuizCounter>
+                        <QuizContent>
+                            <QuizTextCenter>
+                                {quiz1data[currentQuestion].question}       
+                            </QuizTextCenter>      
+                        </QuizContent>
+                    </QuizTitle>
+                    <QuizAnswerContainer>
+                        {quiz1data[currentQuestion].answersList.map((a) => (
+                            <div disabled={clicked} className={`answer ${clicked && a.isCorrect ? "correct" : wrongAnswer}`} key={uuidv4()}onClick={()=>handleCorrectAnswer(a.isCorrect)}>{a.answer}</div>
+                        ))}
+                    </QuizAnswerContainer>
+                    {showExplanation &&
+                        <QuizExplanation>
+                            <>
+                                <div className='title'>Explanation</div>
+                                <div className="line"></div>
+                                <div className='content'>{quiz1data[currentQuestion].help}</div>
+                                <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button>
+                            </>
+                        </QuizExplanation>
+                    }
+                 </QuizContainer>            
             </>        
             )           
             }

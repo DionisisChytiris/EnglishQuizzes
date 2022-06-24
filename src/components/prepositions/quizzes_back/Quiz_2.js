@@ -8,6 +8,8 @@ import ShowSideBar from '../mainPages/ShowSidebarQuiz'
 import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import { QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizTextCenter, QuizAnswerContainer, QuizExplanation, } from '../../../General Styles/QuizzesPage.styled'
 import QuizResultsSection from '../../../General Pages/Quiz Results/ResultsTest'
+import { ProgressBar } from "react-step-progress-bar"
+import "react-step-progress-bar/styles.css"
 
 const Quiz2 = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -17,6 +19,7 @@ const Quiz2 = () => {
     const [showInfo, setShowInfo] = useState(false)
     const [showExplanation, setShowExplanation] = useState(false)
     const [wrongAnswer, setWrongAnswer] = useState('')
+    const [progress, setProgress] = useState(25);
     
     const handleCorrectAnswer = (isCorrect) => {
         if (isCorrect) {
@@ -33,6 +36,7 @@ const Quiz2 = () => {
         setShowExplanation(false)
         setWrongAnswer('')
         setShowInfo(!showInfo)
+        setProgress(progress + 25) 
         if (currentQuestion < quiz2data.length - 1) {
             setCurrentQuestion(currentQuestion + 1)
         } else {
@@ -84,7 +88,15 @@ const Quiz2 = () => {
                 <>
                     <ShowSideBar/>
                     <h2>Prepositions of Time (on, in, at)</h2>
+                    <div style={{width: '400px', marginBottom: '50px'}}>
+                        <ProgressBar 
+                            percent={progress} 
+                            // unfilledBackground="white"
+                            filledBackground="green"
+                        />
+                    </div>
                     <QuizContainer>
+                    <div className='question'>Question  {currentQuestion + 1} / {quiz2data.length}</div>
                         <QuizTitle>
                             <QuizCounter>
                                 {currentQuestion + 1}

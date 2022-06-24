@@ -16,7 +16,7 @@ export const ShowSideBarButton = styled.div`
             height: 40px;
             border-radius: 50%;
             background-color: lightgrey;
-            cursor: pointer;
+            cursor: pointer;      
         }
         .icon{
             display: flex;

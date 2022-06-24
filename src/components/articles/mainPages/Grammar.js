@@ -6,6 +6,10 @@ import {
     ArticlesGrammarContainer,
     ArticlesSide,
     ArticlesMain,
+    ArticlesContainer,
+    InsideContainer1,
+    ExemptionBox,
+    InsideContainer2,
     // Articles1,
 } from './grammar.styled'
 import {IoIosArrowDown} from 'react-icons/io'
@@ -31,37 +35,36 @@ const ArticlesGrammar = () => {
             </ArticlesSide>
             <ArticlesMain>
                 <h1>Articles</h1>
-                <div className="return_page_container1">
-                    <div className='return_page_title'>The definite article: 'the'</div>
-                    <div className="return_inside_container1">
-                        <div className='return_inside1'>The definite article <span>the</span> is used when we are talking about something in particular.</div>
-                        <div className="return_inside_">In more detail, we use the definite article:</div>
+                <ArticlesContainer>
+                    <h1>The definite article: 'the'</h1>
+                    <InsideContainer1>
+                        <p>The definite article <span>the</span> is used when we are talking about something in particular.</p>
+                        <div className="green">In more detail, we use the definite article:</div>
                         
                         <li>to talk about something we have already  mentioned.</li>
-                        <div className="return_inside2">Sally has got two pieces of luggage: a suitcase and a handbag. The suitcase is very heavy.</div>
+                        <div className="example">Sally has got two pieces of luggage: a suitcase and a handbag. The suitcase is very heavy.</div>
 
                         <li>to talk about something that is unique.</li>
-                        <div className="return_inside3">The Pope / The moon / the president of France</div>
+                        <div className="example">The Pope / The moon / the president of France</div>
 
                         <li>when it is clear from the situation which person or thing we mean.</li>
-                        <div className="return_inside3">The bus is coming. (=it's the bus we are waiting for)</div>
+                        <div className="example">The bus is coming. (=it's the bus we are waiting for)</div>
 
                         <li>to talk about a system or service.</li>
-                        <div className="return_inside3">You should call the police.</div>
+                        <div className="example">You should call the police.</div>
 
                         <li>to talk about a type of thing.</li>
-                        <div className="return_inside3">The crocodile is very dangerous. (this type of animal)</div>
+                        <div className="example">The crocodile is very dangerous. (this type of animal)</div>
 
                         <li>with a superlative adjective.</li>
-                        <div className="return_inside3">This is the oldest building in the town.</div>
+                        <div className="example">This is the oldest building in the town.</div>
 
                         <li>to talk about groups of people like rich, poor, elderly, unemployed etc.</li>
-                        <div className="return_inside3">I think the rich should pay more taxes.</div>
-
-                    </div>
-                    <div className="return_inside1"><span>We don't normally use the definite article with NAMES.</span></div>
-                    <div className="return_inside_">Check the box below for the exceptions.</div>
-                    <div className="exceptions_full">
+                        <div className="example">I think the rich should pay more taxes.</div>
+                    </InsideContainer1>
+                    <div className="exemption">We don't normally use the definite article with NAMES.</div>
+                    <div className="green">Check the box below for the exceptions.</div>
+                    <ExemptionBox>
                         <div className="exceptions_container1">
                             <div className="exceptions_title1"><span>USE 'THE'</span> </div>
                             <div className="exceptions_content_column">
@@ -128,14 +131,14 @@ const ArticlesGrammar = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </ExemptionBox>
+                </ArticlesContainer>
 
-                <div className="return_page_container2">
-                    <div className='return_page_title'>The indefinite article: 'a/an'</div>
-                    <div className="return_inside_container2">
-                        <div className="return_indefinite1">The indefinite article <span>a/an</span> is used with <span>singular countable nouns</span> to talk about something in general. </div>
-                        <div className="return_indefinite2">We use <span>a</span> before a consonant sound and <span>an</span> before a vowel sound.</div>
+                <ArticlesContainer>
+                    <h1>The indefinite article: 'a/an'</h1>
+                    <InsideContainer1>
+                        <p>The indefinite article <span>a/an</span> is used with <span>singular countable nouns</span> to talk about something in general. </p>
+                        <p>We use <span>a</span> before a consonant sound and <span>an</span> before a vowel sound.</p>
                         <div className="return_indefinite_example">
                             <div>e.g</div>
                             <div>
@@ -153,7 +156,7 @@ const ArticlesGrammar = () => {
                         </div>
                         <hr />
                         <br />
-                        <div className="return_inside_">In more detail, we use the definite article:</div>
+                        <div className="green">In more detail, we use the indefinite article:</div>
                         <br />
 
                         <div className="rule8">Rule 1</div>
@@ -220,17 +223,14 @@ const ArticlesGrammar = () => {
                             <div className="return_inside3 ">That's  <span>a</span> very expensive car.</div>                        
                         }
                         
-                    </div>
-                </div>
+                    </InsideContainer1>
+                </ArticlesContainer>
 
-                <div className="return_page_container3">
-                    <div className='return_page_title'>Zero Article</div>
-                    <div className="return_inside_container3">
-                        <div className="return_indefinite1">We use <span>Zero Article</span> with plural nouns to talk about something in general. </div>
-                        <br />
-                        <hr />
-                        <br />
-                        <div className="return_inside_">In more detail, we use the zero article:</div>
+                <ArticlesContainer>
+                    <h1>Zero Article</h1>
+                    <InsideContainer2>
+                        <p>We use <span>Zero Article</span> with plural nouns to talk about something in general. </p>
+                        <div className="green">In more detail, we use the zero article:</div>
                         <br />
 
                         <div className="rule8">Rule 1</div>
@@ -305,8 +305,8 @@ const ArticlesGrammar = () => {
                             </div>                        
                         }
                         
-                    </div>
-                </div>
+                    </InsideContainer2>
+                </ArticlesContainer>
             {/* Button */}
             <QuizzesButtonGrammar page='/articles' text='Articles Quizzes'/>
             {/* </div> */}

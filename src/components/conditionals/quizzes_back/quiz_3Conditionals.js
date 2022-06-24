@@ -5,7 +5,8 @@ import pickquiz from '../data/pickquiz'
 import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import { v4 as uuidv4 } from 'uuid'
 // import { QuizAnswerContainer, AnswerContainer, Question, QuestionCounter, QuizzesMain, QuizzesPageMain, Explanation, ExplanationTitle, ExplanationContent, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizExplanation } from '../../../General Styles/QuizzesPage.styled'
-import { QuizAnswerContainer, QuizzesMain, QuizzesPageMain, QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizExplanation } from '../../../General Styles/QuizzesPage.styled'
+import { QuizzesMain, QuizzesPageMain,  QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizTextCenter, QuizAnswerContainer, QuizExplanation, } from '../../../General Styles/QuizzesPage.styled'
+import QuizResultsSection from '../../../General Pages/Quiz Results/ResultsTest'
 import ShowSideBar from '../mainPages/ShowSidebarQuiz'
 
 const Quiz3Conditionals = () => {
@@ -48,43 +49,42 @@ const Quiz3Conditionals = () => {
                 {showScore ? (
                 <div>
                     <ShowSideBar/>    
-                    <div className="score-section">Your score: {score}/{quiz3data.length}</div>
-                    <div className='showscore-btns'>
-                        <a href="/quiz1" className='return'>Try Again</a>
-                        <a href="/quiz2" className='return'>Next Quiz</a>
-                    </div>
+                    <QuizResultsSection data={quiz3data} score={score} source1={'conditionals_3'} source2={'conditionals_1'}/>
                 </div>
                 ) :
                 (
                 <>
                     <ShowSideBar/>
                     <h2>Conditionals 3</h2>
-                    <QuizContainer>            
-                        <QuizTitle>
-                            <QuizCounter>
-                                {currentQuestion + 1}
-                                <small>/ {quiz3data.length}</small>
-                            </QuizCounter>
-                            <QuizContent>
-                                    {quiz3data[currentQuestion].question}       
-                            </QuizContent>
-                        </QuizTitle>
-                        <QuizAnswerContainer>
-                            {quiz3data[currentQuestion].answersList.map((a) => (
+                    <QuizContainer>
+                    <div className='question'>Question  {currentQuestion + 1} / {quiz3data.length}</div>
+                    <QuizTitle>
+                        <QuizCounter>
+                            {currentQuestion + 1}
+                            <small>/ {quiz3data.length}</small>
+                        </QuizCounter>
+                        <QuizContent>
+                            <QuizTextCenter>
+                                {quiz3data[currentQuestion].question}       
+                            </QuizTextCenter>      
+                        </QuizContent>
+                    </QuizTitle>
+                    <QuizAnswerContainer>
+                        {quiz3data[currentQuestion].answersList.map((a) => (
                             <div disabled={clicked} className={`answer ${clicked && a.isCorrect ? "correct" : wrongAnswer}`} key={uuidv4()}onClick={()=>handleCorrectAnswer(a.isCorrect)}>{a.answer}</div>
-                            ))}
-                            </QuizAnswerContainer>
-                            {showExplanation &&
-                                <QuizExplanation>
-                                    <>
-                                        <div className='title'>Explanation</div>
-                                        <div className="line"></div>
-                                        <div className='content'>{quiz3data[currentQuestion].help}</div>
-                                        <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button>
-                                    </>
-                                </QuizExplanation>
-                            }
-                    </QuizContainer>
+                        ))}
+                    </QuizAnswerContainer>
+                    {showExplanation &&
+                        <QuizExplanation>
+                            <>
+                                <div className='title'>Explanation</div>
+                                <div className="line"></div>
+                                <div className='content'>{quiz3data[currentQuestion].help}</div>
+                                <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button>
+                            </>
+                        </QuizExplanation>
+                    }
+                 </QuizContainer>            
                 </>        
                 )           
                 }

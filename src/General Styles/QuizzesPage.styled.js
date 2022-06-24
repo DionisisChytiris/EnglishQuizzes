@@ -9,7 +9,7 @@ export const QuizzesPageMain = styled.div`
     margin: auto;
     display: flex;
     
-    /* align-items: center ; */
+    align-items: center ;
     
     @media (max-width: 1200px){
         width: 100%;
@@ -39,12 +39,13 @@ export const QuizzesMain = styled.div`
         color: white;
         padding: 8%;
     }
+    
     @media (max-width: 850px){
        width: 90%;
     }
     @media (max-width: 750px){
        h2{
-            width: 250px;
+            width: 420px;
             text-align: center;
             font-size: 1.4rem;
         }
@@ -192,14 +193,14 @@ export const QuizContainer = styled.div`
             color: white;
             padding: 5px;
             margin-left: 5%;
-            border-radius: 6px 6px 0px 0px
+            border-radius: 6px 6px 0px 0px;
         }
     }
 `
 
 export const QuizTitle = styled.div`
     width: 100%;
-    height: 15vh;
+    height: 10vh;
     display: flex;
 
     @media (max-width: 850px){
@@ -220,13 +221,13 @@ export const QuizCounter = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(2.6rem, 4vw, 4.1rem);
+    font-size: clamp(2.6rem, 3vw, 3.1rem);
     font-weight: 600;
     border-radius: 10px 0px 0px 0px;
     small {
         /* font-size: 10px; */
         font-size: clamp(0.9rem, 1vw, 1.2rem);
-        margin-top:32px;
+        margin-top:20px;
         @media (max-width: 750px){
             margin-top: 24px;
             display: none;
@@ -255,19 +256,26 @@ export const QuizContent = styled.div`
     @media (max-width: 750px){
         width: 100%;
         border-radius: 8px;
-        padding: 0px;
+        padding: 30px;
+        height: 30px;
     }
     `
 export const QuizTextCenter = styled.div`
     width: 100%;
     text-align: center;
     /* background: yellow; */
-    margin-left: -19%;
+    /* margin-left: -19%; */
+    margin-left: -35%;
 
     @media (max-width: 750px){
         /* font-size: 1rem; */
         width: 100%;
         margin: 0px;
+    }
+    @media (max-width: 550px){
+        font-size: 1.1rem;
+        width: 100%;
+        padding: 20px;
     }
     `
 
@@ -298,6 +306,7 @@ export const QuizAnswerContainer = styled.div`
     }
     .answer.correct {
         background: var(--answer-green);
+        pointer-events: none; //  makes the contents of the div disabled,
     }
     .answer.wrong {
         background: var(--answer-red);
@@ -307,27 +316,43 @@ export const QuizAnswerContainer = styled.div`
         color: black;
         font-weight: 100;
     }
+    @media (max-width: 1250px){
+       .answer {
+           width: 200px;
+           margin: 30px 10px;
+       }   
+    }
+    @media (width: 912px){
+       .answer {
+           width: 200px;
+           margin: 30px 10px;
+       }   
+    }
     @media (max-width: 750px){
-        /* width: 400px; */
+       .answer {
+           width: 150px;
+           margin: 5px 10px 30px;
+       }   
+    }
+    @media (max-width: 550px){
        .answer {
            width: 100px;
-           margin: 30px 10px;
+           margin: 0px 10px 30px;
        }   
     }
-    @media (max-width: 300px){
-        /* width: 400px; */
+    /* @media (max-width: 300px){
        .answer {
            width: 70px;
-           margin: 30px 10px;
-       }   
-    }
+           margin: 10px 10px;
+        }   
+    } */
     @media (max-height: 400px){
-       .answer{
+        .answer{
            margin: 10px 20px ;
-       }
+        }
     }
     @media (max-height: 420px){
-       .answer{
+        .answer{
            margin: 20px 10px;
        }
     }
@@ -359,6 +384,11 @@ export const QuizExplanation = styled.div`
         color: var(--cl-primary-darkblue);
         text-align: center;
         padding: 15px;
+    }
+    .content1{
+        color: var(--cl-primary-darkblue);
+        text-align: center;
+        padding: 0px 15px 25px 15px;
     }
     .next-btn{
         display: flex;

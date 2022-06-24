@@ -67,17 +67,18 @@ const Quiz3Pronouns = () => {
                 <button className='pronouns-explanation' onClick={pronounsExplanation}><AiOutlineQuestionCircle /></button>
                 <h2>Personal Pronouns</h2>
                 <QuizContainer>
-                        <QuizTitle>
-                            <QuizCounter>
-                                {currentQuestion + 1}
-                                <small>/ {quiz3data.length}</small>
-                            </QuizCounter>
-                            <QuizContent>
-                                <QuizTextCenter>
-                                    {quiz3data[currentQuestion].question}       
-                                </QuizTextCenter>
-                            </QuizContent>
-                        </QuizTitle>
+                <div className='question'>Question  {currentQuestion + 1} / {quiz3data.length}</div>
+                    <QuizTitle>
+                        <QuizCounter>
+                            {currentQuestion + 1}
+                            <small>/ {quiz3data.length}</small>
+                        </QuizCounter>
+                        <QuizContent>
+                            <QuizTextCenter>
+                                {quiz3data[currentQuestion].question}       
+                            </QuizTextCenter>
+                        </QuizContent>
+                    </QuizTitle>
                         <QuizAnswerContainer>
                             {quiz3data[currentQuestion].answersList.map((a) => (
                                 <div disabled={clicked} className={`answer ${clicked && a.isCorrect ? "correct" : wrongAnswer}`} key={uuidv4()}onClick={()=>handleCorrectAnswer(a.isCorrect)}>{a.answer}</div>

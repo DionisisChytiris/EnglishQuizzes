@@ -50,6 +50,7 @@ const Conditionals_Grammar = () => {
                         <div className="example1"></div>
                         <div>
                             <li>If I study today, I will go to the party tomorrow.</li>
+                            {/* <br/> */}
                             <h4>(also)</h4>
                             <li>I will go to the party tomorrow if I study today.</li>
                         </div>
@@ -75,7 +76,7 @@ const Conditionals_Grammar = () => {
                         <div className="example">
                             <div className="example1"></div>
                             <div>
-                                <li>If you heat ice, it melts.</li>
+                                <li >If you heat ice, it melts.</li>
                                 {/* <h4>(also)</h4> */}
                                 <br/>
                                 <li>Snakes bite when they are scared. *</li>
@@ -106,7 +107,7 @@ const Conditionals_Grammar = () => {
                         <div className="example">
                             <div className="example2"></div>
                             <div>
-                                <li>If you study hard, you will pass the exam.</li>
+                                <li >If you study hard, you will pass the exam.</li>
                                 <br/>
                                 <li>If I miss the train, I will take the bus.</li>
                                 <br/>
@@ -138,7 +139,7 @@ const Conditionals_Grammar = () => {
                             <div>
                                 <li>If I had more time, I would learn Spanish.</li>
                                 <br/>
-                                <li>If I was rich, I would buy a big yacht.</li>
+                                <li>If I became rich, I would buy a big yacht.</li>
                                 <br/>
                                 <li>If I won the lottery, I could quit my job. *</li>
                             </div>

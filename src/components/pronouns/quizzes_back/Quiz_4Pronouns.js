@@ -67,6 +67,7 @@ const Quiz4Pronouns = () => {
                 <button className='pronouns-explanation' onClick={pronounsExplanation}><AiOutlineQuestionCircle /></button>
                 <h2>Personal Pronouns</h2>
                 <QuizContainer>
+                <div className='question'>Question  {currentQuestion + 1} / {quiz4data.length}</div>
                         <QuizTitle>
                             <QuizCounter>
                                 {currentQuestion + 1}

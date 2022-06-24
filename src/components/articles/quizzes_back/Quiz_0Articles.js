@@ -56,6 +56,7 @@ const Quiz0Articles = () => {
                     <h2>Articles I</h2>
                     {/* <p>(Elementary)</p> */}
                     <QuizContainer>
+                    <div className='question'>Question  {currentQuestion + 1} / {quiz0data.length}</div>
                         <QuizTitle>
                             <QuizCounter>
                                 {currentQuestion + 1}

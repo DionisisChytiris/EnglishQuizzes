@@ -1,0 +1,7 @@
+export { default as Quiz1 } from './Quiz_1'
+export { default as Quiz2 } from './Quiz_2'
+export { default as Quiz3 } from './Quiz_3'
+export { default as Quiz4} from './Quiz_4'
+export { default as Quiz5 } from './Quiz_5'
+export { default as Quiz6 } from './Quiz_6'
+export { default as Test1Prepositions } from './Test_1'

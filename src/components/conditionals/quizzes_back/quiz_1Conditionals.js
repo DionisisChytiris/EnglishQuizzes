@@ -4,8 +4,9 @@ import pickmore from '../data/pickmore'
 import pickquiz from '../data/pickquiz'
 import SidebarGlobal from '../../../General Pages/Sidebar Pick Quiz/Sidebar'
 import { v4 as uuidv4 } from 'uuid'
-import { AnswerContainer, Question, QuestionCounter, QuizzesMain, QuizzesPageMain } from '../../../General Styles/QuizzesPage.styled'
 import ShowSideBar from '../mainPages/ShowSidebarQuiz'
+import { QuizzesMain, QuizzesPageMain,  QuizContainer, QuizTitle, QuizCounter, QuizContent, QuizTextCenter, QuizAnswerContainer, QuizExplanation, } from '../../../General Styles/QuizzesPage.styled'
+import QuizResultsSection from '../../../General Pages/Quiz Results/ResultsTest'
 
 const Quiz1Conditionals = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -47,30 +48,43 @@ const Quiz1Conditionals = () => {
                 {showScore ? (
                 <div>
                     <ShowSideBar/>    
-                    <div className="score-section">Your score: {score}/{quiz1data.length}</div>
-                    <div className='showscore-btns'>
-                        <a href="/quiz1" className='return'>Try Again</a>
-                        <a href="/quiz2" className='return'>Next Quiz</a>
-                    </div>
-                    
+                    <QuizResultsSection data={quiz1data} score={score} source1={'conditionals_1'} source2={'conditionals_2'}/>
                 </div>
                 ) :
                 (
                 <>
                     <ShowSideBar/>
-                    <h1>Conditionals 1</h1>                    
-                    <QuestionCounter>
-                        Question {currentQuestion + 1} / {quiz1data.length}
-                    </QuestionCounter>        
-                    <Question>
-                        {currentQuestion + 1}. {quiz1data[currentQuestion].question}  
-                    </Question>
-                    <AnswerContainer>
+                    <h2>Conditionals 1</h2>                    
+                    <QuizContainer>
+                    <div className='question'>Question  {currentQuestion + 1} / {quiz1data.length}</div>
+                    <QuizTitle>
+                        <QuizCounter>
+                            {currentQuestion + 1}
+                            <small>/ {quiz1data.length}</small>
+                        </QuizCounter>
+                        <QuizContent>
+                            <QuizTextCenter>
+                                {quiz1data[currentQuestion].question}       
+                            </QuizTextCenter>      
+                        </QuizContent>
+                    </QuizTitle>
+                    <QuizAnswerContainer>
                         {quiz1data[currentQuestion].answersList.map((a) => (
                             <div disabled={clicked} className={`answer ${clicked && a.isCorrect ? "correct" : wrongAnswer}`} key={uuidv4()}onClick={()=>handleCorrectAnswer(a.isCorrect)}>{a.answer}</div>
                         ))}
-                    </AnswerContainer>
-                    <button onClick={handleNextQuestion}>Click me</button>
+                    </QuizAnswerContainer>
+                    {showExplanation &&
+                        <QuizExplanation>
+                            <>
+                                <div className='title'>Explanation</div>
+                                <div className="line"></div>
+                                <div className='content'>{quiz1data[currentQuestion].help}</div>
+                                <div className='content1'>{quiz1data[currentQuestion].help1}</div>
+                                <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button>
+                            </>
+                        </QuizExplanation>
+                    }
+                 </QuizContainer>            
                 </>        
                 )           
                 }

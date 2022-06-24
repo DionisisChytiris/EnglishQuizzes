@@ -1,10 +1,8 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import styled from 'styled-components'
-import emailjs from 'emailjs-com'
-// import photo from '../img/colors.jpg'
-// import photo1 from '../img/londoneyetiny.jpg'
-// import photo2 from '../img/small.jpg'
+// import emailjs from 'emailjs-com'
 import photo3 from '../img/large.jpg'
+import emailjs from '@emailjs/browser'
 
 const ContactPage = styled.div`
     background-image: url(${photo3});
@@ -15,18 +13,45 @@ const ContactPage = styled.div`
     height: 100vh;
 `
 const ContactContainer = styled.div`
-    width: 200px;
-    height: 100%;
-    margin-left: 65%;
-    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 500px;
+    margin:auto;
     color: white;
+    background-color: grey;
+    position: relative;
+    top: 20%;
+    border-radius: 20px;
+    h1{
+        margin-top: -100px;
+    }
+    form{
+        width: 300px;
+        padding-top: 20px;
+    }
 `
 
 const Contact = () => {
+
+    const form = useRef()
+
     function sendEmail(e) {
         e.preventDefault();
 
-        emailjs.sendForm()
+        emailjs.sendForm(
+            'service_ggomfi4', 
+            'template_c387o2p',
+            form.current, 
+            'ozFxcxse477DoA5Bh'
+            ).then(res=>{
+                console.log(res.text)
+                console.log('Message sent!')
+                e.target.reset()  //use this line of code to clear the form after successful submit
+
+            }).catch(err=>console.log(err.text))
     }
 
     return (
@@ -34,9 +59,11 @@ const Contact = () => {
             <ContactPage>
                 <ContactContainer>
                     <h1>Contact Form</h1>
-                    <form onSubmit={sendEmail}>
+                    <form ref={form} onSubmit={sendEmail}>
                         <label>Name</label>
                         <input
+                            pattern="[a-zA-Z\s]+" 
+                            title="Please enter on alphabets only."
                             type="text"
                             name="name"
                             placeholder='Your name...'

@@ -30,12 +30,12 @@ const QuizzesButton = styled.div`
         background: #045370;
     }
 `
-export const QuizzesButtonGrammar = ({text, page}) => {
+export const QuizzesButtonGrammar = (props) => {
     return (
         <Container>
             <Slide left>
                 <QuizzesButton>
-                    <Link className='quiz-button' to={page}> {text}</Link>
+                    <Link className='quiz-button' to={props.page}> {props.text}</Link>
                 </QuizzesButton>
             </Slide>
         </Container>

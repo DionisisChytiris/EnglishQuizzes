@@ -67,33 +67,34 @@ const Quiz2Pronouns = () => {
                 <button className='pronouns-explanation' onClick={pronounsExplanation}><AiOutlineQuestionCircle /></button>
                 <h2>Personal Pronouns</h2>
                 <QuizContainer>
-                        <QuizTitle>
-                            <QuizCounter>
-                                {currentQuestion + 1}
-                                <small>/ {quiz2data.length}</small>
-                            </QuizCounter>
-                            <QuizContent>
-                                <QuizTextCenter>
-                                    {quiz2data[currentQuestion].question}       
-                                </QuizTextCenter>
-                            </QuizContent>
-                        </QuizTitle>
-                        <QuizAnswerContainer>
-                            {quiz2data[currentQuestion].answersList.map((a) => (
-                                <div disabled={clicked} className={`answer ${clicked && a.isCorrect ? "correct" : wrongAnswer}`} key={uuidv4()}onClick={()=>handleCorrectAnswer(a.isCorrect)}>{a.answer}</div>
-                            ))}
-                            </QuizAnswerContainer>
-                            {showExplanation &&
-                                <QuizExplanation>
-                                    <>
-                                        <div className='title'>Explanation</div>
-                                        <div className="line"></div>
-                                        <div className='content'>{quiz2data[currentQuestion].help}</div>
-                                        <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button>
-                                    </>
-                                </QuizExplanation>
-                            }
-                    </QuizContainer>            
+                <div className='question'>Question  {currentQuestion + 1} / {quiz2data.length}</div>
+                    <QuizTitle>
+                        <QuizCounter>
+                            {currentQuestion + 1}
+                            <small>/ {quiz2data.length}</small>
+                        </QuizCounter>
+                        <QuizContent>
+                            <QuizTextCenter>
+                                {quiz2data[currentQuestion].question}       
+                            </QuizTextCenter>
+                        </QuizContent>
+                    </QuizTitle>
+                    <QuizAnswerContainer>
+                        {quiz2data[currentQuestion].answersList.map((a) => (
+                            <div disabled={clicked} className={`answer ${clicked && a.isCorrect ? "correct" : wrongAnswer}`} key={uuidv4()}onClick={()=>handleCorrectAnswer(a.isCorrect)}>{a.answer}</div>
+                        ))}
+                    </QuizAnswerContainer>
+                    {showExplanation &&
+                        <QuizExplanation>
+                            <>
+                                <div className='title'>Explanation</div>
+                                <div className="line"></div>
+                                <div className='content'>{quiz2data[currentQuestion].help}</div>
+                                <button className='next-btn' onClick={handleNextQuestion} disabled={!clicked}>Next</button>
+                            </>
+                        </QuizExplanation>
+                    }
+            </QuizContainer>            
             </>        
             )           
             }

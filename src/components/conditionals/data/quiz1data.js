@@ -1,12 +1,13 @@
 const quiz1data = [
     {
       id: 1,
-      question: "conditionals 1",
+      question: "I'll give you an umbrella if it ___.",
       answersList: [
-        {answer: "white", isCorrect: true},
-        {answer: "red", isCorrect: false},
+        {answer: "rains", isCorrect: true},
+        {answer: "rained", isCorrect: false},
       ],
-      help: "Hello, This is my new experimental website."
+      help: "When there is a real possibility that this condition will happen we use first conditional. The structure is:  ",
+      help1: "if + present simple , will + infinitive"
     },
     {
       id: 2,
@@ -15,25 +16,28 @@ const quiz1data = [
         {answer: "", isCorrect: true},
         {answer: "", isCorrect: false},
       ],
-      help: ""
+      help: "",
+      help1: ""
     },
     {
       id: 3,
-      question: "",
+      question: "Coffee ____ sweet if we add sugar.",
       answersList: [
-        {answer: "", isCorrect: true},
-        {answer: "", isCorrect: false},
+        {answer: "will taste", isCorrect: false},
+        {answer: "tastes", isCorrect: true},
       ],
-      help: ""
+      help: "We use Zero Conditional when the result of the condition is always true. We are talking about a general truth, not a particular situation. The structure is: ",
+      help1: " if + present simple, present simple"
     },
     {
       id: 4,
-      question: "",
+      question: "If you miss the train, you __ be late to go to your job.",
       answersList: [
-        {answer: "", isCorrect: true},
-        {answer: "", isCorrect: false},
+        {answer: "will", isCorrect: true},
+        {answer: "would", isCorrect: false},
       ],
-      help: ""
+      help: "When there is a real possibility that this condition will happen we use first conditional. The structure is:  ",
+      help1: "if + present simple , will + infinitive"
     },
     {
       id: 5,
@@ -42,7 +46,8 @@ const quiz1data = [
         {answer: "", isCorrect: true},
         {answer: "", isCorrect: false},
       ],
-      help: ""
+      help: "",
+      help1: ""
     },
     {
       id: 6,
@@ -51,16 +56,18 @@ const quiz1data = [
         {answer: "", isCorrect: true},
         {answer: "", isCorrect: false},
       ],
-      help: ""
+      help: "",
+      help1: ""
     },
     {
       id: 7,
-      question: "",
+      question: "If we leave now, we ___ be home on time for dinner.",
       answersList: [
-        {answer: "", isCorrect: true},
-        {answer: "", isCorrect: false},
+        {answer: "will", isCorrect: true},
+        {answer: "would", isCorrect: false},
       ],
-      help: ""
+      help: "When there is a real possibility that this condition will happen we use first conditional. The structure is:  ",
+      help1: "if + present simple , will + infinitive"
     },
     {
       id: 8,
@@ -69,16 +76,18 @@ const quiz1data = [
         {answer: "", isCorrect: true},
         {answer: "", isCorrect: false},
       ],
-      help: ""
+      help: "",
+      help1: ""
     },
     {
       id: 9,
-      question: "",
+      question: "if you mix blue and yellow, you ___ green.",
       answersList: [
-        {answer: "", isCorrect: true},
-        {answer: "", isCorrect: false},
+        {answer: "get", isCorrect: true},
+        {answer: "will get", isCorrect: false},
       ],
-      help: ""
+      help: "We use Zero Conditional when the result of the condition is always true. It's a fact. The structure is: ",
+      help1: " if + present simple, present simple"
     },
     {
       id: 10,
@@ -87,16 +96,18 @@ const quiz1data = [
         {answer: "", isCorrect: true},
         {answer: "", isCorrect: false},
       ],
-      help: ""
+      help: "",
+      help1: ""
     },
     {
       id: 11,
-      question: "",
+      question: "If I ___ to bed late, I will be tired tomorrow.",
       answersList: [
-        {answer: "", isCorrect: true},
-        {answer: "", isCorrect: false},
+        {answer: "go", isCorrect: true},
+        {answer: "went", isCorrect: false},
       ],
-      help: ""
+      help: "When there is a real possibility that this condition will happen we use first conditional. The structure is:  ",
+      help1: "if + present simple , will + infinitive"
     },
     {
       id: 12,
@@ -105,7 +116,8 @@ const quiz1data = [
         {answer: "", isCorrect: true},
         {answer: "", isCorrect: false},
       ],
-      help: ""
+      help: "",
+      help1: ""
     },
     
 ]
