@@ -155,10 +155,7 @@ const Home = () => {
                     <h1>Refresher Grammar Website</h1>
                     
                     <h1>Test Website</h1>
-                    <h1>Test Website</h1>
-                    <h1>Test Website</h1>
-                    <h1>Test Website</h1>
-                    <h1>Test Website</h1>
+                    
                    
                     <p>Practise your English grammar with clear grammar explanations and practice exercises to test your understanding. All learners, whatever their level, have questions and doubts about grammar as they're learning English and this guide helps to explain the verb tenses and grammar rules in a clear and simple way.</p>
 
