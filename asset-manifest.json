@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/EnglishQuizzes/static/css/main.47f57e75.css",
+    "main.js": "/EnglishQuizzes/static/js/main.60fadeff.js",
+    "static/js/845.becabcc6.chunk.js": "/EnglishQuizzes/static/js/845.becabcc6.chunk.js",
+    "static/media/tetris.mp3": "/EnglishQuizzes/static/media/tetris.39f31892212dd4899483.mp3",
+    "static/media/overview.jpg": "/EnglishQuizzes/static/media/overview.920635a95659d723d5cd.jpg",
+    "static/media/londoneyetiny.jpg": "/EnglishQuizzes/static/media/londoneyetiny.4b471abd5c4a7e6e2c6e.jpg",
+    "static/media/towerbridge.jpg": "/EnglishQuizzes/static/media/towerbridge.3d28a2ed2ee2efa7b68f.jpg",
+    "static/media/stPaul.jpg": "/EnglishQuizzes/static/media/stPaul.457d87c175d01013919f.jpg",
+    "static/media/large.jpg": "/EnglishQuizzes/static/media/large.40ed5fe0d4680e848cfb.jpg",
+    "static/media/colors.jpg": "/EnglishQuizzes/static/media/colors.777ec7daa359e8572586.jpg",
+    "static/media/education.jpg": "/EnglishQuizzes/static/media/education.c7ab305b1b773dff3259.jpg",
+    "static/media/WorldMapFlag.png": "/EnglishQuizzes/static/media/WorldMapFlag.23faa94eddb8a37fa1d0.png",
+    "static/media/uk-flag.jpg": "/EnglishQuizzes/static/media/uk-flag.2163ef2bd9e8efebe7de.jpg",
+    "static/media/westminster.jpg": "/EnglishQuizzes/static/media/westminster.b0ba86fe0223969c78cc.jpg",
+    "static/media/img-2.jpg": "/EnglishQuizzes/static/media/img-2.e45b59940edadfbe8bfc.jpg",
+    "static/media/img-4.jpg": "/EnglishQuizzes/static/media/img-4.cbfdc94307c70033f5d5.jpg",
+    "static/media/img-3.jpg": "/EnglishQuizzes/static/media/img-3.70dd4ab9a02870f9d646.jpg",
+    "static/media/logo.svg": "/EnglishQuizzes/static/media/logo.f13078c14d1831c5548008363223e259.svg",
+    "index.html": "/EnglishQuizzes/index.html",
+    "main.47f57e75.css.map": "/EnglishQuizzes/static/css/main.47f57e75.css.map",
+    "main.60fadeff.js.map": "/EnglishQuizzes/static/js/main.60fadeff.js.map",
+    "845.becabcc6.chunk.js.map": "/EnglishQuizzes/static/js/845.becabcc6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.47f57e75.css",
+    "static/js/main.60fadeff.js"
+  ]
+}
