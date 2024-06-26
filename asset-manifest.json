@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/EnglishQuizzes/static/css/main.47f57e75.css",
-    "main.js": "/EnglishQuizzes/static/js/main.60fadeff.js",
+    "main.js": "/EnglishQuizzes/static/js/main.3ecb58bd.js",
     "static/js/845.becabcc6.chunk.js": "/EnglishQuizzes/static/js/845.becabcc6.chunk.js",
     "static/media/tetris.mp3": "/EnglishQuizzes/static/media/tetris.39f31892212dd4899483.mp3",
     "static/media/overview.jpg": "/EnglishQuizzes/static/media/overview.920635a95659d723d5cd.jpg",
@@ -20,11 +20,11 @@
     "static/media/logo.svg": "/EnglishQuizzes/static/media/logo.f13078c14d1831c5548008363223e259.svg",
     "index.html": "/EnglishQuizzes/index.html",
     "main.47f57e75.css.map": "/EnglishQuizzes/static/css/main.47f57e75.css.map",
-    "main.60fadeff.js.map": "/EnglishQuizzes/static/js/main.60fadeff.js.map",
+    "main.3ecb58bd.js.map": "/EnglishQuizzes/static/js/main.3ecb58bd.js.map",
     "845.becabcc6.chunk.js.map": "/EnglishQuizzes/static/js/845.becabcc6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.47f57e75.css",
-    "static/js/main.60fadeff.js"
+    "static/js/main.3ecb58bd.js"
   ]
 }
