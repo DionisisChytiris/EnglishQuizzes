@@ -153,10 +153,6 @@ const Home = () => {
                     <br/>
                     {/* <h1 className='fade-in'>Refresher Grammar Website</h1> */}
                     <h1>Refresher Grammar Website</h1>
-                    <h1>Refresher Grammar Website</h1>
-                    <h1>Refresher Grammar Website</h1>
-                    <h1>Refresher Grammar Website</h1>
-                    <h1>Refresher Grammar Website</h1>
                     
                     <h1>Test Website</h1>
                     
